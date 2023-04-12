@@ -1,0 +1,153 @@
+---
+title: "examine tissue specific networks"
+output: html_notebook
+---
+
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+```{r}
+library(tidyverse)
+library(readxl)
+
+my_file_mapping <- "../Manuskript/Julia_Analysen/results/translations/mapper.xlsx"
+#load mapper and prepare 
+mapper <- read_excel(my_file_mapping)
+mapper_red <- mapper %>% select('Symbol[table]', 'EntrezID[mapper]') %>% group_by(`Symbol[table]`,`EntrezID[mapper]`) %>% distinct() %>% ungroup()
+```
+
+
+```{r}
+#print matrix: pex proteins vs degree by different tissues
+#read file
+read_csv("../Manuskript/Julia_Analysen/results/parameter/Cheng_Bret_PEX_degree.csv") -> cheng_tissue_degree
+
+#perform clustering: 
+cheng_tissue_degree %>% select(Symbol, 1:56) -> ctd
+ctd %>% mutate_all(~replace(.,is.na(.), 0)) -> temp
+as.matrix(column_to_rownames(temp, var = "Symbol")) -> matrix_ctd
+#cluster genes
+ord_genes <- hclust( dist(matrix_ctd, method = "euclidean"))$order
+#cluster tissues
+ord_tiss <- hclust( dist(t(matrix_ctd), method = "euclidean"))$order
+
+#print map
+#defines colours used in the heatmap
+cols = RColorBrewer::brewer.pal(9, "Blues")
+
+p<- ctd %>% 
+  pivot_longer(cols = 2:57, names_to = "tissue", values_to = "degree") %>%
+  mutate_all(~replace(.,is.na(.), 0)) %>%
+  mutate(Symbol = factor(Symbol, levels = rownames(matrix_ctd)[ord_genes])) %>%
+  mutate(tissue = factor(tissue, levels = colnames(matrix_ctd)[ord_tiss])) %>%
+  ggplot(aes(Symbol, tissue)) + 
+  geom_tile(aes(fill = degree))+
+  theme_light() + 
+  theme(panel.spacing = unit(0.25, "lines"),axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),panel.grid.major.y = element_line(colour = "grey", linetype ="dotted")) + 
+  scale_fill_gradientn(colors = (cols)) +
+  labs(x = "", y = "")
+
+# printing (cm)
+A4width = 21
+A4height = 29.7
+  
+ggsave("degree_by_tissue.pdf", plot = p, width = 0.4*A4width, height = 0.175*A4height, scale = 1.5)
+
+p
+```
+
+
+```{r}
+#print matrix relative degree by tissue
+#read file
+read_csv("../Manuskript/Julia_Analysen/results/parameter/Cheng_Bret_relative_degree.csv") -> cheng_tissue_rel_degree
+
+#mapp symbols and rearange 
+ctrled <- cheng_tissue_rel_degree %>% 
+  left_join(mapper_red, by = c("gene" = "EntrezID[mapper]")) %>% 
+  mutate_all(~replace(.,is.na(.), 0)) %>% 
+  rename(Symbol = 'Symbol[table]',) %>% 
+  select("Symbol",2:57)
+
+#remove all from the tibble
+ctrled <- select(ctrled, -all)
+
+matrix_ctreld <- as.matrix(column_to_rownames(ctrled, var = "Symbol")) 
+#cluster genes
+clust_genes <- hclust( dist(matrix_ctreld, method = "euclidean"))
+ord_rel_genes <- clust_genes$order
+dendro_genes <- as.dendrogram(clust_genes)
+dendroplot_genes <- ggdendrogram(data = dendro_genes, rotate = FALSE) + theme(axis.text.x = element_blank(), axis.text.y = element_blank())
+
+#cluster tissues
+clust_tissues <- hclust( dist(t(matrix_ctreld), method = "euclidean"))
+ord_rel_tiss <- clust_tissues$order
+dendro_tissues <- as.dendrogram(clust_tissues)
+dendroplot_tissues <- ggdendrogram(data = dendro_tissues, rotate = TRUE) + theme(axis.text.x = element_blank(), axis.text.y = element_blank())
+
+
+#print map
+#defines colours used in the heatmap
+cols = RColorBrewer::brewer.pal(9, "Blues")
+cols[10] = "#000000"
+cols = cols[-1]
+cols[1] = "#f0f0f0" 
+
+p<- ctrled %>% 
+  pivot_longer(cols = 2:56, names_to = "tissue", values_to = "degree") %>%
+  mutate(Symbol = factor(Symbol, levels = rownames(matrix_ctreld)[ord_rel_genes])) %>%
+  mutate(tissue = factor(tissue, levels = colnames(matrix_ctreld)[ord_rel_tiss])) %>%
+  ggplot(aes(Symbol, tissue)) + 
+  geom_tile(aes(fill = degree))+
+  theme_light() + 
+  theme(panel.spacing = unit(0.25, "lines"),axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),panel.grid.major.y = element_line(colour = "grey", linetype = "dotted")) + 
+  scale_fill_gradientn(colors = (cols)) +
+  labs(x = "", y = "")
+
+# printing (cm)
+A4width = 21
+A4height = 29.7
+  
+ggsave("../Manuskript/Figures/Figure3/3C_rel_degree_by_tissue.pdf", plot = p, width = 0.4*A4width, height = 0.175*A4height, scale = 1.5)
+
+p
+
+```
+
+
+```{r}
+#read excel file with pex genes expression per tissue (normally expressed and TiP)
+tip_genes <- read_excel("../Manuskript/Julia_Analysen/results/parameter/HPA_PEX_ExpressedTiP_Matrix_transpose.xlsx")
+cols = colnames(tip_genes)[-1]
+
+#calculate
+df_expr <- tip_genes %>% mutate(expr = rowSums(across(all_of(cols), `%in%`, "expressed")))
+
+#tip
+df_tip <- tip_genes %>% mutate(expr = rowSums(across(all_of(cols), `%in%`, "TiP")))
+#show me the proteins that are never TiP
+df_tip %>% select(gene, expr) %>% filter(expr == 0)
+```
+
+```{r}
+#get ordering
+df_tip %>% select(gene, expr) %>% arrange(desc(expr))
+```
+```{r}
+#show me the proteins that are TiP in only 1 tissue
+df_tip %>% filter(expr == 1) %>% select(gene)
+```
+```{r}
+#examine tissues with less than 80 peroxisomal proteins expressed
+#for this we use df_expr
+intr_tissues <- c("testis", "esophagus", "lymph node", "placenta", "tongue", "ovary", "skin", "vagina", "thymus", "tonsil", "bone marrow")
+
+df_expr %>% 
+  select(gene, all_of(intr_tissues)) %>% 
+  pivot_longer(cols = all_of(intr_tissues), names_to = "tissue", values_to = "expressed") %>% 
+  ggplot(aes(x = tissue, y = gene)) + 
+  geom_tile(aes(fill = expressed)) + 
+  theme_light() + 
+  theme(panel.spacing = unit(0.25, "lines"),axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),panel.grid.major.y = element_line(colour = "grey", linetype = "dotted"))
+```
+

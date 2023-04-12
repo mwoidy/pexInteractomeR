@@ -1,0 +1,130 @@
+---
+title: "positiveHeatmap"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Read file with all positives (Cheng + BRET) and prepare data
+```{r}
+library(tidyverse)
+library(readxl)
+
+#colors from iwanthue https://medialab.github.io/iwanthue/?utm_source=Nature+Briefing&utm_campaign=e0c3e024d4-briefing-dy-20211006&utm_medium=email&utm_term=0_c9dfd39373-e0c3e024d4-44542065
+colors <- read_tsv("colors_fancy.txt", col_names = F) %>% pull()
+mygrey <- "#F5F5F5"
+#output
+my_heatmap_file = "../Manuskript/Figures/Figure1/heatmap_positives.pdf"
+
+
+my_file <- "../Manuskript/Results/20220203_PEX_Cheng_Bret_new_dected_edges.txt"
+my_file_mapping <- "../Manuskript/Julia_Analysen/results/translations/mapper.xlsx"
+my_file_function <- "../Manuskript/Tables/genesFunction.txt"
+
+#read all positives
+positives <- read_tsv(my_file)
+
+#load mapper and prepare 
+mapper <- read_excel(my_file_mapping)
+mapper_red <- mapper %>% select('Symbol[table]', 'EntrezID[mapper]') %>% group_by(`Symbol[table]`,`EntrezID[mapper]`) %>% distinct() %>% ungroup()
+
+#read genes with their respective functions and sort
+functions <- read_tsv(my_file_function)
+functions %>% arrange(desc(genefunction), symbol) %>% pull(symbol) -> genes_sorted_by_function
+
+#map data
+#code data
+#found in Cheng and iBRET = 3
+#found in Cheng = 1
+#found in iBRET = 2
+#found nothing = 0
+positives_mapped <- positives %>% left_join(mapper_red, by = c("InteractorA" = "EntrezID[mapper]")) %>% left_join(mapper_red, by = c("InteractorB" = "EntrezID[mapper]")) %>% arrange(InteractorA) %>% rename(proteinA = 'Symbol[table].x', proteinB = 'Symbol[table].y') %>% mutate(class = if_else(FoundInScreen == "Y",if_else(FoundInCheng == "Y",3,2),if_else(FoundInCheng == "Y",1,0)))
+
+#do we have all proteins? n = 92
+union(unique(positives_mapped$proteinB), unique(positives_mapped$proteinA))
+
+#clean up workspace
+#rm(list = c("positives", "mapper", "functions", "my_file", "my_file_mapping", "my_file_function"))
+```
+
+some operations that prepare the data for Fig 1B
+```{r}
+positives_mapped %>% select(proteinA, proteinB, class) -> posA
+positives_mapped %>% select(proteinB, proteinA, class) %>% rename(proteinB = "proteinA", proteinA = "proteinB") -> posB
+
+#bind everything together and create temp. dataframe. 
+df = rbind(posA, posB)
+
+#create a matrix out of the data frame
+df_rearranged <- df %>% group_by(proteinA, proteinB) %>% unique %>% ungroup %>% arrange(proteinA) %>% pivot_wider(names_from = proteinA, values_from = class) %>% arrange(proteinB)
+
+df_matr <- as.matrix(select(df_rearranged,-proteinB)) 
+rownames(df_matr) <- df_rearranged$proteinB
+
+#convert back to data frame but only the lower triangle
+ut <- lower.tri(df_matr, diag = TRUE)
+df_lower <- data.frame(proteinB = rownames(df_matr)[row(df_matr)[ut]], proteinA = colnames(df_matr)[col(df_matr)[ut]], class = df_matr[ut])
+
+#clean
+rm(df)
+```
+
+Fig 1B: Heatmap of positives
+```{r}
+p <- df_lower %>% 
+  #filter(!is.na(class)) %>%
+  mutate(class = case_match(class, 1 ~ "Cheng", 2 ~ "iBRET", 3 ~ "Cheng+iBRET", NA ~ "not interacting")) %>% 
+  mutate(proteinBrev = factor(proteinB, levels = rev(unique(df_lower$proteinB)))) %>%
+  ggplot() +
+  geom_tile(aes(x = proteinA, y = proteinBrev, fill= class), color="white") +
+  theme_light() +
+  scale_fill_manual(values=c("Cheng+iBRET" = colors[1], "iBRET" = colors[4], "Cheng" = colors[2], "not interacting" = mygrey), name="") +
+    theme(
+        panel.border = element_rect(linetype = "blank", fill = NA),
+        panel.grid = element_line(colour = "white", linetype = "dotted"),
+        panel.spacing = unit(0.25, "lines"),
+        axis.text.x = element_text(
+            angle = 90,
+            hjust = 1,
+            vjust = 0.5
+        ),
+    ) +
+    labs(x = "", y = "") +
+    guides()
+
+# printing (cm)
+A4width = 21
+A4height = 29.7
+
+ggsave(my_heatmap_file, plot = p, width = 0.36*A4width, height=0.23*A4height, scale = 1.5)
+p
+```
+
+Fig 1C
+
+
+
+
+
+Pathway crosstalk
+Do pex proteins from different pathways interact with each other? More than expected by chance? 
+
+```{r}
+#load librarys
+library(org.Hs.eg.db)
+library(KEGGREST)
+```
+
+
+```{r}
+#get list of KEGG pathways and map to entrez and gene symbol
+kegg_annotations <- keggLink("pathway", "hsa") %>% tibble(pathway = ., entrez = sub("hsa:", "", names(.))) %>% mutate(
+        symbol = mapIds(org.Hs.eg.db, entrez, "SYMBOL", "ENTREZID"),
+        ensembl = mapIds(org.Hs.eg.db, entrez, "ENSEMBL", "ENTREZID")
+    )
+#get description of pathways
+res <- keggList("pathway", "hsa") %>% tibble(pathway = names(.), description = .)
+```
+

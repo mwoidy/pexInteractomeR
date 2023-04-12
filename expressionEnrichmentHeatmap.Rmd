@@ -1,0 +1,199 @@
+---
+title: "enrichmentHeatmap - Fig4"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(message = FALSE)
+```
+
+```{r}
+library(tidyverse)
+library(readxl)
+```
+
+
+Defines functions that read each enrichment file in a specific folder, concats all files in one big table and adds one extra column that specifies the tissue name. 
+```{r }
+read_concat_files = function(myFolder) {
+  filenames <- list.files(myFolder, pattern="*.xlsx", full.names=TRUE)
+  tibs <- lapply(filenames, read_xls_files)
+  for(i in 1:(length(tibs)-1)) { 
+    tibs[[i+1]] = dplyr::bind_rows(tibs[[i]], tibs[[i+1]])
+    }
+  return(tibs[[length(tibs)]])
+}
+
+#provides functionality to read multiple tissue enrichment files
+read_xls_files = function(file) {
+  f <- str_split(file, "/", simplify = TRUE)
+  n <- length(f)
+  df <- read_excel(file, col_types= c("text","text","numeric","numeric","numeric","numeric","numeric","numeric","numeric")) %>% mutate(tissue = str_split(f[n], "_TiP", simplify = TRUE)[1])
+  return(df)
+}
+
+```
+
+
+Get the matrix with all TiP neighbors per tissue (exported from the python notebook)
+TiPneighbors_to_PEX_alltissues_custom.csv
+
+```{r}
+dir <- "../Manuskript/"
+
+my_tipNeighbors_file <- paste(dir, "Julia_Analysen/results/parameter/TiPneighbors_to_PEX_alltissues_customsymbol.csv", sep="")
+tipNeighbors <- read_csv(my_tipNeighbors_file)
+#turn data into tidy format and remove all unintersting tissues eg those with NA
+tipNeighbors <- rename(tipNeighbors, "TiP" = ...1) %>% 
+  pivot_longer(cols = 2:56, names_to = "tissue", values_to = "pex_interactor") %>% 
+  filter(!is.na(pex_interactor)) %>% 
+  mutate(pex_interactor = str_replace_all(pex_interactor,"\\['|'\\]|'","")) 
+
+#show me a list of TiP and count how often they are TiP and neighbor of pex proteins
+tipNeighbors %>% 
+  count(TiP) %>% 
+  arrange(desc(n)) 
+```
+Plot n of TiP neighbors per tissue
+```{r}
+bp <- tipNeighbors %>% 
+  count(tissue) %>% 
+  ggplot(aes(x = reorder(tissue, desc(n)), y = n)) + 
+  geom_bar(stat = "identity") + 
+  theme_light() + 
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),panel.grid.major.x = element_blank(), panel.grid.major.y = element_line(colour = "grey", linetype ="dotted")) +
+  xlab("tissue") + 
+  ylab("n of interacting TiP")
+
+my_file <- paste(dir, "Figures/TiPperTissue.pdf", sep="")
+ggsave(my_file, plot = bp)
+
+bp
+
+```
+
+```{r}
+#show n of TiPs 
+tipNeighbors %>% rowwise() %>% mutate(n_interactors = length(unlist(str_split(pex_interactor, ",")))) %>% ungroup %>% arrange(desc(n_interactors))
+```
+OK. not surprisingly there is UBC. Lets plot a heatmap to get a better overview
+```{r}
+#show n of TiPs and > 1 pex interactors
+tmp_neighbors <- tipNeighbors %>% 
+  rowwise() %>% 
+  mutate(n_interactors = length(unlist(str_split(pex_interactor, ",")))) %>% 
+  ungroup %>%
+  filter(n_interactors > 1)
+
+tmp <- tmp_neighbors %>%
+  select(TiP, tissue, n_interactors) %>% 
+  pivot_wider(names_from = tissue, values_from = n_interactors) %>%
+  mutate_all(~replace(.,is.na(.), 0))
+
+matrix <- as.matrix(column_to_rownames(tmp, var = "TiP")) 
+#cluster TiP
+ord_tip <- hclust( dist(matrix, method = "euclidean"))$order
+#ord
+#cluster Tissues
+ord_tissues <- hclust( dist(t(matrix), method = "euclidean"))$order
+
+hp <-  tmp_neighbors %>% 
+  mutate(TiP = factor(TiP, levels = rownames(matrix)[ord_tip])) %>%
+  mutate(tissue = factor(tissue, levels = colnames(matrix)[ord_tissues])) %>%
+  ggplot(aes(x = tissue, y = TiP)) + 
+  geom_tile(aes(fill = n_interactors)) +
+  theme_light() + 
+  theme(axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),panel.grid.major.x = element_line(colour = "grey", linetype ="dotted"), panel.grid.major.y = element_line(colour = "grey", linetype ="dotted")) + xlab("") + ylab("")
+
+my_file <- paste(dir, "Figures/heatmapTiP_numberInteractors_perTissue.pdf", sep="")
+# printing (cm)
+A4width = 21
+A4height = 29.7
+ggsave(my_file, plot = hp, width = 0.35*A4width, height = 0.6*A4height)
+
+rm(tmp_neighbors, tmp, matrix)
+hp
+  
+```
+
+
+
+
+Plot enriched GO Terms of neighboring TiPs
+
+Run functions to prepare data for plotting
+```{r warning= FALSE}
+#set the desired GO-ontology here eg MF, BP or CC
+ontology <- "BP"
+
+my_folder <- paste(dir, "Julia_Analysen/results/parameter/enrichment/all_enrich_julia/", ontology, "/", sep = "")
+my_heatmap_file <- paste(dir, "Figures/Figure4/expressionEnrichmentHeatmap_",ontology,".pdf", sep = "")
+
+dat_enr <- read_concat_files(my_folder)
+
+```
+
+Run a clustering to reorder tissues
+```{r}
+#filter for sign results and show only those terms that have > 1 genes 
+dat_enr %>% 
+  filter(`P-value-corrected`< 0.05) %>% 
+  filter(Abundance_group > 1) %>% 
+  select(tissue, Association_term, `P-value-corrected`, OR) -> clustdata
+
+clustdata %>% 
+  select(tissue, Association_term, `P-value-corrected`) -> temp
+#prepare tibble for conversion into matrix
+temp %>% 
+  pivot_wider(names_from=c(Association_term), values_from= c('P-value-corrected')) -> clustdata_wide
+rm(temp)
+clustdata_wide %>% 
+  mutate_all(~replace(.,is.na(.), 0)) -> temp
+#convert to matrix
+as.matrix(column_to_rownames(temp, var = "tissue")) -> matrix
+rm(temp)
+
+#cluster tissues
+ord <- hclust( dist(matrix, method = "euclidean"))$order
+#ord
+#cluster go terms
+ord_go <- hclust( dist(t(matrix), method = "euclidean"))$order
+ord_go
+```
+
+
+
+Now we plot the heatmap and save it to file "my_heatmap_file" as pdf
+```{r}
+# defines colours used in the heatmap -> color brewer but reversed order, since we want lower p-values to be "blueer"
+cols = rev(RColorBrewer::brewer.pal(9, "Blues"))
+#remove white from the cols and add a light-grey
+cols = cols[-9]
+cols[9] = "#f0f0f0" 
+
+p <- clustdata %>% 
+  #mutate(Association_term = factor(Association_term, levels = colnames(matrix)[ord_go])) %>% 
+  mutate(tissue = factor(tissue, levels = rownames(matrix)[ord])) %>%
+  ggplot(aes(x=tissue, y=Association_term)) + 
+  geom_tile(fill= "white") + 
+  theme_light() + 
+  theme(panel.spacing = unit(0.25, "lines"),axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),panel.grid.major.y = element_line(colour = "grey", linetype ="dotted")) + 
+  geom_point(aes(size = OR, fill = `P-value-corrected`, colour = `P-value-corrected`), alpha = 0.7) +
+  scale_fill_gradientn(colors = (cols), limits = c(0,0.05)) + 
+  scale_size(range = c(1,6)) +
+  coord_flip() +
+  labs(x = "", y = "") + 
+  guides(fill = "none")
+
+# printing (cm)
+A4width = 21
+A4height = 29.7
+  
+ggsave(my_heatmap_file, plot = p, width = 0.4*A4width, height = 0.175*A4height, scale = 1.5)
+
+p
+```
+
+
+
