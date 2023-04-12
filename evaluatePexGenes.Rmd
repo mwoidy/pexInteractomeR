@@ -1,0 +1,25 @@
+---
+title: "evaluatePexGenes"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+library(readxl)
+```
+
+```{r}
+my_file_genes <- "../Manuskript/Tables/PEX_Genes_20211227.xlsx"
+my_yifrach_genes <- "../Manuskript/Julia_Analysen/yifrach_bearbeitet.xlsx"
+
+yifrach_genes <- read_excel(my_yifrach_genes)
+pex_genes <- read_excel(my_file_genes, sheet="GenesbyFunction")
+```
+```{r}
+yifrach_genes %>% mutate(study = if_else(Gene %in% pex_genes$`approved symbol`,"y","n")) %>% group_by(study, DetectionFrequency) %>% summarise(n = n())
+```
+

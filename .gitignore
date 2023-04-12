@@ -1,4 +1,6 @@
+R_notebooks.Rproj
 .Rproj.user
 .Rhistory
 .RData
-.Ruserdata
+.Ruser
+data
