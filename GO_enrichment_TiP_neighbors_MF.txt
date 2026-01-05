@@ -1,0 +1,88 @@
+tissue	Association_term	P-value-corrected	OR
+amygdala	calmodulin-dependent protein kinase activity	0.01959287428412212	200
+amygdala	protein phosphatase activator activity	0.01959287428412212	200
+amygdala	adenylate cyclase activator activity	0.01959287428412212	200
+amygdala	calmodulin binding	0.02606372785664915	8.095343680709535
+amygdala	calcium channel inhibitor activity	0.04473979868895513	43.30588235294118
+basal ganglia	titin binding	0.02634639658760558	50.625
+basal ganglia	calmodulin-dependent protein kinase activity	0.02634639658760558	200
+basal ganglia	protein phosphatase activator activity	0.02634639658760558	200
+basal ganglia	adenylate cyclase activator activity	0.02634639658760558	200
+bone marrow	RNA binding	9.01439222625898e-6	2.871003197442046
+bone marrow	single-stranded DNA binding	3.018897389185659e-5	21.86274509803922
+bone marrow	mRNA binding	0.002858034744675118	5.972972972972973
+bone marrow	structural constituent of chromatin	0.02094801563273836	17.4375
+cerebellum	creatine kinase activity	0.03205116998311538	200
+cerebellum	histone H4K8 acetyltransferase activity	0.03205116998311538	200
+cerebellum	histone H3K14 acetyltransferase activity	0.03205116998311538	200
+cerebellum	histone H4K5 acetyltransferase activity	0.03205116998311538	200
+cerebellum	histone H4K12 acetyltransferase activity	0.03205116998311538	200
+cerebellum	protein phosphatase activator activity	0.03205116998311538	200
+cerebellum	adenylate cyclase activator activity	0.03205116998311538	200
+cervix	platelet-derived growth factor binding	0.01698891675433484	200
+cervix	extracellular matrix structural constituent conferring tensile strength	0.04998918560347873	68.05263157894737
+colon	creatine kinase activity	0.01474626153328247	200
+colon	actin filament binding	0.02719079713652772	6.9104
+endometrium	actin filament binding	7.70365030201209e-4	16.23076923076923
+endometrium	extracellular matrix structural constituent conferring tensile strength	7.70365030201209e-4	184.4285714285714
+endometrium	structural constituent of cytoskeleton	0.005821304332760882	17.02666666666667
+endometrium	platelet-derived growth factor binding	0.005821304332760882	200
+endometrium	structural constituent of muscle	0.008599132204637573	26.22448979591837
+endometrium	vinculin binding	0.01151265565147704	117.3636363636364
+endometrium	cytoskeletal protein binding	0.01951587682248099	58.63636363636363
+heart muscle	cytoskeletal protein binding	0.01633822056974987	200
+hippocampal formation	titin binding	0.01131256677978057	64.1038961038961
+hippocampal formation	ionotropic glutamate receptor binding	0.01131256677978057	200
+hippocampal formation	protein phosphatase activator activity	0.01131256677978057	200
+hippocampal formation	adenylate cyclase activator activity	0.01131256677978057	200
+hippocampal formation	calcium channel inhibitor activity	0.03458733288708207	47.46153846153846
+hippocampal formation	transmembrane transporter binding	0.03898495591459376	6.506666666666667
+kidney	pyruvate dehydrogenase (NAD+) activity	0.02154722154191625	200
+lung	serine-type endopeptidase inhibitor activity	0.01342828815950434	100.5789473684211
+lymph node	single-stranded DNA binding	0.01749411996605093	12.62671232876712
+lymph node	single-stranded DNA helicase activity	0.02305672872295774	200
+midbrain	titin binding	0.003806522107078161	86.41379310344827
+ovary	structural constituent of ribosome	4.404969150094139e-12	150.2934782608696
+ovary	RNA binding	2.246369688019212e-4	4.055065359477124
+parathyroid gland	pyruvate dehydrogenase (NAD+) activity	0.01868891664349879	200
+prostate	structural constituent of chromatin	0.02906534954410878	28.73333333333333
+prostate	calmodulin binding	0.04118648528847192	11.41333333333333
+rectum	creatine kinase activity	0.04231907341936469	152.4705882352941
+seminal vesicle	actin filament binding	1.947598868027039e-4	33.78306878306879
+seminal vesicle	structural constituent of muscle	0.001511747751428758	61.76190476190476
+seminal vesicle	protein homodimerization activity	0.04325394488146179	6.744444444444444
+seminal vesicle	calmodulin binding	0.04325394488146179	17.18666666666667
+seminal vesicle	integrin binding	0.04325394488146179	19.86153846153846
+skeletal muscle	RNA binding	0.01861341061375063	1.999699197860963
+skeletal muscle	structural constituent of muscle	0.01861341061375063	14.72401433691756
+skeletal muscle	polyubiquitin modification-dependent protein binding	0.01861341061375063	25.7
+skeletal muscle	proteasome-activating activity	0.01861341061375063	200
+smooth muscle	actin filament binding	0.001767449855110104	19.62962962962963
+smooth muscle	structural constituent of muscle	0.005800899368203371	39.55102040816327
+smooth muscle	collagen binding	0.01764647084993135	86.46666666666667
+smooth muscle	structural constituent of cytoskeleton	0.02178732155292814	17.18303571428572
+stomach	pyruvate transmembrane transporter activity	0.01893050724054454	200
+thymus	damaged DNA binding	4.5793606683969e-6	27.92056074766355
+thymus	single-stranded DNA binding	5.132830177589813e-5	19.9
+thymus	RNA binding	0.004411889606367555	2.496613673629429
+thymus	DNA binding	0.004411889606367555	3.382417582417582
+thymus	cis-regulatory region sequence-specific DNA binding	0.004411889606367555	200
+thymus	chromatin binding	0.009716852227298721	4.681785195936139
+thymus	transcription cis-regulatory region binding	0.0141217189539265	6.212319790301442
+thymus	structural constituent of nuclear pore	0.02211669212833179	200
+thymus	single-stranded DNA helicase activity	0.02211669212833179	200
+thymus	RNA polymerase II-specific DNA-binding transcription factor binding	0.04321952287684321	5.386363636363637
+tongue	proteasome-activating activity	0.0394278918482648	39.5578231292517
+urinary bladder	extracellular matrix structural constituent conferring tensile strength	1.745952918955227e-4	200
+urinary bladder	extracellular matrix structural constituent	0.002795653881206493	200
+urinary bladder	double-stranded RNA binding	0.01616049862679453	18.07142857142857
+urinary bladder	actin filament binding	0.01862526787914984	7.566801619433198
+urinary bladder	platelet-derived growth factor binding	0.02915467618975213	200
+urinary bladder	snoRNA binding	0.02915467618975213	200
+urinary bladder	protease binding	0.0430996930741788	9.684615384615384
+vagina	JUN kinase binding	0.0202522368371039	200
+vagina	RNA polymerase II-specific DNA-binding transcription factor binding	0.02633122032197343	17.81944444444444
+vagina	cadherin binding involved in cell-cell adhesion	0.02633122032197343	66.56410256410257
+vagina	calcium ion binding	0.04909983633393947	9.042857142857143
+vagina	E-box binding	0.04909983633393947	28.43956043956044
+vagina	calcium-dependent protein binding	0.04909983633393947	18.04195804195804
