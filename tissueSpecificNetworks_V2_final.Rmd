@@ -12,10 +12,12 @@ library(AnnotationDbi)
 library(org.Hs.eg.db)
 library(ggpubr)
 
-dir <- "../Manuskript/"
 ```
 
+Set paths to files
 ```{r}
+dir <- "../Manuskript/"
+
 #load data for tissue expression per protein
 protein_expr <- read_xlsx("../Manuskript/Julia_Analysen/173_ePI/results/parameter/HPA_PEX_ExpressedTiP_Matrix_transpose.xlsx") %>% 
   rename("...1" = "protein") %>%
@@ -36,32 +38,6 @@ protein_expr %>%
   arrange(desc(perc)) %>% 
   print(n=100)
 ```
-
-Are peroxin less often TiP than other peroxisomal proteins?
-```{r}
-p<- protein_expr %>% 
-  filter(expression == "TiP") %>% 
-  group_by(protein) %>% 
-  summarise(n=n()) %>% 
-  left_join(fun_pl, by=join_by(protein == symbol)) %>% 
-  dplyr::select(protein, n, gene_class) %>% 
-  replace_na(list(gene_class = "other")) %>% 
-  ggplot(aes(x=gene_class, y=n)) + 
-  geom_boxplot(aes(fill = gene_class), stat="boxplot") + 
-  scale_fill_manual(values = col_peroxins) +
-  theme_minimal() +
-  theme(axis.text.x = element_text(angle = 45,hjust = 1,vjust = 1), legend.position = "none") + 
-  scale_y_continuous(breaks=c(0,2,4,6,8,10)) +
-  labs(x = "", y = "n tissues") +
-  stat_compare_means(method = "wilcox.test", label.x = 1.5, label.y = 9, label = "p.format")
-
-p
-
-#ggsave("../Manuskript/Figures/Figure3/n_tissues_TiP_peroxins.pdf", plot = p, width = 5, height = 4, units = "cm", scale = 2)
-
-
-```
-
 
 
 Fig 3B: Fraction of pex proteins expressed in tissue (expressed + TiP)
@@ -95,29 +71,31 @@ p
 
 
 ```
-
-
-Fig Supplement: Expression of proteins per tissues
+Fig. 3C: Are peroxin less often TiP than other peroxisomal proteins?
 ```{r}
 p<- protein_expr %>% 
-  filter(!is.na(expression)) %>% 
-  group_by(protein, expression) %>% 
-  summarise(n = n()) %>%
-  mutate(n = if_else(expression == "expressed", sum(n), n)) %>%
-  mutate(sorting = if_else(expression == "expressed", n, 0)) %>%
-  ungroup %>%
-  complete(protein, expression, fill = list(n=0, sorting=0)) %>%
-  ggplot(aes(x = n, y = reorder(protein, sorting), fill=expression)) +
-  geom_bar(stat = "identity", position = position_identity()) +
-  scale_fill_manual(values = c("#9A9999", "#E5D542")) +
-  theme_light() +
-  scale_x_continuous(name = "", breaks=c(0,10,20,30,40,50)) +
-  scale_y_discrete(name="", position="left") + 
-  theme(legend.position="none")
+  filter(expression == "TiP") %>% 
+  group_by(protein) %>% 
+  summarise(n=n()) %>% 
+  left_join(fun_pl, by=join_by(protein == symbol)) %>% 
+  dplyr::select(protein, n, gene_class) %>% 
+  replace_na(list(gene_class = "other")) %>% 
+  ggplot(aes(x=gene_class, y=n)) + 
+  geom_boxplot(aes(fill = gene_class), stat="boxplot") + 
+  scale_fill_manual(values = col_peroxins) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45,hjust = 1,vjust = 1), legend.position = "none") + 
+  scale_y_continuous(breaks=c(0,2,4,6,8,10)) +
+  labs(x = "", y = "n tissues") +
+  stat_compare_means(method = "wilcox.test", label.x = 1.5, label.y = 9, label = "p.format")
+
 p
-#ggsave("../Manuskript/Figures/Figure3/n_proteins_per_tissue.pdf", plot = p, width = 3, height = 19, units = "cm", scale = 1.5)
- 
+
+#ggsave("../Manuskript/Figures/Figure3/n_tissues_TiP_peroxins.pdf", plot = p, width = 5, height = 4, units = "cm", scale = 2)
+
+
 ```
+
 
 
 Fig 3D: TiP LCC

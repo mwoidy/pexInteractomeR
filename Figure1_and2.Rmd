@@ -1,0 +1,299 @@
+
+
+---
+title: "Figures 1 and 2"
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  warning = FALSE,
+  message = FALSE
+)
+
+library(tidyverse)
+library(readxl)
+library(ggpubr)
+library(rstatix)
+library(igraph)
+library(ggrepel)
+```
+
+---
+
+# 1 Paths and settings
+
+```{r}
+# ---- paths ----
+file_interactions <- "../Manuskript/Julia_Analysen/final_2023_10/results/Peroxisomal_interactions_across_dbs_final.xlsx"
+file_mapper       <- "../Manuskript/Julia_Analysen/results/translations/mapper.xlsx"
+file_functions    <- "../Manuskript/Tables/genesFunction.txt"
+
+file_heatmap_out  <- "../Manuskript/Figures/Figure2/2B_heatmap_positives.pdf"
+
+# ---- colors ----
+colors <- read_tsv("colors_fancy.txt", col_names = FALSE, show_col_types = FALSE) |> pull()
+col_grey <- "#F5F5F5"
+```
+
+
+
+Load interaction datasets
+```{r}
+
+positives <- read_xlsx(file_interactions) %>% replace(is.na(.), 0)
+
+mapper <- read_excel(file_mapper) %>%
+  select(`Symbol[table]`, `EntrezID[mapper]`) %>%
+  distinct()
+```
+
+
+Map identifiers
+Class definition:
+1	Literature
+2	iBRET
+3	Both
+0	None
+```{r}
+positives_mapped <- positives %>%
+  left_join(mapper, by = c("Interactor_A" = "EntrezID[mapper]")) %>%
+  left_join(mapper, by = c("Interactor_B" = "EntrezID[mapper]")) %>%
+  rename(
+    proteinA = `Symbol[table].x`,
+    proteinB = `Symbol[table].y`
+  ) |>
+  mutate(
+    class = case_when(
+      InteractomeUCR == 1 & iBret == 1 ~ 3,
+      InteractomeUCR == 1 ~ 1,
+      iBret == 1 ~ 2,
+      TRUE ~ 0
+    )
+  )
+```
+
+
+Build interaction graph
+```{r}
+p_inter <- positives_mapped %>%
+  select(proteinA, proteinB)
+
+pex_graph <- graph_from_edgelist(as.matrix(p_inter), directed = FALSE)
+```
+
+-----------
+Figure 1
+
+Isoform similarity analysis
+Isoform pairs
+```{r}
+isoform_pairs <- list(
+  c("ACAA1a","ACAA1b"),
+  c("GSTK1a","GSTK1b"),
+  c("PEX10v1","PEX10v2"),
+  c("PEX5b","PEX5d"),
+  c("SCP2v1","SCP2v2"),
+  c("SOD2v2","SOD2vX")
+)
+
+```
+
+Jaccard similarity
+
+```{r}
+calc_jaccard <- function(pair, graph){
+  similarity(graph, pair, method="jaccard")[2]
+}
+```
+
+Compute isoform similarities
+```{r}
+jacc_isoforms <- map_dbl(
+  isoform_pairs,
+  calc_jaccard,
+  graph = pex_graph
+)
+```
+
+
+All other proteins:
+```{r}
+jacc_allother <- similarity(pex_graph, method="jaccard")
+
+jacc_tbl <- tibble(
+  jaccard = (colSums(jacc_allother)-1)/(nrow(jacc_allother)-1),
+  cat = "other"
+)
+```
+
+Combine
+```{r}
+jacc_all <- bind_rows(
+  jacc_tbl,
+  tibble(jaccard = jacc_isoforms, cat = "isoforms")
+)
+```
+
+Plot
+```{r}
+jaccard_plot <- jacc_all |>
+  ggplot(aes(cat, jaccard, fill = cat)) +
+  geom_boxplot() +
+  stat_compare_means(method="wilcox.test", label="p.format") +
+  scale_fill_manual(values=c("#94d9c5","#D3D3D3")) +
+  theme_classic() +
+  theme(
+    legend.position="none",
+    axis.text.x = element_text(angle=45,hjust=1)
+  )
+
+jaccard_plot
+
+```
+
+Save
+```{r}
+ggsave(
+  "../Manuskript/Figures/Figure1/jaccard_isoform_boxplot.pdf",
+  jaccard_plot,
+  width = 3,
+  height = 5,
+  units = "cm"
+)
+```
+
+
+Is this result dependent on the PPI of import receptors?
+Remove import receptors
+
+```{r}
+import_receptors <- c("PEX5b","PEX5d","PEX7","PEX19")
+
+graph_no_import <- pex_graph - import_receptors
+```
+
+Recalculate Jaccard
+```{r}
+jacc_isoforms_no_import <- map_dbl(
+  isoform_pairs,
+  calc_jaccard,
+  graph = graph_no_import
+)
+```
+
+
+Network topology
+```{r}
+deg <- degree(pex_graph)
+
+deg_df <- as.data.frame(table(deg)) %>%
+  mutate(deg = as.numeric(as.character(deg)))
+```
+
+Plot
+```{r}
+ggplot(deg_df, aes(log(deg), log(Freq))) +
+  geom_point(shape=21, fill="grey") +
+  theme_classic()
+```
+
+Power law testing
+```{r}
+library(poweRlaw)
+
+deg_pos <- deg[deg > 0]
+
+pl_model <- displ$new(deg_pos)
+
+est <- estimate_xmin(pl_model)
+pl_model$setXmin(est)
+pl_model$setPars(est$pars)
+
+bootstrap_p(pl_model, no_of_sims=1000)
+```
+
+
+Compare to log-normal distribution
+```{r}
+ln_model <- dislnorm$new(deg)
+#ximn
+ln_model$setXmin(pl_model$getXmin())
+ln_model$setPars(estimate_pars(ln_model))
+#likelihood test
+comp <- compare_distributions(pl_model, ln_model)
+#comp
+
+#results
+comp$test_statistic
+comp$p_two_sided
+
+#plot both models (eg powerlaw vs log-normal)
+plot(pl_model, main = "Degree distribution")
+lines(pl_model, col = "red")
+lines(ln_model, col = "blue")
+
+legend("bottomleft",
+       legend = c("Power law", "Log-normal"),
+       col = c("red", "blue"),
+       lty = 1)
+
+```
+
+
+
+Hub proteins
+```{r}
+degree_tbl <- tibble(
+  symbol = names(deg),
+  degree = deg
+)
+
+top_hubs <- degree_tbl %>%
+  arrange(desc(degree)) %>%
+  slice_head(n = 10)
+```
+
+Plot
+```{r}
+ggplot(top_hubs,
+       aes(reorder(symbol, degree), degree)) +
+  geom_col(fill="#D3D3D3") +
+  coord_flip() +
+  theme_minimal()
+```
+
+Comparison of network parameters (degree, betweenness centrality) of peroxins with other peroxisomal proteins
+```{r}
+#join degree tibble with function and plot boxgraph
+#functions that should be compared
+col_peroxins <- c("peroxin" = "#FDD49F", "other" = "#D9D9D9")
+
+peroxins <- fun_genes %>% filter(geneFunction == "Peroxins") %>% pull(symbol)
+
+fun_pl <- fun_genes %>% 
+  mutate(gene_class = if_else(symbol %in% peroxins, "peroxin", "other")) %>% 
+  select(symbol, gene_class) %>% 
+  unique() %>%
+  left_join(pex_degree, by = join_by(symbol == symbol))
+
+p <- fun_pl %>% 
+  filter(!is.na(degree)) %>%
+  ggplot(aes(x = gene_class, y=degree)) + 
+  geom_boxplot(aes(fill = gene_class), stat="boxplot") + 
+  scale_fill_manual(values = col_peroxins) +
+  theme_classic() + 
+  theme(axis.text.x = element_text(angle = 45,hjust = 1,vjust = 1), legend.position = "none") + 
+  labs(x = "") +
+  stat_compare_means(method = "wilcox.test", label.x = 1.5, label.y = 65, label = "p.format")
+
+p
+ggsave("../Manuskript/Figures/Figure1/degree_boxplot.pdf", plot = p, width = 3.5, height = 5.5, units = "cm", scale = 1.6)
+```
+
+
+-----
+Figure 2
+

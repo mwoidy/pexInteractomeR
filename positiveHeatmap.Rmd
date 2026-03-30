@@ -310,7 +310,7 @@ G.degrees <- degree(pex_graph)
 G.degree.histogram <- as.data.frame(table(G.degrees))
 
 # Need to convert the first column to numbers, otherwise
-# the log-log thing will not work (that's fair...)
+# log-log will not work
 G.degree.histogram[,1] <- as.numeric(G.degree.histogram[,1])
 
 # Now, plot it!
@@ -323,6 +323,58 @@ ggsave("../Manuskript/Figures/Figure1/degree_distribution.pdf", plot = p, width 
 p
 
 ```
+
+Check for power law distribution
+```{r}
+library(poweRlaw)
+
+deg <- G.degrees[G.degrees > 0] 
+pl_model <- displ$new(deg)  # discrete power law
+
+#xmin
+est_pl <- estimate_xmin(pl_model)
+pl_model$setXmin(est_pl)
+
+#alpha
+pl_model$setPars(est_pl$pars)
+pl_model$pars
+
+#goodness of fit
+bs_pl <- bootstrap_p(pl_model, no_of_sims = 1000, threads = 2)
+bs_pl$p
+#p ≥ 0,1 → Power law plausible
+#p < 0,05 → Power law unlikely
+
+```
+Compare to log-normal distribution
+```{r}
+ln_model <- dislnorm$new(deg)
+#ximn
+ln_model$setXmin(pl_model$getXmin())
+ln_model$setPars(estimate_pars(ln_model))
+#likelihood test
+comp <- compare_distributions(pl_model, ln_model)
+#comp
+
+#results
+comp$test_statistic
+comp$p_two_sided
+
+#plot both models (eg powerlaw vs log-normal)
+plot(pl_model, main = "Degree distribution")
+lines(pl_model, col = "red")
+lines(ln_model, col = "blue")
+
+legend("bottomleft",
+       legend = c("Power law", "Log-normal"),
+       col = c("red", "blue"),
+       lty = 1)
+
+
+
+```
+
+
 
 Load edgelist of extendedPI and plot degree distribution
 ```{r}

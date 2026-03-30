@@ -1,0 +1,214 @@
+tissue	Association_term	P-value-corrected	OR
+adipose tissue	plasma membrane	0.0188069359214016	2.919642857142857
+adipose tissue	caveola	0.0188069359214016	72.6923076923077
+amygdala	neuron projection	0.01209262504638385	7.219657483246463
+amygdala	myelin sheath	0.01209262504638385	18.67378048780488
+amygdala	axon	0.01567914100565563	4.706808343171979
+amygdala	catalytic complex	0.01567914100565563	Inf
+amygdala	calcium channel complex	0.04473157509587795	43.85714285714285
+basal ganglia	axon	0.004784063702249099	5.276974416017797
+basal ganglia	neuron projection	0.004784063702249099	7.50625
+basal ganglia	myelin sheath	0.01719761043394828	16.13031914893617
+basal ganglia	catalytic complex	0.02472827984171908	Inf
+bone marrow	nucleoplasm	3.886507531598622e-5	2.316659128599427
+bone marrow	nucleus	4.899640726502963e-5	2.238696168864241
+bone marrow	ubiquitin ligase complex	0.02446171543756494	6.648271276595745
+bone marrow	nucleosome	0.02446171543756494	7.851851851851852
+bone marrow	ASAP complex	0.02446171543756494	Inf
+bone marrow	MCM complex	0.02446171543756494	Inf
+bone marrow	CMG complex	0.02446171543756494	Inf
+cerebellum	voltage-gated potassium channel complex	0.008816743276583933	50.98290598290598
+cerebral cortex	axon	3.569928704886563e-5	6.206886574074074
+cerebral cortex	neuron projection	0.001593016784519385	6.968925114620479
+cerebral cortex	voltage-gated potassium channel complex	0.01460431668394646	36.45569620253165
+cerebral cortex	synaptic vesicle membrane	0.01485000775013951	14.64968152866242
+cervix	endoplasmic reticulum lumen	0.002394431801751367	18.44927536231884
+cervix	collagen-containing extracellular matrix	0.009156837516563309	16.80263157894737
+cervix	cornified envelope	0.0275959594258556	71.88888888888889
+duodenum	apical plasma membrane	0.01306754675630145	13.02469135802469
+endometrium	endoplasmic reticulum lumen	0.006976353805360792	14.51945080091533
+endometrium	actin filament	0.006976353805360792	21.33333333333333
+endometrium	actin cytoskeleton	0.007613196781647909	11.8796992481203
+endometrium	collagen-containing extracellular matrix	0.01245792915824605	13.4
+endometrium	cortical actin cytoskeleton	0.01245792915824605	26.22448979591837
+endometrium	cytoskeleton	0.01268509246377193	8.236842105263158
+endometrium	muscle thin filament tropomyosin	0.01268509246377193	117.3636363636364
+endometrium	fascia adherens	0.01268509246377193	117.3636363636364
+endometrium	extracellular space	0.02202856811413995	5.732394366197183
+epididymis	endoplasmic reticulum membrane	0.001285952042192769	4.9335407239819
+epididymis	endoplasmic reticulum	0.003127778088665835	4.426666666666667
+epididymis	smooth endoplasmic reticulum	0.007763150797723365	82.56521739130434
+epididymis	endoplasmic reticulum chaperone complex	0.01417389795264469	41.25
+epididymis	cortical granule	0.02786182347710922	Inf
+epididymis	sarcoplasmic reticulum lumen	0.02786182347710922	Inf
+epididymis	endoplasmic reticulum lumen	0.04604214618206433	6.146245059288537
+epididymis	melanosome	0.04604214618206433	6.146245059288537
+fallopian tube	axonemal microtubule	0.01345013695149319	Inf
+fallopian tube	R2TP complex	0.01345013695149319	Inf
+fallopian tube	nucleosome	0.01974774808445124	17.48181818181818
+fallopian tube	cilium	0.01974774808445124	19.245
+fallopian tube	Swr1 complex	0.01974774808445124	61.47619047619047
+fallopian tube	dynein axonemal particle	0.01974774808445124	61.47619047619047
+fallopian tube	RPAP3/R2TP/prefoldin-like complex	0.01974774808445124	61.47619047619047
+fallopian tube	Ino80 complex	0.01974774808445124	123.0476190476191
+fallopian tube	MLL1 complex	0.02368202973156987	40.95238095238095
+fallopian tube	NuA4 histone acetyltransferase complex	0.02368202973156987	40.95238095238095
+fallopian tube	axoneme	0.02368202973156987	40.95238095238095
+fallopian tube	ciliary basal body	0.0288928875680907	11.971875
+fallopian tube	protein folding chaperone complex	0.04119165512029529	24.53333333333333
+heart muscle	mitochondrion	1.707831479510128e-7	4.353414528055676
+heart muscle	mitochondrial matrix	1.150408717195492e-4	7.6895
+heart muscle	mitochondrial inner membrane	1.150408717195492e-4	8.288875946418171
+heart muscle	mitochondrial nucleoid	0.003299518637104198	Inf
+heart muscle	pyruvate dehydrogenase complex	0.02625616951830254	Inf
+heart muscle	mitochondrial pyruvate dehydrogenase complex	0.02625616951830254	Inf
+hippocampal formation	neuron projection	0.001297245793737363	9.665492957746478
+hippocampal formation	myelin sheath	0.007405080758853303	20.53333333333333
+hippocampal formation	postsynaptic density	0.01051420431863144	5.676056338028169
+hippocampal formation	catalytic complex	0.01051420431863144	Inf
+hippocampal formation	neuronal cell body	0.0107716571239002	5.275862068965517
+hippocampal formation	dendritic spine	0.01942210668115259	7.627858627858628
+hippocampal formation	axon	0.02010351099915668	4.48135874067937
+hippocampal formation	calcium channel complex	0.02010351099915668	48.11688311688312
+hippocampal formation	sarcomere	0.0272555746468243	12.95789473684211
+hippocampal formation	synaptic vesicle	0.04933274697442462	6.8
+hypothalamus	synaptic vesicle membrane	0.008804642160632436	23.13432835820895
+hypothalamus	neuron projection	0.01543042635617514	7.335042735042735
+hypothalamus	synaptic vesicle	0.01543042635617514	10.1900826446281
+hypothalamus	myelin sheath	0.04091443306184937	14.57647058823529
+kidney	mitochondrial matrix	0.001954829397519131	8.372727272727273
+kidney	apical plasma membrane	0.004067587740055618	9.486842105263158
+kidney	pyruvate dehydrogenase complex	0.004067587740055618	Inf
+kidney	mitochondrial pyruvate dehydrogenase complex	0.004067587740055618	Inf
+kidney	nucleoplasm	0.0478164714736475	0.3629279397600911
+kidney	basolateral plasma membrane	0.0478164714736475	6.546610169491525
+kidney	clathrin-coated vesicle membrane	0.0478164714736475	20.47540983606557
+kidney	oxoglutarate dehydrogenase complex	0.0478164714736475	Inf
+liver	mitochondrion	0.002005176003511356	2.720703538885357
+liver	endoplasmic reticulum membrane	0.002005176003511356	2.916817687567959
+liver	mitochondrial matrix	0.002901888630289695	5.264539007092199
+lung	extracellular space	0.01014850125543135	5.629664179104478
+lung	plasma membrane	0.01728676858527907	3.154704944178628
+lung	collagen-containing extracellular matrix	0.01728676858527907	9.42942942942943
+lung	external side of plasma membrane	0.01728676858527907	14.7953216374269
+lung	extracellular matrix	0.0200671466710132	24.42307692307692
+lung	apicolateral plasma membrane	0.0200671466710132	Inf
+lung	nucleus	0.03972342998746563	0.3218893505357533
+lung	cell surface	0.04807642248411444	6.013513513513513
+lymph node	chromosome, telomeric region	5.078496635995785e-4	11.40372670807453
+lymph node	MCM complex	8.17920265440083e-4	Inf
+lymph node	CMG complex	8.17920265440083e-4	Inf
+lymph node	male germ cell nucleus	0.01869679082248274	22.25225225225225
+lymph node	plasma membrane signaling receptor complex	0.03289348139488714	49.48
+midbrain	axon	0.01533522135894938	6.215497737556561
+midbrain	myelin sheath	0.0383203880060376	17.54385964912281
+ovary	cytosolic ribosome	6.007540499455191e-11	75.02717391304348
+ovary	cytosolic large ribosomal subunit	4.463422056789381e-7	87.99
+ovary	cytosolic small ribosomal subunit	5.729321282103199e-6	Inf
+ovary	small ribosomal subunit	0.002586386185156874	Inf
+ovary	polysomal ribosome	0.008021145884198784	69.88888888888889
+ovary	postsynaptic density	0.01376206323847571	5.937931034482759
+parathyroid gland	cytoplasm	0.01021768640635108	0.3246124710668444
+parathyroid gland	pyruvate dehydrogenase complex	0.01021768640635108	Inf
+parathyroid gland	mitochondrial pyruvate dehydrogenase complex	0.01021768640635108	Inf
+parathyroid gland	mitochondrial matrix	0.0413863290421523	5.585397653194264
+pituitary gland	transport vesicle	0.01014279778903116	17.08672086720867
+placenta	collagen-containing extracellular matrix	9.315120340369446e-6	23.24597701149425
+placenta	extracellular space	2.434262364092035e-4	7.775641025641026
+placenta	basolateral plasma membrane	0.009452270011403384	12.333984375
+placenta	endoplasmic reticulum lumen	0.02371955673141784	8.532608695652174
+placenta	extracellular matrix	0.02371955673141784	28.125
+placenta	basement membrane	0.02515792679095765	22.48235294117647
+placenta	cell surface	0.03691808003592047	6.981026785714286
+retina	centrosome	0.01221556702135669	3.640396039603961
+retina	ciliary basal body	0.01221556702135669	7.926605504587156
+seminal vesicle	actin filament	0.009575251752808076	33.1025641025641
+seminal vesicle	muscle thin filament tropomyosin	0.009575251752808076	260.6
+seminal vesicle	actin cytoskeleton	0.04152479642029212	14.15555555555556
+seminal vesicle	stress fiber	0.04152479642029212	32.4
+seminal vesicle	cortical actin cytoskeleton	0.04152479642029212	32.4
+seminal vesicle	platelet alpha granule lumen	0.04207932032706514	28.77777777777778
+skeletal muscle	nucleus	7.344971629797449e-9	2.505747126436781
+skeletal muscle	proteasome complex	2.279107574895589e-8	24.59245283018868
+skeletal muscle	proteasome accessory complex	1.263827892804874e-4	Inf
+skeletal muscle	nucleoplasm	1.622452281536071e-4	1.955779739386297
+skeletal muscle	mitochondrial matrix	4.508574369184234e-4	5.213477088948787
+skeletal muscle	mitochondrion	0.001213024828394602	2.239422084623323
+skeletal muscle	proteasome regulatory particle, base subcomplex	0.001213024828394602	Inf
+skeletal muscle	cytosol	0.001433726630676777	1.76691701159328
+skeletal muscle	Z disc	0.001433726630676777	7.024248813916711
+skeletal muscle	mitochondrial inner membrane	0.002687108474527257	4.679678530424799
+skeletal muscle	mitochondrial intermembrane space	0.004044230501749518	11.22545454545454
+skeletal muscle	cytoplasm	0.006220966403625471	1.667919346679194
+skeletal muscle	polysome	0.02990238632552061	7.449275362318841
+skeletal muscle	plasma membrane	0.04312008942962267	0.5768469549982155
+small intestine	apical plasma membrane	0.04125515985515828	9.699074074074074
+smooth muscle	actin filament	0.003069344614186127	33
+smooth muscle	actin cytoskeleton	0.02007642426028382	13.47480106100796
+smooth muscle	muscle thin filament tropomyosin	0.02007642426028382	173.0666666666667
+testis	centrosome	3.296475619130169e-6	5.344893292682927
+testis	nucleoplasm	0.005853135807345582	2.035381944444445
+testis	chromosome	0.005853135807345582	8.01388888888889
+testis	nuclear pore	0.00885221347626359	11.1041095890411
+testis	mitotic spindle	0.01595535717614282	7.074329501915709
+testis	extracellular exosome	0.02171763468960605	0.4076318236902178
+testis	ciliary basal body	0.02648619007588401	5.778056426332288
+testis	centriole	0.02648619007588401	6.922089041095891
+thymus	nucleus	3.830042921804092e-7	3.351293477631808
+thymus	nucleoplasm	1.300912914164866e-6	3.115757778521245
+thymus	chromosome, telomeric region	5.983248920359834e-6	12.47202797202797
+thymus	nuclear envelope	9.771538024760814e-4	7.452830188679245
+thymus	nuclear pore	9.771538024760814e-4	15.34862385321101
+thymus	MCM complex	0.001726706984412344	Inf
+thymus	CMG complex	0.001726706984412344	Inf
+thymus	nonhomologous end joining complex	0.001726706984412344	Inf
+thymus	transcription regulator complex	0.005403671455937773	8.498470948012232
+thymus	protein-DNA complex	0.006435142127271368	42.82142857142857
+thymus	chromosome	0.01058252621657683	6.94161801501251
+thymus	chromatin	0.01168024659175967	3.151815181518152
+thymus	male germ cell nucleus	0.03009578456023032	14.25
+thymus	endoplasmic reticulum membrane	0.03177969873369523	0.1623931623931624
+thymus	ribonucleoprotein complex	0.03532873051296102	3.797987059669303
+thymus	nuclear periphery	0.03532873051296102	31.83185840707965
+thymus	nuclear lamina	0.03532873051296102	31.83185840707965
+thyroid gland	endoplasmic reticulum	0.02473717521084321	3.962037037037037
+thyroid gland	endoplasmic reticulum lumen	0.02473717521084321	7.560386473429952
+thyroid gland	melanosome	0.02473717521084321	7.560386473429952
+thyroid gland	nucleoplasm	0.02473717521084321	0.2131922131922132
+thyroid gland	sarcoplasmic reticulum lumen	0.02473717521084321	Inf
+thyroid gland	MHC class I peptide loading complex	0.02473717521084321	Inf
+tongue	mitochondrion	9.853675456587833e-6	3.338616938616938
+tongue	proteasome complex	9.853675456587833e-6	12.09983896940419
+tongue	proteasome accessory complex	1.858720050686062e-5	65.11888111888112
+tongue	mitochondrial matrix	4.522897946908453e-5	7.028186274509804
+tongue	mitochondrial inner membrane	2.602909981006295e-4	6.764945652173913
+tongue	proteasome regulatory particle, base subcomplex	5.951513609348932e-4	48.16551724137931
+tongue	mitochondrial intermembrane space	0.004260007903988024	11.27777777777778
+tongue	cytoplasm	0.02061978598088445	1.81784188034188
+tongue	nucleus	0.02972291345596257	1.741935483870968
+tongue	ficolin-1-rich granule lumen	0.02972291345596257	3.863559608240459
+tongue	polysome	0.02972291345596257	7.993103448275862
+tongue	muscle thin filament tropomyosin	0.02972291345596257	Inf
+tongue	pyruvate dehydrogenase complex	0.02972291345596257	Inf
+tongue	mitochondrial pyruvate dehydrogenase complex	0.02972291345596257	Inf
+tonsil	chromosome, telomeric region	6.977323038307164e-5	13.0448717948718
+tonsil	MCM complex	0.001082592318642879	Inf
+tonsil	CMG complex	0.001082592318642879	Inf
+tonsil	nucleus	0.002423116095891454	2.596491228070176
+tonsil	nucleoplasm	0.003713861751030801	2.515221214991206
+tonsil	male germ cell nucleus	0.0163722989626639	21.04273504273504
+tonsil	nuclear body	0.0496363073081156	3.988522769344687
+urinary bladder	extracellular space	2.563375169826847e-5	7.915322580645161
+urinary bladder	collagen-containing extracellular matrix	2.563375169826847e-5	18.62222222222222
+urinary bladder	platelet alpha granule lumen	5.464909946154258e-4	27.05128205128205
+urinary bladder	extracellular region	7.706313759569388e-4	5.137096774193548
+urinary bladder	basement membrane	0.001716302631433945	31.7
+urinary bladder	endoplasmic reticulum lumen	0.004425567077120948	8.971291866028707
+urinary bladder	ruffle	0.01107121314665373	14.03333333333333
+urinary bladder	extracellular matrix	0.01532975418255616	23.19512195121951
+urinary bladder	collagen trimer	0.01532975418255616	Inf
+urinary bladder	muscle thin filament tropomyosin	0.03618556416498633	60.52380952380953
+urinary bladder	fascia adherens	0.03618556416498633	60.52380952380953
+urinary bladder	blood microparticle	0.04932633359988758	11.5609756097561
+vagina	extracellular space	0.03190981551017124	8.534722222222221
+vagina	cornified envelope	0.03190981551017124	99.92307692307692
