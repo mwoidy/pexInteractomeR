@@ -1,5 +1,5 @@
 ---
-title: "Fig 1+2"
+title: "R code for Figures 1&2"
 output: html_document
 ---
 
@@ -7,34 +7,46 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Read file with all positives (Cheng + BRET) and prepare data
+Imports
 ```{r}
 library(tidyverse)
 library(readxl)
 library(ggpubr)
 library(rstatix)
 library(igraph)
+```
 
+
+Variables and data
+```{r}
 #colors from iwanthue https://medialab.github.io/iwanthue/?utm_source=Nature+Briefing&utm_campaign=e0c3e024d4-briefing-dy-20211006&utm_medium=email&utm_term=0_c9dfd39373-e0c3e024d4-44542065
 colors <- read_tsv("colors_fancy.txt", col_names = F, show_col_types = FALSE) %>% pull()
 mygrey <- "#F5F5F5"
 
-#output
-my_heatmap_file = "../Manuskript/Figures/Figure2/2B_heatmap_positives.pdf"
-
 #import
-my_file <- "../Manuskript/Julia_Analysen/final_2023_10/results/Peroxisomal_interactions_across_dbs_final.xlsx" 
-
+my_file_pos <- "../Manuskript/Julia_Analysen/positiveScreenAll_20181005_corrected.txt"
+#literature interactions
+my_file_interactions <- "../Manuskript/Julia_Analysen/final_2023_10/results/Peroxisomal_interactions_across_dbs_final.xlsx" 
+#import of Yifrach Dataset
+my_yifrach_genes <- "../Manuskript/Julia_Analysen/yifrach_bearbeitet.xlsx"
+#ePI interactome
+ePI_file <- ("../Manuskript/Julia_Analysen/final_2023_10/results/ePI_edgelist.csv")
+#random sampling lcc
+my_random_lcc_file <- ("1000random_samples_LCC_disease_genes_in_interactome.csv")
+#data on degree of ePI members
+my_intExt_degree_file <- ("../Manuskript/Julia_Analysen/173_ePI/results/parameter/characteristics_ePI_degrees.csv")
 #contains comparison of lit vs bret interactions
-my_file_mapping <- "../Manuskript/Julia_Analysen/results/translations/mapper.xlsx"
-my_file_function <- "../Manuskript/Tables/genesFunction.txt"
-```
+my_file_mapping <- "../Manuskript/Julia_Analysen/results/translations/mapper.xlsx" #mapping from entrez to symbol
+my_file_function <- "../Manuskript/Supplement/Supplementary Files final/9_genesFunction.txt"  #functions of peroxisomal proteins
 
+#output
+my_heatmap_file = "../Manuskript/Figures/Figure2/2B_heatmap_positives.pdf" #output for heatmap file
+```
 
 
 Count genes from the original results table 20211227_positivesBRET.xlsx
 ```{r}
-positives_original <- read_tsv("../Manuskript/Julia_Analysen/positiveScreenAll_20181005_corrected.txt", col_names=FALSE, show_col_types = FALSE)
+positives_original <- read_tsv(my_file_pos, col_names=FALSE, show_col_types = FALSE)
 #following genes removed from analyses since there is no evidence for peroxisomal location (see also file "Nachfrage_pexProteine.xls")
 remove_genes <- c("DNAJC10", "MPV17L2", "ACOT2", "ACOT2v1", "ACOT2v2", "MAVS", "RHOC", "SLC22A5", "ACSF3")
 g <- union(unique(positives_original$X1), unique(positives_original$X2))
@@ -45,11 +57,15 @@ g_isoforms
 Prepare everything for heatmap plotting
 ```{r}
 #read all positives
-positives <- read_xlsx(my_file) %>% replace(is.na(.), 0)
+positives <- read_xlsx(my_file_interactions) %>% replace(is.na(.), 0)
 
 #load mapper and prepare 
 mapper <- read_excel(my_file_mapping)
-mapper_red <- mapper %>% dplyr::select('Symbol[table]', 'EntrezID[mapper]') %>% group_by(`Symbol[table]`,`EntrezID[mapper]`) %>% distinct() %>% ungroup()
+mapper_red <- mapper %>% 
+  dplyr::select('Symbol[table]', 'EntrezID[mapper]') %>% 
+  group_by(`Symbol[table]`,`EntrezID[mapper]`) %>% 
+  distinct() %>% 
+  ungroup()
 
 #map data
 #code data
@@ -57,9 +73,14 @@ mapper_red <- mapper %>% dplyr::select('Symbol[table]', 'EntrezID[mapper]') %>% 
 #found in iBRET = 2
 #found in both = 3
 #found nothing = 0
-positives_mapped <- positives %>% left_join(mapper_red, by = c("Interactor_A" = "EntrezID[mapper]")) %>% left_join(mapper_red, by = c("Interactor_B" = "EntrezID[mapper]")) %>% arrange(Interactor_A) %>% dplyr::rename(proteinA = 'Symbol[table].x', proteinB = 'Symbol[table].y') %>% mutate(class = if_else(InteractomeUCR == 1,if_else(iBret == 1,3,1),if_else(iBret == 1,2,0)))
+positives_mapped <- positives %>% 
+  left_join(mapper_red, by = c("Interactor_A" = "EntrezID[mapper]")) %>% 
+  left_join(mapper_red, by = c("Interactor_B" = "EntrezID[mapper]")) %>% 
+  arrange(Interactor_A) %>% 
+  dplyr::rename(proteinA = 'Symbol[table].x', proteinB = 'Symbol[table].y') %>% 
+  mutate(class = if_else(InteractomeUCR == 1,if_else(iBret == 1,3,1),if_else(iBret == 1,2,0)))
 
-positives_mapped %>% group_by(class) %>% count(n())
+positives_mapped %>% group_by(class) %>% count()
 ```
 
 
@@ -68,23 +89,24 @@ positives_mapped %>% group_by(class) %>% count(n())
 pg_withoutIso <- sort(union(unique(positives_mapped$proteinB), unique(positives_mapped$proteinA)))
 
 pg_withoutIso
-#clean up workspace
-#rm(list = c("positives", "mapper", "functions", "my_file", "my_file_mapping", "my_file_function"))
 ```
 
 ################################
 JACCARD Similarity for isoforms
-check ppi partner of isoforms. Are their interaction partners more similar than other proteins?
+Are their interaction partners more similar than other proteins?
 
-lets get the isoforms that are included in the screen
+Lets get the isoforms that are included in the screen
 ```{r}
 setdiff(g_isoforms, pg_withoutIso) -> i
-setdiff(i, "ABCD3b") -> isos
+setdiff(i, "ABCD3b") -> isos #we do not have a partner for ABCD3b -> exclude it here
 isos
 ```
 
 ```{r}
-p_inter_with_iso <- positives_original %>% filter(!X1 %in% remove_genes & !X2 %in% remove_genes) %>% select(X1, X2)
+p_inter_with_iso <- positives_original %>% 
+  filter(!X1 %in% remove_genes & !X2 %in% remove_genes) %>% 
+  select(X1, X2)
+
 p_graph_with_iso <- graph_from_edgelist(as.matrix(p_inter_with_iso), directed = FALSE)
 #create graph without the isoforms in order to avoid redundancy
 p_graph_without_iso <- p_graph_with_iso - isos
@@ -101,6 +123,7 @@ scp2 <- c("SCP2v1","SCP2v2")
 sod2 <- c("SOD2v2","SOD2vX" )
 
 isoform_pairs <- list(accaa1, gstk1, pex10, pex5, scp2, sod2)
+
 #calculate jaccard similarity for each pair of isoforms
 jacc_isoforms <- sapply(isoform_pairs, function(x) similarity(p_graph_with_iso, x, method="jaccard"))
 
@@ -125,16 +148,17 @@ jaccard_plot
 
 
 ```{r}
-jacc_all %>% group_by(cat) %>% summarise(mean = mean(jaccard), median = median(jaccard), sd = sd(jaccard))
+jacc_all %>% 
+  group_by(cat) %>% 
+  summarise(mean = mean(jaccard), median = median(jaccard), sd = sd(jaccard))
 ```
 
 Is the higher Jaccard Index for isoforms driven by PPI to the import receptors PEX5, PEX7, PEX19?
 
 ```{r}
 #lets remove PPI to PEX5, PEX7 and PEX19 and repeat analysis of Jaccard Index
-
-p_graph_with_iso - c("PEX5b", "PEX5d", "PEX7", "PEX19") -> p_graph_with_iso_withoutImport
-p_graph_without_iso - c("PEX7", "PEX19") -> p_graph_without_iso_withoutImport
+p_graph_with_iso_withoutImport <- p_graph_with_iso - c("PEX5b", "PEX5d", "PEX7", "PEX19") 
+p_graph_without_iso_withoutImport <- p_graph_without_iso - c("PEX7", "PEX19") 
 
 jacc_isoforms_withoutImport <- sapply(list(accaa1, gstk1, pex10, scp2, sod2), function(x) similarity(p_graph_with_iso_withoutImport, x, method="jaccard"))
 
@@ -151,14 +175,16 @@ jaccard_plot <- jacc_all_withoutImport %>%
   theme(axis.text.x = element_text(angle = 45,hjust = 1,vjust = 1), legend.position = "none")
 
 #ggsave("../Manuskript/Figures/Figure1/jaccard_isoform_boxplot.pdf", plot = jaccard_plot, width = 3, height = 5, units = "cm", scale = 1.6)
-jaccard_plot
+print(jaccard_plot)
 
 ```
 
 
 
 ```{r}
-jacc_all_withoutImport %>% group_by(cat) %>% summarise(mean = mean(jaccard), median = median(jaccard), sd = sd(jaccard))
+jacc_all_withoutImport %>% 
+  group_by(cat) %>% 
+  summarise(mean = mean(jaccard), median = median(jaccard), sd = sd(jaccard))
 
 ```
 
@@ -183,24 +209,29 @@ p<- isoform_ppi %>% ggplot() +
 
 ggsave("../Manuskript/Figures/Figure1/isoform_ppi_matrix.pdf", plot = p, width = 13, height=4, scale = 1.6, units = "cm")
 
+print(p)
 ```
 
 
 
-compare with yifrach dataset
+Comparison with yifrach dataset
 ```{r}
-my_yifrach_genes <- "../Manuskript/Julia_Analysen/yifrach_bearbeitet.xlsx"
 yifrach_genes <- read_excel(my_yifrach_genes)
 
-yifrach_genes %>% mutate(study = if_else(Gene %in% pg_withoutIso,"y","n")) %>% group_by(study, DetectionFrequency) %>% count()
+yifrach_genes %>% 
+  mutate(study = if_else(Gene %in% pg_withoutIso,"y","n")) %>% 
+  group_by(study, DetectionFrequency) %>% 
+  count()
 ```
 
 Fig 2b: Heatmap of ePI (iBRET positives plus literature interactions of all pex associated genes according to Yifrach et al)
 
 (1) Read ePI interactions
 ```{r}
-ePI_file <- ("../Manuskript/Julia_Analysen/final_2023_10/results/ePI_edgelist.csv")
-ePI_edge <- read_csv(ePI_file, show_col_types = FALSE) %>% dplyr::select(Symbol_A, Symbol_B) %>% rename(proteinA = "Symbol_A", proteinB = "Symbol_B")
+ePI_edge <- read_csv(ePI_file, show_col_types = FALSE) %>% 
+  dplyr::select(Symbol_A, Symbol_B) %>% 
+  dplyr::rename(proteinA = "Symbol_A", proteinB = "Symbol_B")
+
 ePI_graph <- graph_from_edgelist(as.matrix(ePI_edge), directed = FALSE)
 ```
 
@@ -220,7 +251,7 @@ inter_both <- as_data_frame(igraph::intersection(ePI_graph, pex_both, keep.all.v
 inter_bret <- as_data_frame(igraph::intersection(ePI_graph, pex_bret, keep.all.vertices = FALSE)) %>% mutate(class = 2)
 inter_lit <- as_data_frame(igraph::intersection(ePI_graph, pex_lit, keep.all.vertices = FALSE)) %>% mutate(class = 1)
 inter_ePI <- as_data_frame(difference(ePI_graph, union(pex_bret, pex_both, pex_lit))) %>% unique() %>% mutate(class = 1)
-ePI_edge_cl <- rbind(inter_both, inter_bret, inter_lit, inter_ePI) %>% rename(proteinA = "from", proteinB = "to")
+ePI_edge_cl <- rbind(inter_both, inter_bret, inter_lit, inter_ePI) %>% dplyr::rename(proteinA = "from", proteinB = "to")
 rm(inter_both,inter_bret, inter_lit, inter_ePI)
 
 ePI_edge_cl -> posA
@@ -246,7 +277,7 @@ rm(df)
 Heatmap plotting
 ```{r}
 #we need the degrees to plot only the top n hub proteins
-ePI_degree <- as_tibble(rownames_to_column(as.data.frame(degree(ePI_graph, loops = FALSE)), var="symbol")) %>% rename("degree" = `degree(ePI_graph, loops = FALSE)`) 
+ePI_degree <- as_tibble(rownames_to_column(as.data.frame(degree(ePI_graph, loops = FALSE)), var="symbol")) %>% dplyr::rename("degree" = `degree(ePI_graph, loops = FALSE)`) 
 prot_to_plot <- ePI_degree %>% arrange(desc(degree)) %>% head(n=20) %>% pull(symbol)
 
 p <- df_lower %>% 
@@ -281,8 +312,9 @@ Fig 1D
 Barplot Top 10 Hubs
 ```{r}
 #exclude literature interactions
-pex_graph <- graph_from_edgelist(as.matrix(positives_mapped %>% filter(class != 1) %>% dplyr::select(proteinA, proteinB)), directed = FALSE)
-pex_degree <- as_tibble(rownames_to_column(as.data.frame(degree(pex_graph, loops = FALSE)), var="symbol")) %>% rename("degree" = `degree(pex_graph, loops = FALSE)`) 
+pex_graph <- graph_from_edgelist(as.matrix(positives_mapped %>% filter(class != 1) %>% 
+                                             dplyr::select(proteinA, proteinB)), directed = FALSE)
+pex_degree <- as_tibble(rownames_to_column(as.data.frame(degree(pex_graph, loops = FALSE)), var="symbol")) %>% dplyr::rename("degree" = `degree(pex_graph, loops = FALSE)`) 
 
 p_bar <- pex_degree %>%
   mutate(ranking = dense_rank(desc(degree))) %>%
@@ -400,8 +432,8 @@ p
 
 Figure 2F: Create Barplot for random sampling
 ```{r}
-p<- read_delim("1000random_samples_LCC_disease_genes_in_interactome.csv", delim=";") %>% 
-  rename(lcc = "LCC size of random disease genes") %>% 
+p<- read_delim(my_random_lcc_file, delim=";") %>% 
+  dplyr::rename(lcc = "LCC size of random disease genes") %>% 
   ggplot(aes(x=lcc)) + 
   geom_histogram(binwidth=1, color="white", fill="#D3D3D3") + 
   geom_vline(aes(xintercept = mean(lcc)), color="black", linetype="dashed") +
@@ -418,71 +450,18 @@ p
 
 
 
-Comparison degree vs low/high detection frequency
-```{r}
-col_boxplot <- c("High" = "#203664", "Low" = "#83C7EB")
-
-rownames_to_column(as.data.frame(degree(ePI_graph))) %>% 
-  left_join(yifrach_genes %>% dplyr::select(Gene, DetectionFrequency), by = c("rowname" = "Gene")) %>% 
-  rename("degree" = "degree(ePI_graph)", "gene" = "rowname") %>% 
-  filter(!is.na(DetectionFrequency)) %>%
-  ggplot(aes(x = DetectionFrequency, y = degree)) + 
-  geom_boxplot(aes(fill = DetectionFrequency)) +
-  scale_fill_manual(values = col_boxplot) +
-  theme_classic() + 
-  theme(axis.text.x = element_text(angle = 45,hjust = 1,vjust = 1), legend.position = "none") + 
-  labs(x = "Detection Frequency") +
-  stat_compare_means(method = "wilcox.test", label.x = 1.5, label.y = 65, label = "p.format")
-
-```
-Analyse again but without BRETinteractions
-```{r}
-#ePI_edge_cl holds information on interaction class and we need to filter out class 2 (= BRET only)
-ePI_graph_withoutBRET <- graph_from_edgelist(as.matrix(ePI_edge_cl %>% filter(!class == 2) %>% dplyr::select(proteinA, proteinB)))
-
-rownames_to_column(as.data.frame(degree(ePI_graph_withoutBRET))) %>% 
-  left_join(yifrach_genes %>% dplyr::select(Gene, DetectionFrequency), by = c("rowname" = "Gene")) %>% 
-  rename("degree" = "degree(ePI_graph_withoutBRET)", "gene" = "rowname") %>% 
-  filter(!is.na(DetectionFrequency)) %>%
-  ggplot(aes(x = DetectionFrequency, y = degree)) + 
-  geom_boxplot(aes(fill = DetectionFrequency)) +
-  scale_fill_manual(values = col_boxplot) +
-  theme_classic() + 
-  theme(axis.text.x = element_text(angle = 45,hjust = 1,vjust = 1), legend.position = "none") + 
-  labs(x = "Detection Frequency") +
-  stat_compare_means(method = "wilcox.test", label.x = 1.5, label.y = 65, label = "p.format")
-
-```
-
-Plot betweeness vs degree
-```{r}
-require("ggrepel")
-
-p <- rownames_to_column(as.data.frame(cbind(betweenness(ePI_graph, normalized = TRUE), degree(ePI_graph, loops=FALSE))), var="symbol") %>% 
-  ggplot(aes(x = V1, y = V2)) + 
-  geom_point(alpha=0.5) + 
-  geom_label_repel(aes(label = symbol),
-                  size = 3,
-                  box.padding = unit(0.35, "lines"),
-                  point.padding = unit(0.3, "lines"), 
-                  max.overlaps = 40) +
-  labs(x = "betweeness centrality", y = "degree") + 
-  theme_minimal() + 
-  theme(panel.grid.major = element_line(colour = "grey"))
-
-p
-
-```
-
 Analyse ppi between different functions
 Read functions 
 ```{r}
 #read genes with their respective functions and sort
-functions <- read_tsv(my_file_function, show_col_types = FALSE)
+pex_functions <- read_tsv(my_file_function, show_col_types = FALSE)
 #get all functions in separate cols and rows 
-fun_genes <- functions %>% 
+fun_genes <- pex_functions %>% 
   dplyr::select(symbol, geneFunction) %>% 
   separate_longer_delim(geneFunction, delim = "; ") 
+
+#rowwise() %>% 
+#  mutate(n_interactors = length(unlist(str_split(pex_interactor, ","))))
 
 fun_genes_counted <- fun_genes %>% 
   count(geneFunction) %>% 
@@ -500,16 +479,15 @@ fun_genes_counted %>%
 ```
 
 
-
-
-
 Fig 1E: Comparison of network parameters (degree, betweenness centrality) of peroxins with other peroxisomal proteins
 ```{r}
 #join degree tibble with function and plot boxgraph
 #functions that should be compared
 col_peroxins <- c("peroxin" = "#FDD49F", "other" = "#D9D9D9")
 
-peroxins <- fun_genes %>% filter(geneFunction == "Peroxins") %>% pull(symbol)
+peroxins <- fun_genes %>% 
+  filter(geneFunction == "peroxin") %>% 
+  pull(symbol)
 
 fun_pl <- fun_genes %>% 
   mutate(gene_class = if_else(symbol %in% peroxins, "peroxin", "other")) %>% 
@@ -535,7 +513,7 @@ ggsave("../Manuskript/Figures/Figure1/degree_boxplot.pdf", plot = p, width = 3.5
 
 ```{r}
 #plot betweenness centrality of peroxins vs other pex proteins
-pex_between <- as_tibble(rownames_to_column(as.data.frame(betweenness(pex_graph, normalized = TRUE)), var="symbol")) %>% rename("betweenness" = `betweenness(pex_graph, normalized = TRUE)`) 
+pex_between <- as_tibble(rownames_to_column(as.data.frame(betweenness(pex_graph, normalized = TRUE)), var="symbol")) %>% dplyr::rename("betweenness" = `betweenness(pex_graph, normalized = TRUE)`) 
 
 fun_pl <- fun_genes %>% 
   mutate(gene_class = if_else(symbol %in% peroxins, "peroxin", "other")) %>% 
@@ -560,7 +538,7 @@ ggsave("../Manuskript/Figures/Figure1/between_boxplot.pdf", plot = p, width = 3.
 
 
 ```{r}
-pex_closeness <- as_tibble(rownames_to_column(as.data.frame(closeness(pex_graph)), var="symbol")) %>% rename("closeness" = `closeness(pex_graph)`)
+pex_closeness <- as_tibble(rownames_to_column(as.data.frame(closeness(pex_graph)), var="symbol")) %>% dplyr::rename("closeness" = `closeness(pex_graph)`)
 
 fun_pl <- fun_genes %>% 
   mutate(gene_class = if_else(symbol %in% peroxins, "peroxin", "other")) %>% 
@@ -613,7 +591,6 @@ homo_p_withoutBRET
 ```
 
 
-
 Create Boxplot for Fig 2E: Homooligomerisation
 ```{r}
 homo_plot <- tibble(freq = c(0.138, 0.450, 0.277), interactome = c("UCR", "ePI", "ePI_without_iBRET")) %>% 
@@ -651,7 +628,8 @@ How is the ePI connected to the human interactome?
 
 ```{r}
 #load data from Julia with internal / external degree per ePI protein
-ePI_in_out_degree <- read_csv("../Manuskript/Julia_Analysen/173_ePI/results/parameter/characteristics_ePI_degrees.csv") %>% rename("Entrez" = "...1", "degree" = "overall degree", "degree_int" = "internal degree", "degree_ext" = "external degree")
+ePI_in_out_degree <- read_csv(my_intExt_degree_file) %>% 
+  dplyr::rename("Entrez" = "...1", "degree" = "overall degree", "degree_int" = "internal degree", "degree_ext" = "external degree")
 #merch with yifrach_genes
 ePI_in_out_degree %>% left_join(yifrach_genes, by=join_by(symbol == Gene))
 ```
@@ -719,81 +697,4 @@ p<- ePI_in_out_degree %>%
 ggsave("../Manuskript/Figures/Figure2/degree_yifrach.pdf", plot = p, width = 6, height = 3, units = "cm", scale = 2)
 p
 ```
-
-
-
-Gene function analysis
-
-```{r}
-
-#analyse again but different groups
-
-groups_tofilter <- c("peroxin", "alpha oxidation", "beta oxidation", "ROS metabolism", "proliferation", "bile acid synthesis", "cholesterol/isoprenoid biosynthesis")
-
-fun_pl <- fun_genes %>% 
-    mutate(gene_class = case_when(genefunction == "peroxin" ~ "peroxin",
-                                  genefunction == "alpha oxidation" ~ "alpha oxidation",
-                                  genefunction == "beta oxidation" ~ "beta oxidation",
-                                  genefunction == "proilferation" ~ "proliferation",
-                                  genefunction == "bile acid synthesis" ~ "bile acid synthesis")) %>% 
-    left_join(pex_degree, by = join_by(symbol == symbol))
-
-p <- fun_pl %>% 
-  filter(!is.na(gene_class)) %>% 
-  ggplot(aes(x = gene_class, y=degree)) + 
-  geom_boxplot(aes(fill = gene_class), stat="boxplot") + 
-  #scale_fill_manual(values = col_peroxins) +
-  theme_minimal() + 
-  theme(axis.text.x = element_text(angle = 45,hjust = 1,vjust = 1), legend.position = "none") + 
-  labs(x = "") +
-  stat_compare_means(method = "kruskal.test", label.x = 2.5, label.y = 60, label = "p.format")
-
-p
-
-
-```
-
-
-```{r}
-#filter homomers from positives and literature interactions
-pos_filter <- positives_mapped %>% 
-  filter(class != 1) %>% 
-  filter(proteinA != proteinB) %>% #exclude homomers
-  dplyr::select(proteinA, proteinB)
-
-#join with gene functions
-pos_fun_joined <- pos_filter %>% 
-  inner_join(fun_genes, by = join_by(proteinA == symbol), relationship = "many-to-many") %>% 
-  inner_join(fun_genes, by = join_by(proteinB == symbol), relationship = "many-to-many")
-
-pos_fun_joined %>%
-  unite(col = "ppi_function", geneFunction.x:geneFunction.y, sep = "-") %>%
-  count(ppi_function) %>% 
-  arrange(desc(n))
-
-```
-
-```{r}
-pos_fun_joined %>% 
-  unite(col = "ppi_function", geneFunction.x:geneFunction.y, sep = "#") %>%
-  count(ppi_function) %>%
-  separate(ppi_function, into = c("geneFunction.x", "geneFunction.y"), sep="#") %>%
-  ggplot(aes(x = geneFunction.x, y = geneFunction.y)) +
-  geom_tile(aes(fill = n)) +
-  theme(
-        panel.border = element_rect(linetype = "blank", fill = NA),
-        panel.grid = element_line(colour = "white", linetype = "dotted"),
-        panel.spacing = unit(0.3, "lines"),
-        axis.text.x = element_text(
-            angle = 90,
-            hjust = 1,
-            vjust = 0.5
-        ),
-    ) +
-    labs(x = "", y = "") 
-    #guides(fill = "none")
-  
-```
-
-
 

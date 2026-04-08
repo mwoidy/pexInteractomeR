@@ -231,14 +231,11 @@ comp$test_statistic
 comp$p_two_sided
 
 #plot both models (eg powerlaw vs log-normal)
-plot(pl_model, main = "Degree distribution")
+p_distr <- plot(pl_model, main = "Degree distribution")
 lines(pl_model, col = "red")
 lines(ln_model, col = "blue")
 
-legend("bottomleft",
-       legend = c("Power law", "Log-normal"),
-       col = c("red", "blue"),
-       lty = 1)
+legend("bottomleft",legend = c("Power law", "Log-normal"),col = c("red", "blue"),lty = 1)
 
 ```
 

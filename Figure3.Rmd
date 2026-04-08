@@ -11,7 +11,6 @@ library(ggdendro)
 library(AnnotationDbi)
 library(org.Hs.eg.db)
 library(ggpubr)
-
 ```
 
 Set paths to files
@@ -24,6 +23,27 @@ protein_expr <- read_xlsx("../Manuskript/Julia_Analysen/173_ePI/results/paramete
   pivot_longer(cols = 2:51, names_to = "tissue", values_to = "expression")
 
 tip_tissue <- read_xlsx("../Manuskript/Julia_Analysen/173_ePI/results/number_of_TiP_per_tissue.xlsx", col_names=c("tissue","n"), skip=1)
+
+
+###### import information on peroxins ######
+my_file_function <- "../Manuskript/Supplement/Supplementary Files final/9_genesFunction.txt"  #functions of peroxisomal proteins
+#read genes with their respective functions and sort
+pex_functions <- read_tsv(my_file_function, show_col_types = FALSE)
+#get all functions in separate cols and rows 
+fun_genes <- pex_functions %>% 
+  dplyr::select(symbol, geneFunction) %>% 
+  separate_longer_delim(geneFunction, delim = "; ") 
+
+peroxins <- fun_genes %>% 
+  filter(geneFunction == "peroxin") %>% 
+  pull(symbol)
+
+fun_pl <- fun_genes %>% 
+  mutate(gene_class = if_else(symbol %in% peroxins, "peroxin", "other")) %>% 
+  select(symbol, gene_class) %>% 
+  unique() %>%
+  left_join(pex_degree, by = join_by(symbol == symbol))
+
 ```
 
 How often are proteins not expressed in any of the 50 tissues
@@ -95,7 +115,29 @@ p
 
 
 ```
+Revision Analysis of n TiP for lysosomes
+```{r}
+#data files
+lys_func <- read_xlsx("data/revision/proteins_GO_lysosome_20326.xlsx",sheet="overview")
+lys_tip <- read_xlsx("data/revision/proteins_expert_curated_lysosome_TiP.xlsx")
 
+p_lys <- lys_tip %>% 
+  rowwise() %>% 
+  mutate(n = length(unlist(str_split(TiP_in_tissue, ",")))) %>% 
+  ungroup %>% 
+  left_join(lys_func, by=join_by(GeneID == GeneID)) %>% 
+  filter(!is.na(Function)) %>%
+  ggplot(aes(x=Function, y=n)) + 
+  geom_boxplot(aes(fill = Function), stat="boxplot") + 
+  scale_fill_manual(values = c("Biogenese" = "#FDD49F", "Enzyme" = "#D9D9D9")) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45,hjust = 1,vjust = 1), legend.position = "none") + 
+  scale_y_continuous(breaks=c(0,2,4,6,8,10)) +
+  labs(x = "", y = "n tissues") +
+  stat_compare_means(method = "wilcox.test", label.x = 1.5, label.y = 9, label = "p.format")
+
+print(p_lys)
+```
 
 
 Fig 3D: TiP LCC
@@ -112,67 +154,11 @@ tip_lcc_pertissue <- tip_genes_per_tissue %>%
 Which TiP are most often member of a lcc
 ```{r}
 #tissues that have sig larger lcc than expected by chance
-#sig_tissues <- c("tongue", "parathyroid gland", "liver", "adrenal gland", "kidney", "duodenum", "midbrain", "choroid plexus", "spinal cord", "salivary gland", "heart muscle", "adipose tissue", "skeletal muscle", "colon",  "small intestine")
 #tissues lcc > 2
 sig_tissues <- c("tongue", "parathyroid gland", "liver", "adrenal gland", "kidney", "duodenum", "midbrain", "choroid plexus", "heart muscle", "adipose tissue", "skeletal muscle",  "small intestine")
 
 tip_lcc_pertissue %>% filter(tissue %in% sig_tissues) %>% group_by(SYMBOL) %>% summarise(n = n()) %>% arrange(desc(n))
 ```
-
-Matrix plot of TiP per Tissue
-
-Cluster before plotting
-```{r}
-
-temp_clustering <- tip_lcc_pertissue %>% 
-  filter(tissue %in% sig_tissues) %>%
-  dplyr::select(tissue, SYMBOL) %>% 
-  mutate(ppi = 1) %>% 
-  complete(tissue, SYMBOL, fill=list(ppi = 0))
-
-temp_matrix <- as.matrix(column_to_rownames(temp_clustering %>% pivot_wider(names_from = SYMBOL, values_from = ppi), var="tissue"))
-
-clust_tissue <- hclust( dist(temp_matrix, method = "binary"))
-clust_genes <- hclust( dist(t(temp_matrix), method = "binary"))
-ord_tissues <- clust_tissue$order
-dendro_tissue <- as.dendrogram(clust_tissue)
-dendro_tissue_plot <- ggdendrogram(dendro_tissue, rotate=TRUE) + theme(axis.text.x = element_blank(), axis.text.y = element_blank())
-
-ord_genes <- clust_genes$order
-dendro_genes <- as.dendrogram(clust_genes)
-dendro_genes_plot <- ggdendrogram(dendro_genes) + theme(axis.text.x = element_blank(), axis.text.y = element_blank())
-
-tip_map <- temp_clustering %>% 
-  mutate(SYMBOL = factor(SYMBOL, levels = colnames(temp_matrix)[ord_genes])) %>%
-  mutate(tissue = factor(tissue, levels = rownames(temp_matrix)[ord_tissues])) %>%
-  mutate(ppi = as.character(ppi)) %>% 
-  ggplot() + 
-  geom_tile(aes(x=tissue, y=SYMBOL, fill=ppi), color="white") +
-  scale_fill_manual(values = c("#D9D9D9", "#E5D542")) + 
-  theme_light() +
-  theme(
-        panel.border = element_rect(linetype = "blank", fill = NA),
-        panel.grid = element_line(colour = "white", linetype = "dotted"),
-        panel.spacing = unit(0.3, "lines"),
-        axis.text.x = element_text(
-            angle = 90,
-            hjust = 1,
-            vjust = 0.5),
-        ) +
-  scale_x_discrete(name="") + 
-  scale_y_discrete(name="") +
-  guides(fill = "none") +
-  coord_flip()
-tip_map
-  
-```
-
-
-Save heatmap to files
-```{r}
-ggsave("../Manuskript/Figures/Figure3/tip_heatmap.pdf", plot = tip_map, width = 13, height = 5, units = "cm", scale = 1.5)
-```
-
 
 
 Extract tissue specific modules: function
