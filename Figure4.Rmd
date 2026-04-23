@@ -1,5 +1,5 @@
 ---
-title: "expressionEnrichment"
+title: "Figure 4"
 output: html_document
 ---
 
@@ -20,10 +20,10 @@ library(igraph)
 
 Set files
 ```{r}
-dir <- "../Manuskript/"
+dir <- ""
 
 #tipNeighbors from Python Notebook
-my_tipNeighbors_file <- paste(dir, "Julia_Analysen/173_ePI/results/parameter/TiPneighbors_to_PEX_LCC_alltissues_customsymbol.xlsx", sep="")
+my_tipNeighbors_file <- paste(dir, "data/TiPneighbors_to_PEX_LCC_alltissues_customsymbol.xlsx", sep="")
 tipNeighbors <- read_xlsx(my_tipNeighbors_file)
 
 ```
@@ -31,33 +31,9 @@ tipNeighbors <- read_xlsx(my_tipNeighbors_file)
 Settings for GO enrichment and heatmap generation
 ```{r}
 #GO enrichment
-#set the desired GO-ontology here eg MF, BP or CC
-ontology <- "CC"
-pattern <- "(TiPneighbors_Julia)"
-my_folder <- paste(dir, "Julia_Analysen/173_ePI/results/parameter/enrichment/Julia/", ontology, sep = "")
-my_heatmap_file <- paste(dir, "Figures/Figure4/expressionEnrichmentHeatmap_",ontology,".pdf", sep = "")
-
-```
-
-
-Defines functions that read each enrichment file in a specific folder, concats all files in one big table and adds one extra column that specifies the tissue name. 
-```{r }
-read_concat_files = function(myFolder, pattern) {
-  filenames <- list.files(myFolder, pattern=pattern, full.names=TRUE)
-  tibs <- lapply(filenames, read_xls_files)
-  for(i in 1:(length(tibs)-1)) { 
-    tibs[[i+1]] = dplyr::bind_rows(tibs[[i]], tibs[[i+1]])
-    }
-  return(tibs[[length(tibs)]])
-}
-
-#provides functionality to read multiple tissue enrichment files
-read_xls_files = function(file) {
-  f <- str_split(file, "/", simplify = TRUE)
-  n <- length(f)
-  df <- read_excel(file, col_types= c("text","text","numeric","numeric","numeric","numeric","numeric","numeric","numeric")) %>% mutate(tissue = str_split(f[n], "_TiP", simplify = TRUE)[1])
-  return(df)
-}
+ontology <- "MF"
+my_enrichment_file <- paste(dir, "data/",ontology,"_GO_enrichment.xlsx", sep = "")
+my_heatmap_file <- paste(dir, "output/figure4/expressionEnrichmentHeatmap_",ontology,".pdf", sep = "")
 
 ```
 
@@ -83,7 +59,7 @@ print(tipNeighbors)
 
 Save as supplementary file
 ```{r}
-write_tsv(tipNeighbors, "10_nonPEX_TiPneighbors.txt")
+write_tsv(tipNeighbors, "output/SupplementalFiles/10_nonPEX_TiPneighbors.txt")
 ```
 
 
@@ -98,12 +74,13 @@ bp <- tipNeighbors %>%
   xlab("") + 
   ylab("n of interacting TiP")
 
-my_file <- paste(dir, "Figures/TiPperTissue.pdf", sep="")
+my_file <- paste(dir,"output/TiPperTissue.pdf", sep="")
 ggsave(my_file, plot = bp)
 
 bp
 
 ```
+
 
 ```{r}
 #show n of TiPs 
@@ -119,22 +96,22 @@ print(tipNeighbors)
 
 Plot enriched GO Terms of neighboring TiPs
 
-Run functions to prepare data for plotting
-```{r warning= FALSE}
-dat_enr <- read_concat_files(my_folder, pattern)
-
+```{r}
+#read enrichment file
+dat_enr <- read_xlsx(my_enrichment_file, col_types= c("text","text","numeric","numeric","numeric","numeric","numeric", "text"))
 ```
+
 
 Run a clustering to reorder tissues
 ```{r}
-#filter for sign results and show only those terms that have > 1 genes 
+#filter for sign results and show only those terms that have > 2 genes 
 dat_enr %>% 
   filter(`P-value-corrected`< 0.05) %>% 
-  filter(Abundance_group > 1) %>% 
-  dplyr::select(tissue, Association_term, `P-value-corrected`, OR) -> clustdata
+  filter(Abundance_group > 2) %>% 
+  dplyr::select(Tissue, Association_term, `P-value-corrected`, OR) -> clustdata
 
 clustdata %>% 
-  dplyr::select(tissue, Association_term, `P-value-corrected`) -> temp
+  dplyr::select(Tissue, Association_term, `P-value-corrected`) -> temp
 #prepare tibble for conversion into matrix
 temp %>% 
   pivot_wider(names_from=c(Association_term), values_from= c('P-value-corrected')) -> clustdata_wide
@@ -142,7 +119,7 @@ rm(temp)
 clustdata_wide %>% 
   mutate_all(~replace(.,is.na(.), 0)) -> temp
 #convert to matrix
-as.matrix(column_to_rownames(temp, var = "tissue")) -> matrix
+as.matrix(column_to_rownames(temp, var = "Tissue")) -> matrix
 rm(temp)
 
 #cluster tissues
@@ -164,7 +141,7 @@ cols[9] = "#f0f0f0"
 
 p <- clustdata %>% 
   mutate(Association_term = factor(Association_term, levels = colnames(matrix)[ord_go])) %>% 
-  mutate(tissue = factor(tissue, levels = rownames(matrix)[ord])) %>%
+  mutate(tissue = factor(Tissue, levels = rownames(matrix)[ord])) %>%
   mutate(OR = if_else(is.infinite(OR), max(OR[is.finite(OR)]), OR)) %>%
   ggplot(aes(x=tissue, y=Association_term)) + 
   geom_tile(fill="white") + 
@@ -177,15 +154,9 @@ p <- clustdata %>%
   labs(x = "", y = "") + 
   theme(legend.position="none")
 
-#ggsave(my_heatmap_file, plot = p, width = 16, height = 12, unit="cm", scale = 1.8)
+ggsave(my_heatmap_file, plot = p, width = 16, height = 12, unit="cm", scale = 1.8)
 
 p
-```
-
-Write enrichment to file
-```{r}
-file_enr_to <- paste("GO_enrichment_TiP_neighbors_", ontology, ".txt", sep="")
-write_tsv(clustdata, file = "file_enr_to")
 ```
 
 
@@ -221,11 +192,11 @@ Get tissue-specific subnetwork of enriched TiP neighbors
 ```{r}
 
 #set the file for the tissue specific interactome (in our case retina)
-tissueFile <- "../Manuskript/Julia_Analysen/173_ePI/results/interactome_edgelist_retina.csv"
+tissueFile <- "data/interactome_edgelist_retina.csv"
 #genes for which we want to create a subnetwork
 genes_sub <- c(neighbors_enr, c("CRAT", "PEX19", "RHOA", "VAPA", "MYO5A", "ACTG1", "AKAP11", "TRIM37", "IMPDH2", "PIPOX", "CCDC33", "VIM", "PEX13", "EEHADH")) 
 
-tissue_neighbors_file <- paste(dir, "Figures/Figure4/retina_TiP_enr_neigbors.txt", sep="")
+tissue_neighbors_file <- paste(dir, "output/figure4/retina_TiP_enr_neigbors.txt", sep="")
 write_tsv(as.data.frame(neighbors_enr), tissue_neighbors_file)
 
 interactome <- read_csv(tissueFile, skip=1, col_names=c("p1_entrez","p2_entrez","protein1","protein2"), col_types= "cccc") %>% 
@@ -246,7 +217,7 @@ v_network <- intersect(V(network)$name, genes_sub)
 tissue_network <- induced_subgraph(network, v_network)
 
 #write to subnetwork file
-subnetwork_file <- paste(dir, "Figures/Figure4/retina_enriched_network.txt", sep ="")
+subnetwork_file <- paste(dir, "output/figure4/retina_enriched_network.txt", sep ="")
 as.data.frame(as_edgelist(tissue_network)) %>% write_tsv(subnetwork_file)
 ```
 

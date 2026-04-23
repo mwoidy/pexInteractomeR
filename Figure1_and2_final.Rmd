@@ -1,5 +1,5 @@
 ---
-title: "R code for Figures 1&2"
+title: "Figures 1&2"
 output: html_document
 ---
 
@@ -14,50 +14,50 @@ library(readxl)
 library(ggpubr)
 library(rstatix)
 library(igraph)
+library(readxl)
 ```
 
 
 Variables and data
 ```{r}
 #colors from iwanthue https://medialab.github.io/iwanthue/?utm_source=Nature+Briefing&utm_campaign=e0c3e024d4-briefing-dy-20211006&utm_medium=email&utm_term=0_c9dfd39373-e0c3e024d4-44542065
-colors <- read_tsv("colors_fancy.txt", col_names = F, show_col_types = FALSE) %>% pull()
+colors <- read_tsv("data/colors_fancy.txt", col_names = F, show_col_types = FALSE) %>% pull()
 mygrey <- "#F5F5F5"
 
 #import
-my_file_pos <- "../Manuskript/Julia_Analysen/positiveScreenAll_20181005_corrected.txt"
+my_file_pos <- "data/2_Bret_screen_final.xlsx"
 #literature interactions
-my_file_interactions <- "../Manuskript/Julia_Analysen/final_2023_10/results/Peroxisomal_interactions_across_dbs_final.xlsx" 
+my_file_interactions <- "data/Peroxisomal_interactions_across_dbs_final.xlsx" 
 #import of Yifrach Dataset
-my_yifrach_genes <- "../Manuskript/Julia_Analysen/yifrach_bearbeitet.xlsx"
+#Gene / FinalScore / DetectionFrequency
+my_yifrach_genes <- "data/yifrach.xlsx"
 #ePI interactome
-ePI_file <- ("../Manuskript/Julia_Analysen/final_2023_10/results/ePI_edgelist.csv")
+ePI_file <- "data/ePI_edgelist.csv"
 #random sampling lcc
-my_random_lcc_file <- ("1000random_samples_LCC_disease_genes_in_interactome.csv")
+my_random_lcc_file <- "data/1000_degree_matched_random_samples_LCC_disease_genes_in_interactome.xlsx"
 #data on degree of ePI members
 my_intExt_degree_file <- ("../Manuskript/Julia_Analysen/173_ePI/results/parameter/characteristics_ePI_degrees.csv")
 #contains comparison of lit vs bret interactions
-my_file_mapping <- "../Manuskript/Julia_Analysen/results/translations/mapper.xlsx" #mapping from entrez to symbol
-my_file_function <- "../Manuskript/Supplement/Supplementary Files final/9_genesFunction.txt"  #functions of peroxisomal proteins
+my_file_mapping <- "data/mapper.xlsx" #mapping from entrez to symbol
+my_file_function <- "data/9_genesFunction.txt"  #functions of peroxisomal proteins
 
 #output
-my_heatmap_file = "../Manuskript/Figures/Figure2/2B_heatmap_positives.pdf" #output for heatmap file
+my_heatmap_file = "output/figure2/2B_heatmap_positives.pdf" #output for heatmap file
 ```
 
 
-Count genes from the original results table 20211227_positivesBRET.xlsx
+Genes from the results
 ```{r}
-positives_original <- read_tsv(my_file_pos, col_names=FALSE, show_col_types = FALSE)
-#following genes removed from analyses since there is no evidence for peroxisomal location (see also file "Nachfrage_pexProteine.xls")
-remove_genes <- c("DNAJC10", "MPV17L2", "ACOT2", "ACOT2v1", "ACOT2v2", "MAVS", "RHOC", "SLC22A5", "ACSF3")
-g <- union(unique(positives_original$X1), unique(positives_original$X2))
-g_isoforms <- sort(setdiff(g, remove_genes))
+positives_original <- read_xlsx(my_file_pos, col_names=TRUE)
+g_isoforms <- sort(union(unique(positives_original$ProteinA), unique(positives_original$ProteinB)))
 g_isoforms
 ```
 
 Prepare everything for heatmap plotting
 ```{r}
 #read all positives
-positives <- read_xlsx(my_file_interactions) %>% replace(is.na(.), 0)
+positives <- read_xlsx(my_file_interactions) %>% 
+  replace(is.na(.), 0)
 
 #load mapper and prepare 
 mapper <- read_excel(my_file_mapping)
@@ -104,8 +104,8 @@ isos
 
 ```{r}
 p_inter_with_iso <- positives_original %>% 
-  filter(!X1 %in% remove_genes & !X2 %in% remove_genes) %>% 
-  select(X1, X2)
+  filter(!ProteinA %in% remove_genes & !ProteinB %in% remove_genes) %>% 
+  select(ProteinA, ProteinB)
 
 p_graph_with_iso <- graph_from_edgelist(as.matrix(p_inter_with_iso), directed = FALSE)
 #create graph without the isoforms in order to avoid redundancy
@@ -142,7 +142,7 @@ jaccard_plot <- jacc_all %>%
   scale_fill_manual(values = c("#94d9c5", "#D3D3D3")) + stat_compare_means(method = "wilcox.test", label.x = 1.5, label.y = 0.3, label = "p.format") + 
   theme(axis.text.x = element_text(angle = 45,hjust = 1,vjust = 1), legend.position = "none")
 
-ggsave("../Manuskript/Figures/Figure1/jaccard_isoform_boxplot.pdf", plot = jaccard_plot, width = 3, height = 5, units = "cm", scale = 1.6)
+ggsave("output/figure1/jaccard_isoform_boxplot.pdf", plot = jaccard_plot, width = 3, height = 5, units = "cm", scale = 1.6)
 jaccard_plot
 ```
 
@@ -207,7 +207,7 @@ p<- isoform_ppi %>% ggplot() +
   labs(x="", y="") + 
   guides(fill = "none")
 
-ggsave("../Manuskript/Figures/Figure1/isoform_ppi_matrix.pdf", plot = p, width = 13, height=4, scale = 1.6, units = "cm")
+ggsave("output/figure1/isoform_ppi_matrix.pdf", plot = p, width = 13, height=4, scale = 1.6, units = "cm")
 
 print(p)
 ```
@@ -224,7 +224,7 @@ yifrach_genes %>%
   count()
 ```
 
-Fig 2b: Heatmap of ePI (iBRET positives plus literature interactions of all pex associated genes according to Yifrach et al)
+Heatmap of ePI (iBRET positives plus literature interactions of all pex associated genes according to Yifrach et al)
 
 (1) Read ePI interactions
 ```{r}
@@ -236,7 +236,7 @@ ePI_graph <- graph_from_edgelist(as.matrix(ePI_edge), directed = FALSE)
 ```
 
 (2)
-some operations that prepare the data for Fig 2B
+some operations that prepare the data
 specifically, this sets a lower triangle for heatmap plotting
 ```{r}
 #create igraph with bret interactions only
@@ -330,10 +330,10 @@ p_bar <- pex_degree %>%
   coord_flip()
 p_bar
 
-ggsave("../Manuskript/Figures/Figure1/top_hubs.pdf", plot = p_bar, width = 3.5, height = 3.5, units = "cm", scale = 1.5)
+ggsave("output/figure1/top_hubs.pdf", plot = p_bar, width = 3.5, height = 3.5, units = "cm", scale = 1.5)
 ```
-Fig 1C degree distribution
 
+Fig 1C degree distribution
 ```{r}
 # List of degrees
 G.degrees <- degree(pex_graph)
@@ -351,7 +351,7 @@ p <- ggplot(G.degree.histogram, aes(x = log(G.degrees), y = log(Freq))) +
   scale_x_continuous("Number of interaction partners") +
   scale_y_continuous("Number of proteins", breaks = c(0,1,2,3)) +
   theme_classic()
-ggsave("../Manuskript/Figures/Figure1/degree_distribution.pdf", plot = p, width = 4, height = 3, units = "cm", scale = 2)
+ggsave("output/figure1/degree_distribution.pdf", plot = p, width = 4, height = 3, units = "cm", scale = 2)
 p
 
 ```
@@ -360,7 +360,9 @@ Check for power law distribution
 ```{r}
 library(poweRlaw)
 
-deg <- G.degrees[G.degrees > 0] 
+#deg <- G.degrees[G.degrees > 0] 
+deg <- G.degrees_ePI[G.degrees_ePI > 0] 
+
 pl_model <- displ$new(deg)  # discrete power law
 
 #xmin
@@ -378,12 +380,14 @@ bs_pl$p
 #p < 0,05 → Power law unlikely
 
 ```
+
 Compare to log-normal distribution
 ```{r}
 ln_model <- dislnorm$new(deg)
 #ximn
 ln_model$setXmin(pl_model$getXmin())
 ln_model$setPars(estimate_pars(ln_model))
+
 #likelihood test
 comp <- compare_distributions(pl_model, ln_model)
 #comp
@@ -391,6 +395,11 @@ comp <- compare_distributions(pl_model, ln_model)
 #results
 comp$test_statistic
 comp$p_two_sided
+
+# Save as PNG using png() and dev.off()
+#png(paste(path_to, "PI_distr_comparison.png", sep=""))
+png("output/figure2/ePI_distr_comparison.png")
+
 
 #plot both models (eg powerlaw vs log-normal)
 plot(pl_model, main = "Degree distribution")
@@ -404,35 +413,39 @@ legend("bottomleft",
 
 
 
-```
+# Close the PNG device
+dev.off()
 
+
+```
 
 
 Load edgelist of extendedPI and plot degree distribution
 ```{r}
 # List of degrees
-G.degrees <- degree(ePI_graph)
+G.degrees_ePI <- degree(ePI_graph)
 
 # Let's count the frequencies of each degree
-G.degree.histogram <- as.data.frame(table(G.degrees))
+G.degree_ePI.histogram <- as.data.frame(table(G.degrees_ePI))
 
 # Need to convert the first column to numbers, otherwise
 # the log-log thing will not work (that's fair...)
-G.degree.histogram[,1] <- as.numeric(G.degree.histogram[,1])
+G.degree_ePI.histogram[,1] <- as.numeric(G.degree_ePI.histogram[,1])
 
 # Now, plot it!
-p <- ggplot(G.degree.histogram, aes(x = log(G.degrees), y = log(Freq))) +
+p <- ggplot(G.degree_ePI.histogram, aes(x = log(G.degrees_ePI), y = log(Freq))) +
   geom_point(shape = 21, colour = "black", fill = "grey", stroke = 1) +
   scale_x_continuous("Number of interaction partners") +
   scale_y_continuous("Number of proteins", breaks = c(0,1,2,3)) +
   theme_classic()
-ggsave("../Manuskript/Figures/Figure2/degree_distributio_ePI.pdf", plot = p, width = 4, height = 3, units = "cm", scale = 2)
+ggsave("output/figure2/degree_distributio_ePI.pdf", plot = p, width = 4, height = 3, units = "cm", scale = 2)
 p
 ```
 
+
 Figure 2F: Create Barplot for random sampling
 ```{r}
-p<- read_delim(my_random_lcc_file, delim=";") %>% 
+p<- read_xlsx(my_random_lcc_file) %>% 
   dplyr::rename(lcc = "LCC size of random disease genes") %>% 
   ggplot(aes(x=lcc)) + 
   geom_histogram(binwidth=1, color="white", fill="#D3D3D3") + 
@@ -442,7 +455,7 @@ p<- read_delim(my_random_lcc_file, delim=";") %>%
   xlab("lcc size") +
   ylab("Number of permutations")
 
-ggsave("../Manuskript/Figures/Figure2/lcc_disease_module_histogram.pdf", plot = p, width = 4.5, height = 3, units = "cm", scale = 2) 
+ggsave("output/figure2/lcc_disease_module_histogram.pdf", plot = p, width = 4.5, height = 3, units = "cm", scale = 2) 
 
 p
 
@@ -450,7 +463,6 @@ p
 
 
 
-Analyse ppi between different functions
 Read functions 
 ```{r}
 #read genes with their respective functions and sort
@@ -506,7 +518,7 @@ p <- fun_pl %>%
   stat_compare_means(method = "wilcox.test", label.x = 1.5, label.y = 65, label = "p.format")
 
 p
-ggsave("../Manuskript/Figures/Figure1/degree_boxplot.pdf", plot = p, width = 3.5, height = 5.5, units = "cm", scale = 1.6)
+ggsave("output/figure1/degree_boxplot.pdf", plot = p, width = 3.5, height = 5.5, units = "cm", scale = 1.6)
 ```
 
 
@@ -532,7 +544,7 @@ p <- fun_pl %>%
   stat_compare_means(method = "wilcox.test", label.x = 1.5, label.y = 0.4, label = "p.format")
 
 p
-ggsave("../Manuskript/Figures/Figure1/between_boxplot.pdf", plot = p, width = 3.5, height = 5.5, units = "cm", scale = 1.6)
+ggsave("output/figure1/between_boxplot.pdf", plot = p, width = 3.5, height = 5.5, units = "cm", scale = 1.6)
 ```
 
 
@@ -557,7 +569,7 @@ p <- fun_pl %>%
   stat_compare_means(method = "wilcox.test", label.x = 1.5, label.y = 0.01, label = "p.format")
 
 p
-ggsave("../Manuskript/Figures/Figure1/closeness_boxplot.pdf", plot = p, width = 3.5, height = 5.5, units = "cm", scale = 1.6)
+ggsave("output/figure1/closeness_boxplot.pdf", plot = p, width = 3.5, height = 5.5, units = "cm", scale = 1.6)
 
 
 ```
@@ -605,7 +617,7 @@ homo_plot <- tibble(freq = c(0.138, 0.450, 0.277), interactome = c("UCR", "ePI",
   coord_flip()
 homo_plot
 
-ggsave("../Manuskript/Figures/Figure2/homomers_compare.pdf", plot = homo_plot, width = 5, height = 2.5, units = "cm", scale = 1.5)
+ggsave("output/figure2/homomers_compare.pdf", plot = homo_plot, width = 5, height = 2.5, units = "cm", scale = 1.5)
 ```
 
 
@@ -650,7 +662,7 @@ p<- ePI_in_out_degree %>%
   theme_minimal() + 
   theme(panel.grid.major = element_line(colour = "grey"))
 
-ggsave("../Manuskript/Figures/Figure2/degree_out.pdf", plot = p, width = 6, height = 3, units = "cm", scale = 2)
+ggsave("output/figure2/degree_out.pdf", plot = p, width = 6, height = 3, units = "cm", scale = 2)
 p
 
 ```
@@ -673,9 +685,10 @@ p<- ePI_in_out_degree %>%
   theme_minimal() + 
   theme(panel.grid.major = element_line(colour = "grey"))
 
-ggsave("../Manuskript/Figures/Figure2/degree_in.pdf", plot = p, width = 6, height = 3, units = "cm", scale = 2)
+ggsave("output/figure2/degree_in.pdf", plot = p, width = 6, height = 3, units = "cm", scale = 2)
 p
 ```
+
 ```{r}
 
 require("ggrepel")
@@ -694,7 +707,7 @@ p<- ePI_in_out_degree %>%
   theme_minimal() + 
   theme(panel.grid.major = element_line(colour = "grey"))
 
-ggsave("../Manuskript/Figures/Figure2/degree_yifrach.pdf", plot = p, width = 6, height = 3, units = "cm", scale = 2)
+ggsave("output/figure2/degree_yifrach.pdf", plot = p, width = 6, height = 3, units = "cm", scale = 2)
 p
 ```
 

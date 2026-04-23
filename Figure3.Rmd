@@ -1,5 +1,5 @@
 ---
-title: "examine tissue specific networks"
+title: "Figure 3: examine tissue specific networks"
 output: html_notebook
 ---
 
@@ -7,7 +7,6 @@ output: html_notebook
 ```{r}
 library(tidyverse)
 library(readxl)
-library(ggdendro)
 library(AnnotationDbi)
 library(org.Hs.eg.db)
 library(ggpubr)
@@ -15,18 +14,18 @@ library(ggpubr)
 
 Set paths to files
 ```{r}
-dir <- "../Manuskript/"
+dir <- ""
 
 #load data for tissue expression per protein
-protein_expr <- read_xlsx("../Manuskript/Julia_Analysen/173_ePI/results/parameter/HPA_PEX_ExpressedTiP_Matrix_transpose.xlsx") %>% 
+protein_expr <- read_xlsx("data/HPA_PEX_ExpressedTiP_Matrix_transpose.xlsx") %>% 
   rename("...1" = "protein") %>%
   pivot_longer(cols = 2:51, names_to = "tissue", values_to = "expression")
 
-tip_tissue <- read_xlsx("../Manuskript/Julia_Analysen/173_ePI/results/number_of_TiP_per_tissue.xlsx", col_names=c("tissue","n"), skip=1)
+tip_tissue <- read_xlsx("data/number_of_TiP_per_tissue.xlsx", col_names=c("tissue","n"), skip=1)
 
 
 ###### import information on peroxins ######
-my_file_function <- "../Manuskript/Supplement/Supplementary Files final/9_genesFunction.txt"  #functions of peroxisomal proteins
+my_file_function <- "data/9_genesFunction.txt"  #functions of peroxisomal proteins
 #read genes with their respective functions and sort
 pex_functions <- read_tsv(my_file_function, show_col_types = FALSE)
 #get all functions in separate cols and rows 
@@ -40,7 +39,7 @@ peroxins <- fun_genes %>%
 
 fun_pl <- fun_genes %>% 
   mutate(gene_class = if_else(symbol %in% peroxins, "peroxin", "other")) %>% 
-  select(symbol, gene_class) %>% 
+  dplyr::select(symbol, gene_class) %>% 
   unique() %>%
   left_join(pex_degree, by = join_by(symbol == symbol))
 
@@ -86,8 +85,8 @@ p <- protein_expr %>%
   scale_x_discrete(name="") + 
   theme(legend.position="none")
 
-p
-#ggsave("../Manuskript/Figures/Figure3/fraction_expression_per_tissue.pdf", plot = p, width = 7, height = 4, units = "cm", scale = 2)
+print(p)
+ggsave("output/figure3/fraction_expression_per_tissue.pdf", plot = p, width = 7, height = 4, units = "cm", scale = 2)
 
 
 ```
@@ -109,9 +108,9 @@ p<- protein_expr %>%
   labs(x = "", y = "n tissues") +
   stat_compare_means(method = "wilcox.test", label.x = 1.5, label.y = 9, label = "p.format")
 
-p
+print(p)
 
-#ggsave("../Manuskript/Figures/Figure3/n_tissues_TiP_peroxins.pdf", plot = p, width = 5, height = 4, units = "cm", scale = 2)
+ggsave("output/figure3/n_tissues_TiP_peroxins.pdf", plot = p, width = 5, height = 4, units = "cm", scale = 2)
 
 
 ```
@@ -142,7 +141,7 @@ print(p_lys)
 
 Fig 3D: TiP LCC
 ```{r}
-tip_genes_per_tissue <- read_xlsx("../Manuskript/Julia_Analysen/173_ePI/results/LCC_TiP_PEX.xlsx") %>% 
+tip_genes_per_tissue <- read_xlsx("data/LCC_TiP_PEX.xlsx") %>% 
   filter(TiP_LCC_genes != "all single") %>% 
   mutate(TiP_LCC_genes = str_remove_all(TiP_LCC_genes, "[{|}| ]")) %>% 
   separate_longer_delim(TiP_LCC_genes, ",")
@@ -157,50 +156,18 @@ Which TiP are most often member of a lcc
 #tissues lcc > 2
 sig_tissues <- c("tongue", "parathyroid gland", "liver", "adrenal gland", "kidney", "duodenum", "midbrain", "choroid plexus", "heart muscle", "adipose tissue", "skeletal muscle",  "small intestine")
 
-tip_lcc_pertissue %>% filter(tissue %in% sig_tissues) %>% group_by(SYMBOL) %>% summarise(n = n()) %>% arrange(desc(n))
+tip_lcc_pertissue %>% 
+  filter(tissue %in% sig_tissues) %>% 
+  group_by(SYMBOL) %>% 
+  summarise(n = n()) %>% 
+  arrange(desc(n))
 ```
 
 
-Extract tissue specific modules: function
+Figure 3D: Extract function of members of TiP-lcc
 ```{r}
-#load network and write submodule as csv
-library(igraph)
-extract_submodule <- function(tissueFile, genes) {
-  interactome <- read_csv(tissueFile, skip=1, col_names=c("p1_entrez","p2_entrez","protein1","protein2"), show_col_types = FALSE) %>% dplyr::select(protein1,protein2)
-  network <- simplify(graph_from_data_frame(interactome, directed = FALSE))
-  v_network <- intersect(V(network)$name, genes)
-  tissue_network <- induced_subgraph(network, v_network)
-
-  return(tissue_network)
-}
-```
-
-Extract TiP interactions
-```{r}
-
-folder_from <- "../Manuskript/Julia_Analysen/173_ePI/results/ePI_edgelist_"
-folder_to <- "../Manuskript/Figures/Figure3/tissueNetworks/"
-gene_sets <- list()
-
-for (i in 1:length(sig_tissues)) {
-  file <- paste(folder_from, sig_tissues[i], ".csv", sep="")
-  genes <- tip_lcc_pertissue %>% filter(tissue == .env$sig_tissues[i]) %>% pull(SYMBOL)
-  #add genes to our gene_sets list
-  gene_sets[[sig_tissues[i]]] <- genes
-  net <- extract_submodule(file, genes)
-  #save edge list for further processing e.g. to construct network images
-  file_to <- paste(folder_to, sig_tissues[i], sep="")
-  as.data.frame(as_edgelist(net)) %>% write_tsv(file_to, col_names = FALSE)
-}
-```
-
-Function of members of TiP-lcc
-```{r}
-my_file_function <- "../Manuskript/Tables/genesFunction.txt"
-#read genes with their respective functions and sort
-functions <- read_tsv(my_file_function, show_col_types = FALSE)
 #get all functions in separate cols and rows 
-fun_genes <- functions %>% 
+fun_genes <- pex_functions %>% 
   dplyr::select(symbol, geneFunction) %>% 
   separate_longer_delim(geneFunction, delim = "; ") %>%
   filter(!geneFunction %in% c("membrane", "matrix"))
@@ -214,11 +181,11 @@ getFunction <- function(fun_genes, gene_list) {
 }
 ```
 
-
+Get functions by tissue.
 ```{r}
 #colors
 tissue_filt = "tongue"
-fun_cols <- deframe(read_tsv("fun_colors.txt", show_col_types = FALSE))
+fun_cols <- deframe(read_tsv("data/fun_colors.txt", show_col_types = FALSE))
 #get barplots
 # col fill "#D3D3D3"
 gene_list <- tip_lcc_pertissue %>% filter(tissue == tissue_filt) %>% pull(SYMBOL)
@@ -235,60 +202,6 @@ p <- getFunction(fun_genes, gene_list) %>%
   guides(fill = "none")
 
 #ggsave
-file_save = paste("../Manuskript/Figures/Figure3/",tissue_filt,"_function.pdf", sep="")
+file_save = paste("output/figure3/",tissue_filt,"_function.pdf", sep="")
 ggsave(file_save, plot = p, width = 4, height = 3, units = "cm", scale = 2)
-```
-
-
-Matrix degree of a protein by tissue
-```{r}
-#print matrix: pex proteins vs degree by different tissues
-#read file
-tissue_degree <- read_csv("../Manuskript/Julia_Analysen/173_ePI/results/parameter/_PEX_degree.csv", show_col_types = FALSE) 
-tissue_degree_tidy <- tissue_degree %>%
-  filter(all != 0) %>%
-  dplyr::select(!c(all,GeneID)) %>%
-  mutate_all(~replace(.,is.na(.), 0)) %>%
-  pivot_longer(cols = 1:50, names_to = "tissue", values_to = "degree") %>% 
-  group_by(Symbol) %>% 
-  mutate(z_score = scale(degree)) %>% 
-  ungroup %>% 
-  mutate_all(~replace(.,is.na(.), 0)) #this is needed to circumvent NaN values in zscores
-
-#perform clustering: 
-#create data matrix
-matrix_ctd <- as.matrix(column_to_rownames(tissue_degree_tidy %>% dplyr::select(!degree) %>% pivot_wider(names_from = tissue, values_from = z_score), var = "Symbol"))
-
-#cluster genes
-clust_genes <- hclust( dist(matrix_ctd, method = "euclidean"))
-ord_genes <- clust_genes$order
-dendro_genes <- as.dendrogram(clust_genes)
-dendro_genes_plot <- ggdendrogram(dendro_genes) + theme(axis.text.x = element_blank(), axis.text.y = element_blank())
-
-#cluster tissues
-clust_tiss <- hclust( dist(t(matrix_ctd), method = "euclidean"))
-ord_tiss <- clust_tiss$order
-dendro_tiss <- as.dendrogram(clust_tiss)
-dendro_tiss_plot <- ggdendrogram(dendro_tiss, rotate=TRUE) + theme(axis.text.x = element_blank(), axis.text.y = element_blank())
-
-#defines colours used in the heatmap
-cols = RColorBrewer::brewer.pal(9, "Blues")
-
-p<- tissue_degree_tidy %>% 
-  mutate(Symbol = factor(Symbol, levels = rownames(matrix_ctd)[ord_genes])) %>%
-  mutate(tissue = factor(tissue, levels = colnames(matrix_ctd)[ord_tiss])) %>%
-  ggplot(aes(Symbol, tissue)) + 
-  geom_tile(aes(fill = z_score))+
-  theme_light() + 
-  theme(panel.spacing = unit(0.25, "lines"),axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),panel.grid.major.y = element_line(colour = "grey", linetype ="dotted")) + 
-  scale_fill_gradientn(colors = (cols)) +
-  labs(x = "", y = "")
-
-# printing (cm)
-A4width = 21
-A4height = 29.7
-  
-ggsave("../Manuskript/Figures/Figure3/degree_by_tissue.pdf", plot = p, width = 0.4*A4width, height = 0.175*A4height, scale = 1.5)
-
-p
 ```

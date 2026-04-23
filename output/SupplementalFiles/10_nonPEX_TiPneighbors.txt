@@ -1,0 +1,4038 @@
+TiP	tissue	pex_interactor
+A2M	liver	FIS1
+A2M	urinary bladder	FIS1
+A2M	lung	FIS1
+AARS1	cerebral cortex	SOD1
+ABL1	colon	CAV1, MAVS, PRDX1
+ABL1	urinary bladder	CAV1, MAVS, PRDX1
+ABL2	retina	CAV1
+ABL2	gallbladder	CAV1
+ABL2	cerebellum	CAV1
+ABL2	adipose tissue	CAV1
+ACACB	tongue	PEX14
+ACACB	heart muscle	PEX14
+ACACB	colon	PEX14
+ACACB	adipose tissue	PEX14
+ACACB	breast	PEX14
+ACACB	liver	PEX14
+ACACB	skeletal muscle	PEX14
+ACLY	prostate	DNM1L
+ACLY	adipose tissue	DNM1L
+ACO2	cerebral cortex	SOD1
+ACO2	tongue	SOD1
+ACO2	heart muscle	SOD1
+ACO2	skeletal muscle	SOD1
+ACO2	parathyroid gland	SOD1
+ACTB	smooth muscle	EHHADH, ACTG1
+ACTB	colon	EHHADH, ACTG1
+ACTB	endometrium	EHHADH, ACTG1
+ACTN1	smooth muscle	DNM1L
+ACTN1	colon	DNM1L
+ACTN1	endometrium	DNM1L
+ACTN1	urinary bladder	DNM1L
+ACTN1	seminal vesicle	DNM1L
+ADAM10	thymus	PEX13
+ADARB1	retina	EHHADH
+ADARB1	colon	EHHADH
+ADARB1	urinary bladder	EHHADH
+ADARB1	lung	EHHADH
+ADCY6	adipose tissue	VAPA
+ADH5	liver	PRDX1
+ADRB2	skin	NHERF1, VAPA, CRYM, PRDX1
+ADRB2	adipose tissue	NHERF1, VAPA, CRYM, PRDX1
+ADRB2	breast	NHERF1, VAPA, CRYM, PRDX1
+ADRB2	lung	NHERF1, VAPA, CRYM, PRDX1
+AP1B1	parathyroid gland	ARF1
+AP2B1	cerebral cortex	VAPB, PEX26, SOD1
+AP2B1	parathyroid gland	VAPB, PEX26, SOD1
+TLE5	cerebral cortex	VIM
+TLE5	cerebellum	VIM
+AHCY	ovary	DNM1L
+AHCY	esophagus	DNM1L
+AHCY	pancreas	DNM1L
+AHCY	liver	DNM1L
+AHCY	kidney	DNM1L
+AK2	tongue	SOD1, VIM
+AK2	liver	SOD1, VIM
+AK2	skeletal muscle	SOD1, VIM
+AK2	kidney	SOD1, VIM
+AKT1	heart muscle	VIM, ACAT2, IMPDH2
+AKT1	pancreas	VIM, ACAT2, IMPDH2
+AKT1	liver	VIM, ACAT2, IMPDH2
+AKT1	adrenal gland	VIM, ACAT2, IMPDH2
+ALDOA	cerebral cortex	DNM1L, SOD1
+ALDOA	tongue	DNM1L, SOD1
+ALDOA	heart muscle	DNM1L, SOD1
+ALDOA	esophagus	DNM1L, SOD1
+ALDOA	skeletal muscle	DNM1L, SOD1
+ALDOA	choroid plexus	DNM1L, SOD1
+ALDOA	parathyroid gland	DNM1L, SOD1
+AMPD2	pituitary gland	VIM
+AMPD2	choroid plexus	VIM
+SLC25A6	pancreas	VIM
+SLC25A6	choroid plexus	VIM
+ANXA1	bone marrow	SOD1
+ANXA1	cervix	SOD1
+ANXA1	tonsil	SOD1
+ANXA1	esophagus	SOD1
+ANXA1	salivary gland	SOD1
+ANXA1	adipose tissue	SOD1
+ANXA1	vagina	SOD1
+ANXA1	placenta	SOD1
+ANXA7	skeletal muscle	VIM
+ANXA7	parathyroid gland	VIM
+BIRC5	testis	PEX26
+BIRC5	bone marrow	PEX26
+BIRC5	thymus	PEX26
+APLP1	amygdala	VIM
+APLP1	cerebral cortex	VIM
+APLP1	spinal cord	VIM
+APLP1	midbrain	VIM
+APLP1	hippocampal formation	VIM
+APLP1	pituitary gland	VIM
+APLP1	hypothalamus	VIM
+APLP1	basal ganglia	VIM
+APOD	adipose tissue	VAPA, MFF
+APOD	breast	VAPA, MFF
+APOD	choroid plexus	VAPA, MFF
+APOE	amygdala	ACTG1
+APOE	cerebral cortex	ACTG1
+APOE	midbrain	ACTG1
+APOE	hippocampal formation	ACTG1
+APOE	hypothalamus	ACTG1
+APOE	liver	ACTG1
+APOE	basal ganglia	ACTG1
+APOE	adrenal gland	ACTG1
+APOE	kidney	ACTG1
+APRT	esophagus	SOD1
+APRT	skin	SOD1
+FAS	ovary	RHOA
+FAS	adrenal gland	RHOA
+FAS	lung	RHOA
+AQP1	tongue	TRIM37
+AQP1	adipose tissue	TRIM37
+AQP1	choroid plexus	TRIM37
+AQP1	kidney	TRIM37
+AQP1	lung	TRIM37
+AQP3	esophagus	MFF
+AQP3	salivary gland	MFF
+AQP3	skin	MFF
+AQP3	thymus	MFF
+AQP3	urinary bladder	MFF
+AQP3	vagina	MFF
+AQP6	kidney	PEX11G, VAPB, VAPA, PEX16, MFF, ACSL5, CYB5R3
+AR	liver	CAV1
+TRIM23	cerebral cortex	EHHADH, CCDC33
+TRIM23	tongue	EHHADH, CCDC33
+ARHGAP1	heart muscle	RHOA
+ARHGAP1	urinary bladder	RHOA
+ARHGAP5	thyroid gland	RHOA
+ARHGAP5	retina	RHOA
+ARHGAP5	heart muscle	RHOA
+ARHGAP5	esophagus	RHOA
+ARHGAP5	salivary gland	RHOA
+GET3	choroid plexus	PDIA6, PEX14
+ATM	retina	PEX5
+ATM	tonsil	PEX5
+ATM	appendix	PEX5
+ATM	pancreas	PEX5
+ATM	spleen	PEX5
+ATM	lymph node	PEX5
+ATM	thymus	PEX5
+RERE	skeletal muscle	VIM
+ATP1A1	duodenum	SOD1
+ATP1A1	thyroid gland	SOD1
+ATP1A1	small intestine	SOD1
+ATP1A1	salivary gland	SOD1
+ATP1A1	pancreas	SOD1
+ATP1A1	kidney	SOD1
+ATP1A1	parathyroid gland	SOD1
+ALDH7A1	amygdala	SOD1
+ALDH7A1	ovary	SOD1
+ALDH7A1	liver	SOD1
+ALDH7A1	basal ganglia	SOD1
+ALDH7A1	kidney	SOD1
+ATP5F1B	tongue	ABCD4, ECI2
+ATP5F1B	heart muscle	ABCD4, ECI2
+ATP5F1B	skeletal muscle	ABCD4, ECI2
+ATP5F1B	choroid plexus	ABCD4, ECI2
+ATP5F1B	kidney	ABCD4, ECI2
+ATP5F1B	parathyroid gland	ABCD4, ECI2
+ATP6V1A	retina	SOD1
+ATP6V1A	cerebral cortex	SOD1
+ATP6V1A	hypothalamus	SOD1
+ATP6V1A	kidney	SOD1
+ATP6V1A	parathyroid gland	SOD1
+ATP6V1B1	cervix	SOD1
+ATP6V1B1	salivary gland	SOD1
+ATP6V1B1	skin	SOD1
+ATP6V1B1	kidney	SOD1
+ATP6V0B	bone marrow	MFF
+ATP6V0B	choroid plexus	MFF
+BAK1	duodenum	SOD1, HSD17B4
+BARD1	testis	IDI1
+BARD1	bone marrow	IDI1
+BARD1	tonsil	IDI1
+BARD1	skin	IDI1
+BARD1	thymus	IDI1
+BCL2	thyroid gland	SOD1
+BCL2	spleen	SOD1
+BCL2	thymus	SOD1
+BDKRB2	urinary bladder	PEX16
+BID	bone marrow	RHOA
+BLMH	skin	NUDT12
+BLMH	thymus	NUDT12
+BNIP2	bone marrow	PEX12, CYB5R3
+BRCA1	testis	HSPD1, PEX5, ACTG1
+BRCA1	bone marrow	HSPD1, PEX5, ACTG1
+BRCA1	tonsil	HSPD1, PEX5, ACTG1
+BRCA1	lymph node	HSPD1, PEX5, ACTG1
+BRCA1	thymus	HSPD1, PEX5, ACTG1
+BYSL	skeletal muscle	TRIM37, CCDC33, VIM
+BYSL	urinary bladder	TRIM37, CCDC33, VIM
+CACNA1A	cerebellum	SCP2
+CACNG1	tongue	VAPA
+CALM1	amygdala	IDH1, NOS2, MYO5A
+CALM1	cerebral cortex	IDH1, NOS2, MYO5A
+CALM1	cerebellum	IDH1, NOS2, MYO5A
+CALM1	hippocampal formation	IDH1, NOS2, MYO5A
+CALM1	basal ganglia	IDH1, NOS2, MYO5A
+CALM1	skeletal muscle	IDH1, NOS2, MYO5A
+CALM2	amygdala	IDH1
+CALM2	cerebral cortex	IDH1
+CALM2	cerebellum	IDH1
+CALM2	spinal cord	IDH1
+CALM2	midbrain	IDH1
+CALM2	hippocampal formation	IDH1
+CALM2	hypothalamus	IDH1
+CALM2	basal ganglia	IDH1
+CALM3	amygdala	IDH1
+CALM3	testis	IDH1
+CALM3	cerebral cortex	IDH1
+CALM3	cerebellum	IDH1
+CALM3	midbrain	IDH1
+CALM3	hippocampal formation	IDH1
+CALM3	hypothalamus	IDH1
+CALM3	basal ganglia	IDH1
+CALR	thyroid gland	IDH1, MAVS
+CALR	epididymis	IDH1, MAVS
+CALR	bone marrow	IDH1, MAVS
+CALR	liver	IDH1, MAVS
+CAMK2A	amygdala	VIM
+CAMK2A	cerebral cortex	VIM
+CAMK2A	hippocampal formation	VIM
+CAMK2A	basal ganglia	VIM
+CAMK2A	skeletal muscle	VIM
+CAPN3	spinal cord	EHHADH
+CAPN3	epididymis	EHHADH
+CAPN3	midbrain	EHHADH
+CAPN3	hippocampal formation	EHHADH
+CAPN3	tongue	EHHADH
+CAPN3	basal ganglia	EHHADH
+CAPN3	skeletal muscle	EHHADH
+CAPN3	kidney	EHHADH
+CASP6	duodenum	BAAT, CROT, SCP2
+CASP6	small intestine	BAAT, CROT, SCP2
+CASP6	colon	BAAT, CROT, SCP2
+CASP6	rectum	BAAT, CROT, SCP2
+CASP8	bone marrow	PDIA6, VIM
+CASP8	spleen	PDIA6, VIM
+CASP8	lymph node	PDIA6, VIM
+CASP9	thyroid gland	HSD17B4
+CASP9	testis	HSD17B4
+CASP9	ovary	HSD17B4
+CASP9	pituitary gland	HSD17B4
+CASP9	pancreas	HSD17B4
+CASP9	adrenal gland	HSD17B4
+CBLB	adipose tissue	SOD1
+SERPINH1	smooth muscle	IDH1, SOD1
+SERPINH1	adipose tissue	IDH1, SOD1
+SERPINH1	lung	IDH1, SOD1
+SERPINH1	placenta	IDH1, SOD1
+CBS	pancreas	EHHADH
+CBS	liver	EHHADH
+CCNH	testis	CCDC33
+CD79A	tonsil	VAPB, VAPA, MFF
+CD79A	appendix	VAPB, VAPA, MFF
+CD79A	small intestine	VAPB, VAPA, MFF
+CD79A	spleen	VAPB, VAPA, MFF
+CD79A	lymph node	VAPB, VAPA, MFF
+CD79A	thymus	VAPB, VAPA, MFF
+CDK1	bone marrow	DNM1L
+CDK1	tonsil	DNM1L
+CDK1	lymph node	DNM1L
+CDK1	thymus	DNM1L
+CDC5L	bone marrow	PEX14
+CDC5L	tongue	PEX14
+CDC5L	liver	PEX14
+CDC5L	parathyroid gland	PEX14
+CDC25A	testis	PEX19
+CDC25A	bone marrow	PEX19
+CDC25A	thymus	PEX19
+CDC42	bone marrow	SOD1
+CDK7	testis	HSD17B4
+CDK7	bone marrow	HSD17B4
+CDK7	esophagus	HSD17B4
+CDK7	skin	HSD17B4
+CDK7	skeletal muscle	HSD17B4
+CDKN1A	choroid plexus	VIM
+CDKN2D	amygdala	PRDX5
+CDKN2D	cerebral cortex	PRDX5
+CDKN2D	cerebellum	PRDX5
+CDKN2D	midbrain	PRDX5
+CDKN2D	bone marrow	PRDX5
+CDKN2D	hippocampal formation	PRDX5
+CDKN2D	hypothalamus	PRDX5
+CDKN2D	basal ganglia	PRDX5
+CDKN2D	thymus	PRDX5
+CFL1	bone marrow	ACTG1
+CFL2	tongue	EHHADH, RAB2A, ACTG1
+CFL2	heart muscle	EHHADH, RAB2A, ACTG1
+CFL2	liver	EHHADH, RAB2A, ACTG1
+CFL2	skeletal muscle	EHHADH, RAB2A, ACTG1
+CFTR	pancreas	VAPB, VAPA, TTC1, HSPD1, LDHA, ACSL4, ISOC1, CNOT1, HACL1, PAICS, DDO, ACOT8, NHERF1, CAV1, HK1, PRDX1
+RCC1	testis	DNM1L
+RCC1	bone marrow	DNM1L
+CHD3	cervix	PEX14, PAICS, VIM
+CKB	cerebral cortex	DNM1L, SOD1
+CKB	cerebellum	DNM1L, SOD1
+CKB	colon	DNM1L, SOD1
+CKB	basal ganglia	DNM1L, SOD1
+CKMT1B	cerebellum	DNM1L
+CKMT1B	colon	DNM1L
+CKMT1B	esophagus	DNM1L
+CKMT1B	rectum	DNM1L
+CCR4	thymus	PRDX1
+PLK3	gallbladder	MFF
+PLK3	esophagus	MFF
+PLK3	skin	MFF
+PLK3	urinary bladder	MFF
+COL1A1	gallbladder	PDIA6, PRDX1
+COL1A1	smooth muscle	PDIA6, PRDX1
+COL1A1	cervix	PDIA6, PRDX1
+COL1A1	ovary	PDIA6, PRDX1
+COL1A1	endometrium	PDIA6, PRDX1
+COL1A1	urinary bladder	PDIA6, PRDX1
+COL1A1	placenta	PDIA6, PRDX1
+COL4A5	endometrium	MFF
+COL4A5	urinary bladder	MFF
+COL6A1	cervix	HSD17B4
+COL6A1	ovary	HSD17B4
+COL6A1	fallopian tube	HSD17B4
+COL6A1	colon	HSD17B4
+COL6A1	endometrium	HSD17B4
+COL6A1	urinary bladder	HSD17B4
+COL8A2	urinary bladder	PEX12, CYB5R3
+COL8A2	choroid plexus	PEX12, CYB5R3
+COL8A2	placenta	PEX12, CYB5R3
+COX15	tongue	LDHA, RHOA, ARF1
+COX15	heart muscle	LDHA, RHOA, ARF1
+COX15	liver	LDHA, RHOA, ARF1
+COX15	skeletal muscle	LDHA, RHOA, ARF1
+COX15	adrenal gland	LDHA, RHOA, ARF1
+CREB1	testis	VIM
+CREB1	thymus	VIM
+CRMP1	amygdala	VIM
+CRMP1	retina	VIM
+CRMP1	cerebral cortex	VIM
+CRMP1	cerebellum	VIM
+CRMP1	hippocampal formation	VIM
+CRMP1	pituitary gland	VIM
+CRMP1	hypothalamus	VIM
+CRMP1	basal ganglia	VIM
+CRYBA2	pituitary gland	CCDC33, SOD1
+CRYBA2	pancreas	CCDC33, SOD1
+CRYZ	epididymis	SOD1
+CRYZ	liver	SOD1
+CRYZ	choroid plexus	SOD1
+CRYZ	kidney	SOD1
+CSK	tonsil	CAV1
+CSK	appendix	CAV1
+CSK	small intestine	CAV1
+CSK	esophagus	CAV1
+CSK	liver	CAV1
+CSK	spleen	CAV1
+CSK	lymph node	CAV1
+CSK	thymus	CAV1
+CSNK1D	skeletal muscle	CAV1, SOD1
+CSTF2	testis	ECH1
+CSTF2	tonsil	ECH1
+CSTF2	esophagus	ECH1
+CSTF2	lymph node	ECH1
+CSTF2	rectum	ECH1
+CSTF2	thymus	ECH1
+CTBP2	thyroid gland	ACTG1
+CTBP2	retina	ACTG1
+CTNND1	esophagus	SOD1
+CYB561	salivary gland	EHHADH, VAPB, VAPA
+CYB561	pancreas	EHHADH, VAPB, VAPA
+CYB561	choroid plexus	EHHADH, VAPB, VAPA
+CYB561	adrenal gland	EHHADH, VAPB, VAPA
+DAB2	epididymis	SOD1
+DAB2	adrenal gland	SOD1
+DAB2	kidney	SOD1
+DAB2	placenta	SOD1
+DAG1	tongue	MDH1, CAT
+DAG1	heart muscle	MDH1, CAT
+DAG1	skeletal muscle	MDH1, CAT
+DAG1	placenta	MDH1, CAT
+DARS1	retina	DNM1L, SOD1
+DARS1	skeletal muscle	DNM1L, SOD1
+DARS1	thymus	DNM1L, SOD1
+DAXX	spleen	PEX26
+GADD45A	skeletal muscle	VIM
+DDX6	retina	CNOT1, TRIM37
+DDX6	bone marrow	CNOT1, TRIM37
+DDX6	tonsil	CNOT1, TRIM37
+DDX6	lymph node	CNOT1, TRIM37
+DDX6	thymus	CNOT1, TRIM37
+DMXL1	thyroid gland	PDIA6
+DMXL1	bone marrow	PDIA6
+DMXL1	prostate	PDIA6
+DMXL1	kidney	PDIA6
+DES	heart muscle	EHHADH, SOD1, VIM
+DES	prostate	EHHADH, SOD1, VIM
+DES	stomach	EHHADH, SOD1, VIM
+DES	colon	EHHADH, SOD1, VIM
+DES	skeletal muscle	EHHADH, SOD1, VIM
+DES	endometrium	EHHADH, SOD1, VIM
+DES	urinary bladder	EHHADH, SOD1, VIM
+DIAPH1	bone marrow	RHOA
+DIAPH1	liver	RHOA
+DIAPH1	skeletal muscle	RHOA
+DLD	tongue	LDHA, MAP2K2, HSDL2, PAICS, PDIA6, ARF1, HSD17B4
+DLD	heart muscle	LDHA, MAP2K2, HSDL2, PAICS, PDIA6, ARF1, HSD17B4
+DLD	liver	LDHA, MAP2K2, HSDL2, PAICS, PDIA6, ARF1, HSD17B4
+DLD	skeletal muscle	LDHA, MAP2K2, HSDL2, PAICS, PDIA6, ARF1, HSD17B4
+DLD	kidney	LDHA, MAP2K2, HSDL2, PAICS, PDIA6, ARF1, HSD17B4
+DLD	parathyroid gland	LDHA, MAP2K2, HSDL2, PAICS, PDIA6, ARF1, HSD17B4
+DLG4	amygdala	PEX19, HSPD1
+DLG4	retina	PEX19, HSPD1
+DLG4	cerebral cortex	PEX19, HSPD1
+DLG4	cerebellum	PEX19, HSPD1
+DLG4	hippocampal formation	PEX19, HSPD1
+DLG4	pituitary gland	PEX19, HSPD1
+DLG4	hypothalamus	PEX19, HSPD1
+DLG4	basal ganglia	PEX19, HSPD1
+DLST	tongue	MAVS, RHOA, ACAT1, HSDL2, IMPDH2, PAICS, PDIA6, IDH1, HSD17B4
+DLST	heart muscle	MAVS, RHOA, ACAT1, HSDL2, IMPDH2, PAICS, PDIA6, IDH1, HSD17B4
+DLST	skeletal muscle	MAVS, RHOA, ACAT1, HSDL2, IMPDH2, PAICS, PDIA6, IDH1, HSD17B4
+DLST	kidney	MAVS, RHOA, ACAT1, HSDL2, IMPDH2, PAICS, PDIA6, IDH1, HSD17B4
+ATN1	cerebellum	ACBD4, VIM
+DTNB	amygdala	TRIM37
+DTNB	cerebral cortex	TRIM37
+DTNB	hippocampal formation	TRIM37
+DTNB	salivary gland	TRIM37
+DTNB	basal ganglia	TRIM37
+EEF1B2	pancreas	DNM1L, SOD1
+EEF1B2	skeletal muscle	DNM1L, SOD1
+EEF1D	pancreas	ECH1, DNM1L, SOD1
+EEF1G	tongue	ECH1, DNM1L, MVD, SOD1, ARF1
+EEF1G	ovary	ECH1, DNM1L, MVD, SOD1, ARF1
+EEF1G	skeletal muscle	ECH1, DNM1L, MVD, SOD1, ARF1
+EEF2	pancreas	DNM1L, SOD1
+EEF2	skeletal muscle	DNM1L, SOD1
+EGFR	skin	CAV1, VAPA, PRDX1, MDH1
+EGFR	liver	CAV1, VAPA, PRDX1, MDH1
+EGFR	placenta	CAV1, VAPA, PRDX1, MDH1
+EIF1AX	skeletal muscle	SOD1
+EIF2S1	skeletal muscle	DNM1L, SOD1
+EIF5A	esophagus	DNM1L
+EIF5A	skin	DNM1L
+EIF5A	liver	DNM1L
+EIF5A	skeletal muscle	DNM1L
+ELAVL1	testis	SOD1
+ELAVL1	tonsil	SOD1
+ELAVL1	thymus	SOD1
+EMP1	cervix	EHHADH
+EMP1	esophagus	EHHADH
+EMP1	salivary gland	EHHADH
+EMP1	adipose tissue	EHHADH
+EMP1	vagina	EHHADH
+ENO3	tongue	SOD1
+ENO3	heart muscle	SOD1
+ENO3	prostate	SOD1
+ENO3	esophagus	SOD1
+ENO3	salivary gland	SOD1
+ENO3	liver	SOD1
+ENO3	skeletal muscle	SOD1
+EP300	bone marrow	DAO, DECR2
+EP300	thymus	DAO, DECR2
+EPHA4	testis	TRIM37
+EPHA4	cerebral cortex	TRIM37
+EPHA4	heart muscle	TRIM37
+EPHA4	skin	TRIM37
+EPHB2	duodenum	PHYH
+EPHB2	ovary	PHYH
+EPHB2	appendix	PHYH
+EPHB2	small intestine	PHYH
+EPHB2	colon	PHYH
+EPHB2	rectum	PHYH
+CLN8	spinal cord	VAPA, PDIA6
+EPRS1	tongue	SOD1
+EPRS1	salivary gland	SOD1
+EPRS1	parathyroid gland	SOD1
+ERBB4	fallopian tube	PRDX5
+ERH	thymus	DNM1L
+ESR1	smooth muscle	DNM1L
+ESR1	cervix	DNM1L
+ESR1	fallopian tube	DNM1L
+ESR1	breast	DNM1L
+ESR1	endometrium	DNM1L
+ESR1	vagina	DNM1L
+ETFB	tongue	SOD1
+ETFB	heart muscle	SOD1
+ETFB	liver	SOD1
+ETFB	skeletal muscle	SOD1
+EWSR1	testis	MVK, TRIM37
+EWSR1	bone marrow	MVK, TRIM37
+EWSR1	skeletal muscle	MVK, TRIM37
+EWSR1	thymus	MVK, TRIM37
+F8	tongue	PHYH
+F8	heart muscle	PHYH
+F8	adipose tissue	PHYH
+FABP4	choroid plexus	VIM
+FANCG	cerebellum	VIM
+FANCG	thymus	VIM
+FASN	cerebellum	DNM1L, LACC1
+FASN	prostate	DNM1L, LACC1
+FASN	skin	DNM1L, LACC1
+FASN	pituitary gland	DNM1L, LACC1
+FASN	adipose tissue	DNM1L, LACC1
+FASN	breast	DNM1L, LACC1
+FASN	liver	DNM1L, LACC1
+FBP1	liver	BAAT
+FCER1G	bone marrow	PEX16, MFF
+FCER1G	appendix	PEX16, MFF
+FCER1G	adipose tissue	PEX16, MFF
+FCER1G	spleen	PEX16, MFF
+FCER1G	urinary bladder	PEX16, MFF
+FCER1G	choroid plexus	PEX16, MFF
+FCER1G	lung	PEX16, MFF
+FCER1G	placenta	PEX16, MFF
+FEN1	bone marrow	SOD1
+FEN1	tonsil	SOD1
+FEN1	lymph node	SOD1
+FEN1	thymus	SOD1
+FGA	stomach	SOD1
+FGA	liver	SOD1
+FHL2	heart muscle	IDH1
+FHL2	ovary	IDH1
+FHL3	skeletal muscle	BAAT
+FKBP4	cerebellum	PHYH
+FN1	smooth muscle	VAPA, LDHA, GSTK1, CNOT1, G6PD, PAICS, TKT, PDIA6, IDI1, IMPDH2
+FN1	heart muscle	VAPA, LDHA, GSTK1, CNOT1, G6PD, PAICS, TKT, PDIA6, IDI1, IMPDH2
+FN1	colon	VAPA, LDHA, GSTK1, CNOT1, G6PD, PAICS, TKT, PDIA6, IDI1, IMPDH2
+FN1	liver	VAPA, LDHA, GSTK1, CNOT1, G6PD, PAICS, TKT, PDIA6, IDI1, IMPDH2
+FN1	urinary bladder	VAPA, LDHA, GSTK1, CNOT1, G6PD, PAICS, TKT, PDIA6, IDI1, IMPDH2
+FN1	seminal vesicle	VAPA, LDHA, GSTK1, CNOT1, G6PD, PAICS, TKT, PDIA6, IDI1, IMPDH2
+FN1	lung	VAPA, LDHA, GSTK1, CNOT1, G6PD, PAICS, TKT, PDIA6, IDI1, IMPDH2
+FN1	placenta	VAPA, LDHA, GSTK1, CNOT1, G6PD, PAICS, TKT, PDIA6, IDI1, IMPDH2
+XRCC6	testis	ABCD4, DNM1L, SOD1
+XRCC6	bone marrow	ABCD4, DNM1L, SOD1
+XRCC6	tonsil	ABCD4, DNM1L, SOD1
+XRCC6	skeletal muscle	ABCD4, DNM1L, SOD1
+XRCC6	thymus	ABCD4, DNM1L, SOD1
+GAPDH	tongue	PRDX1
+GAPDH	heart muscle	PRDX1
+GAPDH	skeletal muscle	PRDX1
+GAS8	fallopian tube	EHHADH
+GAS8	choroid plexus	EHHADH
+GCG	small intestine	IDE
+GCG	pancreas	IDE
+GCG	rectum	IDE
+GDI1	amygdala	SOD1
+GDI1	cerebral cortex	SOD1
+GDI1	cerebellum	SOD1
+GDI1	spinal cord	SOD1
+GDI1	midbrain	SOD1
+GDI1	hippocampal formation	SOD1
+GDI1	pituitary gland	SOD1
+GDI1	hypothalamus	SOD1
+GDI1	basal ganglia	SOD1
+GDI1	choroid plexus	SOD1
+GFAP	amygdala	DNM1L, VIM
+GFAP	retina	DNM1L, VIM
+GFAP	cerebral cortex	DNM1L, VIM
+GFAP	cerebellum	DNM1L, VIM
+GFAP	spinal cord	DNM1L, VIM
+GFAP	midbrain	DNM1L, VIM
+GFAP	hippocampal formation	DNM1L, VIM
+GFAP	hypothalamus	DNM1L, VIM
+GFAP	basal ganglia	DNM1L, VIM
+GFAP	choroid plexus	DNM1L, VIM
+GJB1	spinal cord	MFF
+GJB1	pancreas	MFF
+GJB1	liver	MFF
+GJB2	cervix	PEX12
+GJB2	tonsil	PEX12
+GJB2	esophagus	PEX12
+GJB2	salivary gland	PEX12
+GJB2	skin	PEX12
+GJB2	liver	PEX12
+GJB2	vagina	PEX12
+GLO1	tongue	SOD1
+GLO1	prostate	SOD1
+GLO1	liver	SOD1
+GLO1	skeletal muscle	SOD1
+GLP1R	pancreas	CAV1, VAPB, AGXT
+GNAO1	amygdala	ABCD3
+GNAO1	cerebral cortex	ABCD3
+GNAO1	cerebellum	ABCD3
+GNAO1	spinal cord	ABCD3
+GNAO1	midbrain	ABCD3
+GNAO1	hippocampal formation	ABCD3
+GNAO1	hypothalamus	ABCD3
+GNAO1	basal ganglia	ABCD3
+GNB1	retina	SOD1
+GNB1	cerebral cortex	SOD1
+GNB2	esophagus	SOD1
+GOLGB1	epididymis	SOD2
+GOLGB1	choroid plexus	SOD2
+FFAR2	bone marrow	FIS1, PEX16
+FFAR2	appendix	FIS1, PEX16
+FFAR2	spleen	FIS1, PEX16
+GRB2	bone marrow	GSTK1, VIM, PEX13, RAB8B, FABP1
+GRB2	tonsil	GSTK1, VIM, PEX13, RAB8B, FABP1
+GRB2	lymph node	GSTK1, VIM, PEX13, RAB8B, FABP1
+GRB10	retina	CAV1
+GRB10	tongue	CAV1
+GRB10	pancreas	CAV1
+GRB10	skeletal muscle	CAV1
+GRN	lung	CYB5A, TTC1, CCDC33
+NR3C1	skeletal muscle	CAV1, HSPD1
+NR3C1	placenta	CAV1, HSPD1
+ARHGAP35	amygdala	RHOA
+ARHGAP35	testis	RHOA
+ARHGAP35	cerebral cortex	RHOA
+ARHGAP35	hippocampal formation	RHOA
+ARHGAP35	parathyroid gland	RHOA
+PDIA3	thyroid gland	SOD1
+GSK3A	amygdala	LDHA, AKAP11
+GSK3A	cerebral cortex	LDHA, AKAP11
+GSK3A	cerebellum	LDHA, AKAP11
+GSK3A	hippocampal formation	LDHA, AKAP11
+GSK3A	basal ganglia	LDHA, AKAP11
+GSK3A	skeletal muscle	LDHA, AKAP11
+GSK3B	retina	AKAP11, DNM1L, VIM
+GSK3B	testis	AKAP11, DNM1L, VIM
+GSTP1	esophagus	SOD1
+GSTP1	vagina	SOD1
+GSTP1	choroid plexus	SOD1
+GTF2B	bone marrow	HMGCL
+GTF2B	thymus	HMGCL
+GTF2B	choroid plexus	HMGCL
+H1-0	bone marrow	PIK3C3, SOD1, TRIM37
+H1-0	kidney	PIK3C3, SOD1, TRIM37
+H1-2	bone marrow	AKAP11, G6PD, ECI2
+H1-2	heart muscle	AKAP11, G6PD, ECI2
+H1-2	skeletal muscle	AKAP11, G6PD, ECI2
+H1-2	choroid plexus	AKAP11, G6PD, ECI2
+H1-2	kidney	AKAP11, G6PD, ECI2
+H2AC8	bone marrow	IDE, DNM1L, SOD1
+H2AC8	prostate	IDE, DNM1L, SOD1
+H2AC8	breast	IDE, DNM1L, SOD1
+H2AC8	choroid plexus	IDE, DNM1L, SOD1
+HSD17B10	heart muscle	RHOA, ACAT1, DNM1L, PDIA6, HMGCL, HMGCS2, CPS1, MDH1
+HSD17B10	esophagus	RHOA, ACAT1, DNM1L, PDIA6, HMGCL, HMGCS2, CPS1, MDH1
+HSD17B10	liver	RHOA, ACAT1, DNM1L, PDIA6, HMGCL, HMGCS2, CPS1, MDH1
+HSD17B10	adrenal gland	RHOA, ACAT1, DNM1L, PDIA6, HMGCL, HMGCS2, CPS1, MDH1
+HSD17B10	kidney	RHOA, ACAT1, DNM1L, PDIA6, HMGCL, HMGCS2, CPS1, MDH1
+HAGH	liver	SOD1
+HAGH	skeletal muscle	SOD1
+HTT	cerebral cortex	TTC1, HSPD1, ECH1, VIM, ACTG1, SAMD4A, PEX11B
+HTT	cerebellum	TTC1, HSPD1, ECH1, VIM, ACTG1, SAMD4A, PEX11B
+HTT	skin	TTC1, HSPD1, ECH1, VIM, ACTG1, SAMD4A, PEX11B
+HTT	pancreas	TTC1, HSPD1, ECH1, VIM, ACTG1, SAMD4A, PEX11B
+HTT	skeletal muscle	TTC1, HSPD1, ECH1, VIM, ACTG1, SAMD4A, PEX11B
+HDAC1	tonsil	LDHA
+HDAC1	colon	LDHA
+HDAC1	lymph node	LDHA
+HEXB	epididymis	SOD1
+HEXB	placenta	SOD1
+HIP1	testis	EHHADH, BAAT, CROT, SCP2
+HIP1	spinal cord	EHHADH, BAAT, CROT, SCP2
+HINT1	liver	SOD1
+HINT1	skeletal muscle	SOD1
+HINT1	choroid plexus	SOD1
+HMGB1	bone marrow	SOD1
+HMGB1	tonsil	SOD1
+HMGB1	lymph node	SOD1
+HMGB1	thymus	SOD1
+HMGB3	bone marrow	SOD1
+HMGB3	liver	SOD1
+HMGB3	skeletal muscle	SOD1
+HMGB3	thymus	SOD1
+HMGB3	parathyroid gland	SOD1
+HMGB3	placenta	SOD1
+HMOX2	liver	BAAT
+HNRNPD	bone marrow	PEX10
+HNRNPD	tonsil	PEX10
+HNRNPD	lymph node	PEX10
+HNRNPD	thymus	PEX10
+HNRNPH1	bone marrow	PEX5
+HNRNPH1	spleen	PEX5
+HNRNPH1	thymus	PEX5
+HOXC4	fallopian tube	SOD1
+HPRT1	retina	DNM1L
+HPRT1	testis	DNM1L
+HPRT1	cerebral cortex	DNM1L
+HPRT1	hypothalamus	DNM1L
+PRMT1	tongue	DNM1L
+PRMT1	heart muscle	DNM1L
+PRMT1	ovary	DNM1L
+PRMT1	skeletal muscle	DNM1L
+HES1	esophagus	HMGCL
+HES1	skin	HMGCL
+HES1	vagina	HMGCL
+DNAJA1	liver	HMGCL, DNM1L
+HSPA4	retina	DNM1L, SOD1
+HSPA4	skeletal muscle	DNM1L, SOD1
+HSPA5	thyroid gland	PDIA6
+HSPA5	epididymis	PDIA6
+HSPA5	bone marrow	PDIA6
+HSPB1	cervix	TTC1, GNPAT, VIM
+HSPB1	heart muscle	TTC1, GNPAT, VIM
+HSPB1	colon	TTC1, GNPAT, VIM
+HSPB1	esophagus	TTC1, GNPAT, VIM
+HSPB1	skin	TTC1, GNPAT, VIM
+HSPB1	skeletal muscle	TTC1, GNPAT, VIM
+HSPB1	endometrium	TTC1, GNPAT, VIM
+HSPB1	vagina	TTC1, GNPAT, VIM
+HSPB2	tongue	ABCD4, MDH1, ACTG1
+HSPB2	heart muscle	ABCD4, MDH1, ACTG1
+HSPB2	adipose tissue	ABCD4, MDH1, ACTG1
+HSPB2	skeletal muscle	ABCD4, MDH1, ACTG1
+HSP90AB1	tongue	TRIM37
+HSP90AB1	ovary	TRIM37
+HSP90AB1	skeletal muscle	TRIM37
+HSPE1	liver	HSPD1, SOD1
+HSPE1	choroid plexus	HSPD1, SOD1
+HSPE1	adrenal gland	HSPD1, SOD1
+HSPE1	kidney	HSPD1, SOD1
+ID1	esophagus	CAV1
+ID1	urinary bladder	CAV1
+IDH3A	tongue	SOD1
+IDH3A	heart muscle	SOD1
+IDH3A	skeletal muscle	SOD1
+IDH3A	parathyroid gland	SOD1
+IGFBP5	cervix	PDIA6, MFF
+IGFBP5	ovary	PDIA6, MFF
+IGFBP5	fallopian tube	PDIA6, MFF
+IGFBP5	endometrium	PDIA6, MFF
+ILF2	bone marrow	DNM1L, SOD1
+ILF2	thymus	DNM1L, SOD1
+IMPDH1	retina	IMPDH2
+IMPDH1	adipose tissue	IMPDH2
+IMPDH1	spleen	IMPDH2
+INS	bone marrow	IDE
+INS	skin	IDE
+INS	pancreas	IDE
+EIF3E	ovary	SOD1
+EIF3E	pancreas	SOD1
+EIF3E	breast	SOD1
+IRF3	spleen	PEX19, PRDX1
+EIF6	esophagus	ACTG1
+EIF6	skin	ACTG1
+EIF6	liver	ACTG1
+KARS1	tongue	SOD1, VIM
+KARS1	skeletal muscle	SOD1, VIM
+KCNA2	cerebral cortex	RHOA
+KCNA2	cerebellum	RHOA
+KCNB1	retina	VAPB, VAPA
+KCNB1	cerebral cortex	VAPB, VAPA
+KCNH2	testis	CAV1
+KCNH2	cerebellum	CAV1
+KCNH2	colon	CAV1
+KCNH2	pituitary gland	CAV1
+KIF5B	amygdala	SOD1
+KIF5B	spinal cord	SOD1
+KIF5B	midbrain	SOD1
+KIFC3	retina	CCDC33, VIM
+KIFC3	testis	CCDC33, VIM
+KIFC3	pancreas	CCDC33, VIM
+KPNB1	testis	DNM1L, SOD1
+KPNB1	tongue	DNM1L, SOD1
+KPNB1	tonsil	DNM1L, SOD1
+KPNB1	skeletal muscle	DNM1L, SOD1
+KPNB1	thymus	DNM1L, SOD1
+KRT8	pancreas	PEX5L, VIM
+KRT18	pancreas	PEX5L, VIM
+KTN1	tongue	RHOA
+KTN1	skeletal muscle	RHOA
+KTN1	choroid plexus	RHOA
+LAMP2	spinal cord	BAAT, SCP2
+LAMP2	midbrain	BAAT, SCP2
+LAMP2	liver	BAAT, SCP2
+LAMP2	skeletal muscle	BAAT, SCP2
+RPSA	ovary	ABCD1, SOD1
+RPSA	pancreas	ABCD1, SOD1
+STMN1	amygdala	SOD1
+STMN1	cerebral cortex	SOD1
+STMN1	spinal cord	SOD1
+STMN1	midbrain	SOD1
+STMN1	hippocampal formation	SOD1
+STMN1	hypothalamus	SOD1
+STMN1	thymus	SOD1
+LCN2	gallbladder	EHHADH
+LCN2	bone marrow	EHHADH
+LCN2	cervix	EHHADH
+LCN2	stomach	EHHADH
+LCN2	esophagus	EHHADH
+LCN2	salivary gland	EHHADH
+LCN2	urinary bladder	EHHADH
+LCN2	vagina	EHHADH
+LDHB	midbrain	LDHA, DNM1L, PEX5, SOD1
+LDHB	tongue	LDHA, DNM1L, PEX5, SOD1
+LDHB	heart muscle	LDHA, DNM1L, PEX5, SOD1
+LDHB	choroid plexus	LDHA, DNM1L, PEX5, SOD1
+LDHB	kidney	LDHA, DNM1L, PEX5, SOD1
+LIG4	retina	GRHPR, MAP2K2, ACTG1, PEX10, HK1
+LIG4	liver	GRHPR, MAP2K2, ACTG1, PEX10, HK1
+LIG4	thymus	GRHPR, MAP2K2, ACTG1, PEX10, HK1
+ABLIM1	cerebellum	VIM
+ABLIM1	ovary	VIM
+LMNA	skin	SOD1
+LMNB1	bone marrow	SOD1
+LMNB1	tonsil	SOD1
+LMNB1	appendix	SOD1
+LMNB1	lymph node	SOD1
+LMNB1	thymus	SOD1
+CAPRIN1	testis	DNM1L
+SMAD2	thyroid gland	PEX19, HSPD1, RHOA, MYO5A, SOD1
+SMAD2	retina	PEX19, HSPD1, RHOA, MYO5A, SOD1
+SMAD2	thymus	PEX19, HSPD1, RHOA, MYO5A, SOD1
+SMAD4	skeletal muscle	BAAT
+MAFG	skeletal muscle	VIM
+MAN2A2	retina	VIM
+MAN2A2	cerebellum	VIM
+MAN2A2	spinal cord	VIM
+MAN2A2	skeletal muscle	VIM
+MAT2A	thyroid gland	DNM1L, SOD1
+MAT2A	pancreas	DNM1L, SOD1
+MCF2	adrenal gland	RHOA
+MCM2	bone marrow	SOD1
+MCM2	tonsil	SOD1
+MCM2	lymph node	SOD1
+MCM2	thymus	SOD1
+MCM3	bone marrow	SOD1
+MCM3	tonsil	SOD1
+MCM3	lymph node	SOD1
+MCM3	thymus	SOD1
+MCM4	testis	SOD1
+MCM4	bone marrow	SOD1
+MCM4	tonsil	SOD1
+MCM4	lymph node	SOD1
+MCM4	thymus	SOD1
+MCM5	bone marrow	SOD1
+MCM5	tonsil	SOD1
+MCM5	appendix	SOD1
+MCM5	spleen	SOD1
+MCM5	lymph node	SOD1
+MCM5	thymus	SOD1
+MCM6	bone marrow	SOD1
+MCM6	tonsil	SOD1
+MCM6	lymph node	SOD1
+MCM6	thymus	SOD1
+MDH2	tongue	DNM1L, SOD1
+MDH2	heart muscle	DNM1L, SOD1
+MDH2	liver	DNM1L, SOD1
+MDH2	skeletal muscle	DNM1L, SOD1
+MDH2	adrenal gland	DNM1L, SOD1
+MAP3K1	thyroid gland	RHOA
+MAP3K1	retina	RHOA
+MAP3K1	bone marrow	RHOA
+MAP3K1	tonsil	RHOA
+MAP3K1	salivary gland	RHOA
+MAP3K1	skin	RHOA
+MAP3K1	breast	RHOA
+MAP3K1	spleen	RHOA
+MAP3K1	lymph node	RHOA
+MEOX1	tongue	ACBD4, ACOT12, PEX26
+MEOX1	heart muscle	ACBD4, ACOT12, PEX26
+MEOX1	adipose tissue	ACBD4, ACOT12, PEX26
+MEOX1	breast	ACBD4, ACOT12, PEX26
+MEOX2	adipose tissue	ACBD4, PXT1, SLC25A17, MFF, ACSS1, SAMD4A, ACOT12
+MEOX2	breast	ACBD4, PXT1, SLC25A17, MFF, ACSS1, SAMD4A, ACOT12
+MEOX2	placenta	ACBD4, PXT1, SLC25A17, MFF, ACSS1, SAMD4A, ACOT12
+MID1	colon	EHHADH
+MID1	seminal vesicle	EHHADH
+MLF1	retina	CRAT
+MLF1	testis	CRAT
+MLF1	tongue	CRAT
+MLF1	heart muscle	CRAT
+MLF1	fallopian tube	CRAT
+MLF1	skeletal muscle	CRAT
+MLF1	choroid plexus	CRAT
+MLH1	testis	BAAT, CCDC33, ACTG1
+MLH1	tongue	BAAT, CCDC33, ACTG1
+MLH1	heart muscle	BAAT, CCDC33, ACTG1
+MLH1	skeletal muscle	BAAT, CCDC33, ACTG1
+MLH1	thymus	BAAT, CCDC33, ACTG1
+MNDA	bone marrow	PEX1
+MNDA	appendix	PEX1
+MNDA	spleen	PEX1
+MNDA	lung	PEX1
+MSH5	testis	PEX1
+MSH5	kidney	PEX1
+MTHFD1	tongue	DNM1L, SOD1
+MTHFD1	adipose tissue	DNM1L, SOD1
+MTHFD1	liver	DNM1L, SOD1
+MTHFD1	skeletal muscle	DNM1L, SOD1
+MTHFD1	kidney	DNM1L, SOD1
+MYC	fallopian tube	PRDX1
+MYC	skin	PRDX1
+MYC	adipose tissue	PRDX1
+MYD88	spleen	PRDX1
+MYH11	smooth muscle	DNM1L, SOD1
+MYH11	prostate	DNM1L, SOD1
+MYH11	stomach	DNM1L, SOD1
+MYH11	colon	DNM1L, SOD1
+MYH11	esophagus	DNM1L, SOD1
+MYH11	endometrium	DNM1L, SOD1
+MYH11	urinary bladder	DNM1L, SOD1
+MYH11	seminal vesicle	DNM1L, SOD1
+MYO9A	retina	RHOA
+MYO9A	testis	RHOA
+MYO9A	tongue	RHOA
+MYOC	tongue	TKT, ACTG1
+MYOC	stomach	TKT, ACTG1
+MYOC	adipose tissue	TKT, ACTG1
+NACA	ovary	DNM1L, SOD1
+NAP1L1	spinal cord	DNM1L
+NAP1L1	ovary	DNM1L
+NAP1L4	spinal cord	SOD1
+NAP1L4	midbrain	SOD1
+NAP1L4	skeletal muscle	SOD1
+NEB	skeletal muscle	VIM
+NEDD9	adipose tissue	PEX14
+NEDD9	breast	PEX14
+NEDD9	lung	PEX14
+NEDD9	placenta	PEX14
+NEFM	cerebral cortex	HSPD1, VIM
+NEFM	midbrain	HSPD1, VIM
+NEFL	retina	CCDC33, VIM
+NEFL	cerebral cortex	CCDC33, VIM
+NEFL	midbrain	CCDC33, VIM
+NFATC2	choroid plexus	VIM
+NFKBIL1	ovary	PEX14
+NFKBIL1	pancreas	PEX14
+TONSL	bone marrow	PEX14
+NKG7	bone marrow	PEX12
+NKG7	spleen	PEX12
+NKG7	lymph node	PEX12
+NKG7	lung	PEX12
+NME1	retina	DNM1L
+NME1	choroid plexus	DNM1L
+NOS3	heart muscle	FIS1
+NOS3	adipose tissue	FIS1
+NOS3	breast	FIS1
+NOS3	spleen	FIS1
+NOS3	kidney	FIS1
+NTS	stomach	MFF
+NTS	small intestine	MFF
+NTS	pituitary gland	MFF
+NTS	hypothalamus	MFF
+ODC1	bone marrow	BAAT
+ODC1	skeletal muscle	BAAT
+SLC22A18	duodenum	ECI2
+SLC22A18	small intestine	ECI2
+SLC22A18	colon	ECI2
+SLC22A18	liver	ECI2
+OSBP	tongue	VAPA
+OSBP	parathyroid gland	VAPA
+P4HB	salivary gland	SOD2, SOD1
+P4HB	pancreas	SOD2, SOD1
+P4HB	liver	SOD2, SOD1
+PA2G4	bone marrow	PDIA6
+PA2G4	tonsil	PDIA6
+PA2G4	esophagus	PDIA6
+PA2G4	skeletal muscle	PDIA6
+PA2G4	thymus	PDIA6
+PAFAH1B3	amygdala	ECH1
+PAFAH1B3	cerebral cortex	ECH1
+PAFAH1B3	cerebellum	ECH1
+PAFAH1B3	hypothalamus	ECH1
+PAFAH1B3	basal ganglia	ECH1
+PAFAH1B3	thymus	ECH1
+PRKN	cerebral cortex	DNM1L
+PRKN	tongue	DNM1L
+PRKN	heart muscle	DNM1L
+PRKN	skeletal muscle	DNM1L
+PAX6	retina	ACOT12, SOD1
+PAX6	cerebellum	ACOT12, SOD1
+PCBP1	bone marrow	PEX3
+PCBP1	skeletal muscle	PEX3
+PCMT1	cerebral cortex	DNM1L, SOD1
+PCMT1	tongue	DNM1L, SOD1
+PCMT1	heart muscle	DNM1L, SOD1
+PCMT1	skeletal muscle	DNM1L, SOD1
+PCNA	bone marrow	ECH1, GPD1, GRHPR, LDHA, CAT, SCCPDH, CYB5R3
+PCNA	tonsil	ECH1, GPD1, GRHPR, LDHA, CAT, SCCPDH, CYB5R3
+PCNA	lymph node	ECH1, GPD1, GRHPR, LDHA, CAT, SCCPDH, CYB5R3
+PCNA	thymus	ECH1, GPD1, GRHPR, LDHA, CAT, SCCPDH, CYB5R3
+PDE6D	amygdala	RHOA
+PDE6D	retina	RHOA
+PDE6D	cerebral cortex	RHOA
+PDE6D	spinal cord	RHOA
+PDE6D	midbrain	RHOA
+PDE6D	hippocampal formation	RHOA
+PDE6D	hypothalamus	RHOA
+PDE6D	basal ganglia	RHOA
+PDHA1	tongue	ABCD3, HSD17B4, RHOA, ACAT1, SCP2, HSDL2, DHRS4, ACOT8, ECI2, AGPS, ACAA1, CYB5R3
+PDHA1	heart muscle	ABCD3, HSD17B4, RHOA, ACAT1, SCP2, HSDL2, DHRS4, ACOT8, ECI2, AGPS, ACAA1, CYB5R3
+PDHA1	liver	ABCD3, HSD17B4, RHOA, ACAT1, SCP2, HSDL2, DHRS4, ACOT8, ECI2, AGPS, ACAA1, CYB5R3
+PDHA1	skeletal muscle	ABCD3, HSD17B4, RHOA, ACAT1, SCP2, HSDL2, DHRS4, ACOT8, ECI2, AGPS, ACAA1, CYB5R3
+PDHA1	kidney	ABCD3, HSD17B4, RHOA, ACAT1, SCP2, HSDL2, DHRS4, ACOT8, ECI2, AGPS, ACAA1, CYB5R3
+PDHA1	parathyroid gland	ABCD3, HSD17B4, RHOA, ACAT1, SCP2, HSDL2, DHRS4, ACOT8, ECI2, AGPS, ACAA1, CYB5R3
+PDHB	tongue	DNM1L
+PDHB	heart muscle	DNM1L
+PDHB	liver	DNM1L
+PDHB	skeletal muscle	DNM1L
+PDHB	choroid plexus	DNM1L
+PDHB	kidney	DNM1L
+PDHB	parathyroid gland	DNM1L
+PDZK1	duodenum	NHERF1, PEX5
+PDZK1	small intestine	NHERF1, PEX5
+PDZK1	liver	NHERF1, PEX5
+PDZK1	kidney	NHERF1, PEX5
+PECAM1	adipose tissue	IDH1
+PECAM1	breast	IDH1
+PECAM1	lung	IDH1
+PECAM1	placenta	IDH1
+PFDN2	amygdala	DNM1L, SOD1
+PFDN2	cerebral cortex	DNM1L, SOD1
+PFDN2	spinal cord	DNM1L, SOD1
+PFDN2	midbrain	DNM1L, SOD1
+PFDN2	hypothalamus	DNM1L, SOD1
+PFDN2	skeletal muscle	DNM1L, SOD1
+PFDN5	choroid plexus	PEX26
+PFN1	bone marrow	DNM1L, SOD1
+PFN1	tonsil	DNM1L, SOD1
+PFN1	lymph node	DNM1L, SOD1
+PFN2	amygdala	ACTG1
+PFN2	cerebral cortex	ACTG1
+PFN2	hippocampal formation	ACTG1
+PFN2	basal ganglia	ACTG1
+PFN2	skeletal muscle	ACTG1
+PGAM1	retina	DNM1L
+PGAM1	cerebral cortex	DNM1L
+PGAM1	esophagus	DNM1L
+PGAM1	choroid plexus	DNM1L
+PGK1	retina	SOD1
+PGK1	tongue	SOD1
+PGK1	skeletal muscle	SOD1
+SERPINB5	esophagus	MDH1, TKT
+SERPINB5	skin	MDH1, TKT
+SERPINB5	urinary bladder	MDH1, TKT
+SERPINB9	bone marrow	ECH1
+SERPINB9	tonsil	ECH1
+SERPINB9	appendix	ECH1
+SERPINB9	spleen	ECH1
+SERPINB9	lymph node	ECH1
+SERPINB9	lung	ECH1
+SERPINB9	placenta	ECH1
+PIN1	amygdala	CCDC33
+PIN1	hippocampal formation	CCDC33
+PIN1	hypothalamus	CCDC33
+PIN1	basal ganglia	CCDC33
+PIP4K2A	amygdala	GSTK1
+PIP4K2A	cerebral cortex	GSTK1
+PIP4K2A	spinal cord	GSTK1
+PIP4K2A	midbrain	GSTK1
+PIP4K2A	hippocampal formation	GSTK1
+PIP4K2A	tonsil	GSTK1
+PIP4K2A	hypothalamus	GSTK1
+PIP4K2A	lymph node	GSTK1
+PIP4K2A	basal ganglia	GSTK1
+PITPNA	bone marrow	SCP2
+PITPNA	small intestine	SCP2
+PITPNA	salivary gland	SCP2
+PITPNA	skin	SCP2
+PKP2	parathyroid gland	VIM
+PLCG1	cerebellum	CAV1
+PLCG1	thymus	CAV1
+PLEC	skeletal muscle	PEX5
+PLK1	testis	IDH1, MAVS, IDH2
+PLK1	bone marrow	IDH1, MAVS, IDH2
+PLK1	tonsil	IDH1, MAVS, IDH2
+PLK1	lymph node	IDH1, MAVS, IDH2
+PLK1	thymus	IDH1, MAVS, IDH2
+PLN	gallbladder	MFF
+PLN	smooth muscle	MFF
+PLN	tongue	MFF
+PLN	heart muscle	MFF
+PLN	colon	MFF
+PLN	skeletal muscle	MFF
+PLN	endometrium	MFF
+PLP1	amygdala	MFF
+PLP1	cerebral cortex	MFF
+PLP1	cerebellum	MFF
+PLP1	spinal cord	MFF
+PLP1	midbrain	MFF
+PLP1	hippocampal formation	MFF
+PLP1	colon	MFF
+PLP1	hypothalamus	MFF
+PLP1	basal ganglia	MFF
+PLP1	choroid plexus	MFF
+PLP1	parathyroid gland	MFF
+PLS3	thyroid gland	DNM1L
+PLS3	liver	DNM1L
+PNLIPRP1	pancreas	PEX12, CYB5R3
+PNN	epididymis	DNM1L
+PNN	bone marrow	DNM1L
+PNN	liver	DNM1L
+PNN	choroid plexus	DNM1L
+POLR2E	cerebral cortex	SOD1
+POLR2E	adipose tissue	SOD1
+POLR2E	liver	SOD1
+PPA1	retina	SOD1
+PPA1	spinal cord	SOD1
+PPARG	ovary	FABP1, CAV1
+PPARG	stomach	FABP1, CAV1
+PPARG	colon	FABP1, CAV1
+PPARG	adipose tissue	FABP1, CAV1
+PPARG	breast	FABP1, CAV1
+PPARG	rectum	FABP1, CAV1
+PPARG	urinary bladder	FABP1, CAV1
+PPARG	placenta	FABP1, CAV1
+CTSA	colon	TMEM35A
+CTSA	rectum	TMEM35A
+CTSA	choroid plexus	TMEM35A
+CTSA	adrenal gland	TMEM35A
+PPIA	thymus	BAAT, DNM1L, SOD1
+PPIB	epididymis	PEX19
+PPM1A	testis	SOD1
+PPM1A	bone marrow	SOD1
+PPM1A	tongue	SOD1
+PPM1A	skeletal muscle	SOD1
+PPM1B	tongue	SOD1
+PPM1B	skeletal muscle	SOD1
+PPP2R1A	cerebral cortex	PLAAT3, SOD1
+PPP2R1A	hippocampal formation	PLAAT3, SOD1
+PPP2R1A	heart muscle	PLAAT3, SOD1
+PPP2R1A	basal ganglia	PLAAT3, SOD1
+PPP2R1A	adrenal gland	PLAAT3, SOD1
+PPP3CA	amygdala	SOD1
+PPP3CA	cerebral cortex	SOD1
+PPP3CA	cerebellum	SOD1
+PPP3CA	hippocampal formation	SOD1
+PPP3CA	prostate	SOD1
+PPP3CA	basal ganglia	SOD1
+PPP3CA	skeletal muscle	SOD1
+PPP3CA	seminal vesicle	SOD1
+SRGN	bone marrow	PEX12
+SRGN	appendix	PEX12
+SRGN	lymph node	PEX12
+SRGN	urinary bladder	PEX12
+PRKAB2	liver	SAMD4A, DAO, CCDC33
+PRKACA	tongue	IDH1
+PRKACA	heart muscle	IDH1
+PRKACA	skeletal muscle	IDH1
+PRKACA	adrenal gland	IDH1
+PRKAG1	tongue	PAICS
+PRKAG1	heart muscle	PAICS
+PRKAG1	skeletal muscle	PAICS
+PKN1	heart muscle	RHOA, VIM
+PKN1	spleen	RHOA, VIM
+PKN2	bone marrow	RHOA
+PRKCSH	bone marrow	SOD1
+PRKCSH	ovary	SOD1
+PRKCSH	pancreas	SOD1
+MAPK6	bone marrow	HSPD1, HACL1, RAB2A, ACTG1
+MAPK6	liver	HSPD1, HACL1, RAB2A, ACTG1
+MAPK8	retina	RHOA, HSD17B4
+MAPK8	cerebral cortex	RHOA, HSD17B4
+MAPK8	cerebellum	RHOA, HSD17B4
+MAPK10	amygdala	LDHA
+MAPK10	cerebral cortex	LDHA
+MAPK10	midbrain	LDHA
+MAPK10	hypothalamus	LDHA
+MAP2K5	skeletal muscle	VIM
+MAP2K5	parathyroid gland	VIM
+PRPH	testis	SOD1, VIM
+PRPH	colon	SOD1, VIM
+PRPH	adrenal gland	SOD1, VIM
+PSAP	choroid plexus	PEX5, SOD1
+PSEN2	pancreas	ACTG1
+PSEN2	skeletal muscle	ACTG1
+PSMA1	tongue	ABCD3, VIM
+PSMA1	skeletal muscle	ABCD3, VIM
+PSMA2	liver	SOD1
+PSMA2	skeletal muscle	SOD1
+PSMA4	skeletal muscle	DNM1L
+PSMA6	testis	SOD1
+PSMA6	tongue	SOD1
+PSMA6	skeletal muscle	SOD1
+PSMA6	thymus	SOD1
+PSMB6	tongue	SOD1
+PSMB6	heart muscle	SOD1
+PSMB6	liver	SOD1
+PSMB6	skeletal muscle	SOD1
+PSMB6	choroid plexus	SOD1
+PSMB8	spleen	SOD1
+PSMC1	tongue	DNM1L, SOD1
+PSMC1	heart muscle	DNM1L, SOD1
+PSMC1	skeletal muscle	DNM1L, SOD1
+PSMC2	tongue	DNM1L, SOD1
+PSMC2	liver	DNM1L, SOD1
+PSMC2	skeletal muscle	DNM1L, SOD1
+PSMC3	tongue	DNM1L, SOD1
+PSMC3	heart muscle	DNM1L, SOD1
+PSMC3	basal ganglia	DNM1L, SOD1
+PSMC3	skeletal muscle	DNM1L, SOD1
+PSMC3	choroid plexus	DNM1L, SOD1
+PSMC4	liver	DNM1L, SOD1
+PSMC4	skeletal muscle	DNM1L, SOD1
+PSMC5	tongue	DNM1L, SOD1, VIM
+PSMC5	skeletal muscle	DNM1L, SOD1, VIM
+PSMC5	choroid plexus	DNM1L, SOD1, VIM
+PSMC5	parathyroid gland	DNM1L, SOD1, VIM
+PSMC6	tongue	DNM1L, SOD1
+PSMC6	liver	DNM1L, SOD1
+PSMC6	skeletal muscle	DNM1L, SOD1
+PSMD2	testis	DNM1L, SOD1
+PSMD2	tongue	DNM1L, SOD1
+PSMD2	heart muscle	DNM1L, SOD1
+PSMD2	skeletal muscle	DNM1L, SOD1
+PSMD2	adrenal gland	DNM1L, SOD1
+PSMD7	skeletal muscle	VIM
+PSMD11	tongue	SOD1
+PSMD11	skeletal muscle	SOD1
+PSME2	duodenum	SOD1
+PSME2	liver	SOD1
+PSME2	spleen	SOD1
+PSME2	adrenal gland	SOD1
+PTGER4	bone marrow	PRDX1
+PTGER4	pancreas	PRDX1
+PTMS	liver	SOD1
+PTPN9	thyroid gland	PEX12
+PTPRF	esophagus	LDHA, RHOA, ACAT1
+PTPRF	salivary gland	LDHA, RHOA, ACAT1
+PTPRF	skin	LDHA, RHOA, ACAT1
+PTPRF	liver	LDHA, RHOA, ACAT1
+PTPRG	parathyroid gland	VIM
+PTPRJ	bone marrow	BAAT
+PTPRK	duodenum	GSTK1
+PTPRK	gallbladder	GSTK1
+PTPRO	rectum	ACTG1
+PTPRO	basal ganglia	ACTG1
+PTPRO	kidney	ACTG1
+RAD51	testis	VIM
+RAN	bone marrow	BAAT, CROT, SCP2
+RAN	tonsil	BAAT, CROT, SCP2
+RAN	esophagus	BAAT, CROT, SCP2
+RAN	lymph node	BAAT, CROT, SCP2
+RAN	skeletal muscle	BAAT, CROT, SCP2
+RAN	thymus	BAAT, CROT, SCP2
+RANBP1	testis	DNM1L
+RANBP1	bone marrow	DNM1L
+RANBP1	esophagus	DNM1L
+RANBP1	lymph node	DNM1L
+RANBP1	thymus	DNM1L
+RAP1A	colon	SOD1
+RAP1GDS1	amygdala	RHOA
+RAP1GDS1	retina	RHOA
+RAP1GDS1	cerebral cortex	RHOA
+RAP1GDS1	cerebellum	RHOA
+RAP1GDS1	spinal cord	RHOA
+RAP1GDS1	midbrain	RHOA
+RAP1GDS1	hippocampal formation	RHOA
+RAP1GDS1	hypothalamus	RHOA
+RAP1GDS1	basal ganglia	RHOA
+RARS1	duodenum	DNM1L
+RASA1	retina	CAV1
+RASA1	testis	CAV1
+RASA1	placenta	CAV1
+RASGRF2	retina	RHOA
+RASGRF2	cerebral cortex	RHOA
+RASGRF2	spinal cord	RHOA
+RASGRF2	ovary	RHOA
+RASGRF2	choroid plexus	RHOA
+RBBP4	retina	DNM1L, SOD1
+RBBP4	testis	DNM1L, SOD1
+RBBP4	tonsil	DNM1L, SOD1
+RBBP4	lymph node	DNM1L, SOD1
+RBBP4	thymus	DNM1L, SOD1
+REL	bone marrow	ACBD4, SZT2, EHHADH, ACOT8, ACOT12
+REL	tonsil	ACBD4, SZT2, EHHADH, ACOT8, ACOT12
+REL	appendix	ACBD4, SZT2, EHHADH, ACOT8, ACOT12
+REL	lymph node	ACBD4, SZT2, EHHADH, ACOT8, ACOT12
+REL	urinary bladder	ACBD4, SZT2, EHHADH, ACOT8, ACOT12
+TRIM27	pancreas	EHHADH
+TRIM27	liver	EHHADH
+TRIM27	spleen	EHHADH
+RNF4	bone marrow	EHHADH, PAICS
+RNF4	tonsil	EHHADH, PAICS
+RNF4	spleen	EHHADH, PAICS
+RNF4	lymph node	EHHADH, PAICS
+RNF4	thymus	EHHADH, PAICS
+RNF6	testis	CCDC33, TRIM37
+RNF6	bone marrow	CCDC33, TRIM37
+ROCK1	bone marrow	RHOA
+RPA1	skeletal muscle	VIM
+RPA1	thymus	VIM
+RPA3	bone marrow	DNM1L, SOD1
+RPA3	thymus	DNM1L, SOD1
+RPA3	parathyroid gland	DNM1L, SOD1
+RPL7A	ovary	TMEM35A
+RPL9	ovary	TRIM37
+RPL12	ovary	DNM1L
+RPL21	bone marrow	SOD2
+RPL21	tonsil	SOD2
+RPL21	ovary	SOD2
+RPL21	breast	SOD2
+RPL21	lymph node	SOD2
+RPL30	bone marrow	DNM1L, SOD1
+RPL30	tonsil	DNM1L, SOD1
+RPL30	ovary	DNM1L, SOD1
+RPL30	breast	DNM1L, SOD1
+RPL27A	bone marrow	PEX6
+RPL27A	ovary	PEX6
+RPL27A	pancreas	PEX6
+RPL28	ovary	DNM1L
+RPL28	esophagus	DNM1L
+MRPL12	tongue	SOD1
+MRPL12	heart muscle	SOD1
+MRPL12	liver	SOD1
+MRPL12	skeletal muscle	SOD1
+RPN2	thyroid gland	RHOA
+RPN2	epididymis	RHOA
+RPN2	choroid plexus	RHOA
+RPN2	placenta	RHOA
+RPS3A	bone marrow	SOD2
+RPS3A	ovary	SOD2
+RPS3A	breast	SOD2
+RPS6	ovary	VIM
+RPS14	ovary	PEX6
+RPS14	skin	PEX6
+RPS14	pancreas	PEX6
+RPS25	ovary	PEX5L
+RPS25	skeletal muscle	PEX5L
+RRM2	bone marrow	DNM1L
+RRM2	tonsil	DNM1L
+RRM2	lymph node	DNM1L
+RRM2	thymus	DNM1L
+S100A6	colon	PEX5
+S100A6	urinary bladder	PEX5
+S100A11	esophagus	SOD1
+S100A11	urinary bladder	SOD1
+S100A11	vagina	SOD1
+SAFB	cerebellum	HSPD1, DNM1L
+SAFB	skeletal muscle	HSPD1, DNM1L
+SARS1	thyroid gland	SOD1
+SARS1	cerebral cortex	SOD1
+SARS1	pancreas	SOD1
+ATXN1	retina	FDPS, FAR1
+ATXN1	cerebral cortex	FDPS, FAR1
+ATXN1	tongue	FDPS, FAR1
+ATXN1	skeletal muscle	FDPS, FAR1
+CCL3	cerebral cortex	IDE
+CCL3	bone marrow	IDE
+CCL3	adipose tissue	IDE
+CCL3	spleen	IDE
+CCL3	adrenal gland	IDE
+CCL3	lung	IDE
+SDHA	tongue	LDHA, TKT, CYB5R3, PDIA6, PMVK, HSD17B4
+SDHA	heart muscle	LDHA, TKT, CYB5R3, PDIA6, PMVK, HSD17B4
+SDHA	liver	LDHA, TKT, CYB5R3, PDIA6, PMVK, HSD17B4
+SDHA	skeletal muscle	LDHA, TKT, CYB5R3, PDIA6, PMVK, HSD17B4
+SDHA	choroid plexus	LDHA, TKT, CYB5R3, PDIA6, PMVK, HSD17B4
+SFPQ	thymus	VIM
+SGCB	tongue	EHHADH
+SGCB	heart muscle	EHHADH
+SGCB	skeletal muscle	EHHADH
+SGCB	parathyroid gland	EHHADH
+SH3GL1	esophagus	DNM1L, VIM
+SH3GL1	skin	DNM1L, VIM
+SH3GL1	vagina	DNM1L, VIM
+SH3GL2	cerebral cortex	ACTG1
+ST3GAL3	cerebral cortex	ACTG1
+ST3GAL3	tongue	ACTG1
+ST3GAL3	skeletal muscle	ACTG1
+SKP1	skeletal muscle	DNM1L
+SLC7A1	cerebral cortex	MFF
+SLC7A1	esophagus	MFF
+SLC7A1	skin	MFF
+SLC7A1	pancreas	MFF
+SLC14A1	midbrain	FIS1
+SLC14A1	prostate	FIS1
+SLC14A1	basal ganglia	FIS1
+SLC14A1	urinary bladder	FIS1
+SLC18A1	adrenal gland	PEX16
+SLC18A3	basal ganglia	MFF
+SMARCA2	ovary	SOD2
+SMARCA2	skeletal muscle	SOD2
+SMARCA2	choroid plexus	SOD2
+SMARCA2	parathyroid gland	SOD2
+SMARCC2	cerebellum	PEX14
+SMARCD1	bone marrow	PRDX1, CCDC33, PAICS
+SMARCD1	tonsil	PRDX1, CCDC33, PAICS
+SMARCD1	thymus	PRDX1, CCDC33, PAICS
+SMARCD1	parathyroid gland	PRDX1, CCDC33, PAICS
+SUMO3	cerebral cortex	VIM
+SUMO3	basal ganglia	VIM
+SUMO3	skeletal muscle	VIM
+SUMO2	cerebellum	DNM1L, SOD1, VIM
+SUMO2	ovary	DNM1L, SOD1, VIM
+SNCA	amygdala	SOD1
+SNCA	cerebral cortex	SOD1
+SNCA	cerebellum	SOD1
+SNCA	spinal cord	SOD1
+SNCA	midbrain	SOD1
+SNCA	bone marrow	SOD1
+SNCA	hippocampal formation	SOD1
+SNCA	hypothalamus	SOD1
+SNCA	basal ganglia	SOD1
+SOAT1	salivary gland	IDH2, LDHA, TKT, ARF1
+SOAT1	adrenal gland	IDH2, LDHA, TKT, ARF1
+SPTBN1	amygdala	CRAT
+SPTBN1	adipose tissue	CRAT
+SPTBN1	basal ganglia	CRAT
+SRP19	thyroid gland	SOD1
+SRP19	bone marrow	SOD1
+SRP19	tonsil	SOD1
+SRP19	pituitary gland	SOD1
+SRP19	pancreas	SOD1
+SRP19	liver	SOD1
+SRPK1	testis	PEX19
+SRPK1	bone marrow	PEX19
+SRPK2	amygdala	LDHA
+SRPK2	testis	LDHA
+SRPK2	cerebral cortex	LDHA
+SRPK2	cerebellum	LDHA
+SRPK2	spinal cord	LDHA
+SRPK2	midbrain	LDHA
+SRPK2	hippocampal formation	LDHA
+SRPK2	hypothalamus	LDHA
+SRPK2	basal ganglia	LDHA
+SRPK2	thymus	LDHA
+SSB	bone marrow	DNM1L, SOD1
+SSB	adipose tissue	DNM1L, SOD1
+SSB	choroid plexus	DNM1L, SOD1
+STAT3	liver	ECH1, IMPDH2
+STK4	bone marrow	SOD2, PRDX1
+STK4	tonsil	SOD2, PRDX1
+STK4	appendix	SOD2, PRDX1
+STK4	spleen	SOD2, PRDX1
+STK4	lymph node	SOD2, PRDX1
+STK4	thymus	SOD2, PRDX1
+STK4	lung	SOD2, PRDX1
+STX1A	amygdala	VIM
+STX1A	cerebral cortex	VIM
+STX1A	cerebellum	VIM
+STX1A	hippocampal formation	VIM
+STX1A	pituitary gland	VIM
+STX1A	hypothalamus	VIM
+STX1A	basal ganglia	VIM
+SUOX	epididymis	PEX19, POMC
+SUOX	liver	PEX19, POMC
+SUOX	skeletal muscle	PEX19, POMC
+SUOX	adrenal gland	PEX19, POMC
+SUOX	kidney	PEX19, POMC
+SUOX	parathyroid gland	PEX19, POMC
+VAMP1	cerebral cortex	TMEM35A, CYB5R3
+VAMP1	spinal cord	TMEM35A, CYB5R3
+VAMP1	midbrain	TMEM35A, CYB5R3
+VAMP1	hypothalamus	TMEM35A, CYB5R3
+SYN1	amygdala	VIM
+SYN1	retina	VIM
+SYN1	cerebral cortex	VIM
+SYN1	cerebellum	VIM
+SYN1	midbrain	VIM
+SYN1	hippocampal formation	VIM
+SYN1	pituitary gland	VIM
+SYN1	hypothalamus	VIM
+SYN1	basal ganglia	VIM
+TBCA	epididymis	SOD1
+TBCA	liver	SOD1
+TBCA	adrenal gland	SOD1
+TCEA2	amygdala	DHRS2, VIM
+TCEA2	testis	DHRS2, VIM
+TCEA2	cerebral cortex	DHRS2, VIM
+TCEA2	cerebellum	DHRS2, VIM
+TCEA2	hippocampal formation	DHRS2, VIM
+TCEA2	hypothalamus	DHRS2, VIM
+TCEA2	basal ganglia	DHRS2, VIM
+ELOA	pancreas	TRIM37
+ELOA	liver	TRIM37
+ELOA	skeletal muscle	TRIM37
+TCF4	cervix	MARF1, SZT2
+TCF4	placenta	MARF1, SZT2
+TCF3	testis	VIM
+TCF3	thymus	VIM
+GCFC2	skeletal muscle	VIM
+TCOF1	choroid plexus	VIM
+PRDX2	bone marrow	DNM1L, SOD1
+PRDX2	tongue	DNM1L, SOD1
+PRDX2	heart muscle	DNM1L, SOD1
+PRDX2	skeletal muscle	DNM1L, SOD1
+PRDX2	adrenal gland	DNM1L, SOD1
+TERF2	cerebral cortex	SOD1
+TERF2	cerebellum	SOD1
+TERF2	tonsil	SOD1
+TERF2	lymph node	SOD1
+TERF2	skeletal muscle	SOD1
+TFAP2A	skin	LDHA, RHOA
+TFCP2	retina	OXCT1, ACAA1
+TFCP2	tonsil	OXCT1, ACAA1
+TFCP2	skeletal muscle	OXCT1, ACAA1
+TFCP2	thymus	OXCT1, ACAA1
+TFCP2	parathyroid gland	OXCT1, ACAA1
+TFRC	bone marrow	MFF
+TFRC	tongue	MFF
+TFRC	ovary	MFF
+TFRC	colon	MFF
+TFRC	skeletal muscle	MFF
+TFRC	urinary bladder	MFF
+TFRC	lung	MFF
+TFRC	placenta	MFF
+TGFBR2	adipose tissue	IDH1, MAVS
+TGM2	cervix	DNM1L
+TGM2	heart muscle	DNM1L
+TGM2	fallopian tube	DNM1L
+TGM2	liver	DNM1L
+TGM2	endometrium	DNM1L
+TGM2	lung	DNM1L
+TGM2	placenta	DNM1L
+THBD	adipose tissue	TMEM35A
+THBD	lung	TMEM35A
+TIAM1	amygdala	RHOA, HSD17B4
+TIAM1	cerebellum	RHOA, HSD17B4
+TIAM1	hippocampal formation	RHOA, HSD17B4
+TIAM1	esophagus	RHOA, HSD17B4
+TIAM1	basal ganglia	RHOA, HSD17B4
+TIMP1	gallbladder	ECH1
+TIMP1	appendix	ECH1
+TIMP1	urinary bladder	ECH1
+TIMP1	lung	ECH1
+TLE1	liver	PEX2
+TLE1	skeletal muscle	PEX2
+TLN1	colon	DNM1L
+TLN1	endometrium	DNM1L
+TMSB4X	spinal cord	ACTG1
+TMSB4X	bone marrow	ACTG1
+TMSB4X	spleen	ACTG1
+TMSB4X	lymph node	ACTG1
+CLDN5	adipose tissue	EHHADH
+CLDN5	breast	EHHADH
+CLDN5	choroid plexus	EHHADH
+CLDN5	lung	EHHADH
+TNFAIP1	heart muscle	SOD1
+TNFAIP1	liver	SOD1
+TNFAIP1	spleen	SOD1
+TNNI3	heart muscle	PEX1
+TNNI3	breast	PEX1
+TNNI3	lung	PEX1
+TNNT1	skeletal muscle	VIM
+TP53	tonsil	MUL1, PEX26
+TP53	thymus	MUL1, PEX26
+TP53BP1	pituitary gland	HSPD1, VIM
+TPD52	retina	SOD1
+TPD52	rectum	SOD1
+TPI1	tongue	DNM1L, SOD1
+TPI1	heart muscle	DNM1L, SOD1
+TPI1	skeletal muscle	DNM1L, SOD1
+TPM1	smooth muscle	DNM1L
+TPM1	tongue	DNM1L
+TPM1	heart muscle	DNM1L
+TPM1	colon	DNM1L
+TPM1	skeletal muscle	DNM1L
+TPM1	endometrium	DNM1L
+TPM1	urinary bladder	DNM1L
+TPM1	seminal vesicle	DNM1L
+TPM2	smooth muscle	SOD1
+TPM2	tongue	SOD1
+TPM2	colon	SOD1
+TPM2	skeletal muscle	SOD1
+TPM2	endometrium	SOD1
+TPM2	urinary bladder	SOD1
+TPM2	seminal vesicle	SOD1
+TPM3	bone marrow	DNM1L
+TPM3	tongue	DNM1L
+TPM3	skeletal muscle	DNM1L
+TPP2	testis	EHHADH
+TPP2	bone marrow	EHHADH
+TPP2	skeletal muscle	EHHADH
+TPR	testis	SOD1
+TPR	bone marrow	SOD1
+TPR	thymus	SOD1
+TPR	parathyroid gland	SOD1
+TPT1	tongue	PRDX1
+TPT1	salivary gland	PRDX1
+TPT1	pancreas	PRDX1
+TPT1	skeletal muscle	PRDX1
+HSP90B1	thyroid gland	SOD2, DNM1L, SOD1
+HSP90B1	epididymis	SOD2, DNM1L, SOD1
+HSP90B1	liver	SOD2, DNM1L, SOD1
+TRAF1	tonsil	EHHADH, ECH1
+TRAF1	appendix	EHHADH, ECH1
+TRAF1	lymph node	EHHADH, ECH1
+TRAF2	cerebellum	MAVS, ACTG1, EHHADH, CCDC33, IMPDH2
+TRAF2	lymph node	MAVS, ACTG1, EHHADH, CCDC33, IMPDH2
+TRAF5	tonsil	PHYH, MAVS
+TRAF5	lymph node	PHYH, MAVS
+TRAF6	thyroid gland	MAVS, TRIM37
+TRAF6	bone marrow	MAVS, TRIM37
+TRPC1	retina	CAV1
+TSC1	testis	VIM
+TSC1	cerebellum	VIM
+TSG101	tongue	FDPS, EHHADH
+TTPA	liver	PEX12
+TTR	hippocampal formation	VIM
+TTR	pancreas	VIM
+TTR	choroid plexus	VIM
+TTR	parathyroid gland	VIM
+TUFT1	cervix	ABCD3, CCDC33
+TUFT1	esophagus	ABCD3, CCDC33
+TUFT1	skin	ABCD3, CCDC33
+TUFT1	vagina	ABCD3, CCDC33
+TXN	colon	DNM1L, PRDX1, VIM
+TXN	esophagus	DNM1L, PRDX1, VIM
+TXN	salivary gland	DNM1L, PRDX1, VIM
+TXN	liver	DNM1L, PRDX1, VIM
+TXN	rectum	DNM1L, PRDX1, VIM
+TXN	kidney	DNM1L, PRDX1, VIM
+UBB	liver	SOD1
+UBC	bone marrow	IDE
+UBC	tongue	IDE
+UBC	esophagus	IDE
+UBC	liver	IDE
+UBC	skeletal muscle	IDE
+UBC	choroid plexus	IDE
+UBA1	skeletal muscle	DNM1L, SOD1
+UBA1	choroid plexus	DNM1L, SOD1
+UBE2D1	bone marrow	MUL1, TRIM37
+UBE2D1	tongue	MUL1, TRIM37
+UBE2D1	heart muscle	MUL1, TRIM37
+UBE2D1	skeletal muscle	MUL1, TRIM37
+UBE2D2	testis	MUL1, TRIM37
+UBE2D2	cervix	MUL1, TRIM37
+UBE2D2	fallopian tube	MUL1, TRIM37
+UBE2D2	skeletal muscle	MUL1, TRIM37
+UBE2D3	bone marrow	MUL1, TRIM37
+UBE2E1	bone marrow	MUL1, TRIM37
+UBE2E2	cerebral cortex	MUL1, LDHA, TRIM37
+UBE2H	tongue	DNM1L, TRIM37
+UBE2H	heart muscle	DNM1L, TRIM37
+UBE2H	pancreas	DNM1L, TRIM37
+UBE2H	skeletal muscle	DNM1L, TRIM37
+UBE2H	choroid plexus	DNM1L, TRIM37
+UBE2H	adrenal gland	DNM1L, TRIM37
+UBE2I	thymus	PEX10, PAICS
+UBE2N	testis	SOD1
+UBE2N	lymph node	SOD1
+UBE2N	skeletal muscle	SOD1
+UBE3A	tongue	IDH1, MARF1
+UBE3A	skeletal muscle	IDH1, MARF1
+UCHL1	amygdala	SOD1
+UCHL1	cerebral cortex	SOD1
+UCHL1	cerebellum	SOD1
+UCHL1	spinal cord	SOD1
+UCHL1	midbrain	SOD1
+UCHL1	hippocampal formation	SOD1
+UCHL1	pituitary gland	SOD1
+UCHL1	hypothalamus	SOD1
+UCHL1	basal ganglia	SOD1
+UCHL1	adrenal gland	SOD1
+UPK1B	stomach	MFF
+UPK1B	urinary bladder	MFF
+NR1H2	skeletal muscle	VIM
+UROD	choroid plexus	VIM
+UROD	parathyroid gland	VIM
+VASP	bone marrow	ACTG1
+VAV1	bone marrow	RHOA
+VAV1	tonsil	RHOA
+VAV1	appendix	RHOA
+VAV1	small intestine	RHOA
+VAV1	spleen	RHOA
+VAV1	lymph node	RHOA
+VAV1	thymus	RHOA
+VAV1	urinary bladder	RHOA
+VAV2	small intestine	CAV1
+VAV2	pancreas	CAV1
+VAV2	liver	CAV1
+VAV2	adrenal gland	CAV1
+VCAM1	tonsil	HSPD1, VAPA, LDHA, GSTK1, ACAT1, VIM, CNOT1, PAICS, ARF1, HK2, PRDX1, PMVK
+VCAM1	ovary	HSPD1, VAPA, LDHA, GSTK1, ACAT1, VIM, CNOT1, PAICS, ARF1, HK2, PRDX1, PMVK
+VCAM1	spleen	HSPD1, VAPA, LDHA, GSTK1, ACAT1, VIM, CNOT1, PAICS, ARF1, HK2, PRDX1, PMVK
+VCAM1	lymph node	HSPD1, VAPA, LDHA, GSTK1, ACAT1, VIM, CNOT1, PAICS, ARF1, HK2, PRDX1, PMVK
+VCAM1	urinary bladder	HSPD1, VAPA, LDHA, GSTK1, ACAT1, VIM, CNOT1, PAICS, ARF1, HK2, PRDX1, PMVK
+VCAM1	kidney	HSPD1, VAPA, LDHA, GSTK1, ACAT1, VIM, CNOT1, PAICS, ARF1, HK2, PRDX1, PMVK
+VCP	tongue	DNM1L, SOD1
+VCP	heart muscle	DNM1L, SOD1
+VCP	liver	DNM1L, SOD1
+VCP	skeletal muscle	DNM1L, SOD1
+VCP	choroid plexus	DNM1L, SOD1
+VCP	adrenal gland	DNM1L, SOD1
+VDAC1	retina	LDHA, TKT, ARF1, HK1, IMPDH2
+VDAC1	tongue	LDHA, TKT, ARF1, HK1, IMPDH2
+VDAC1	heart muscle	LDHA, TKT, ARF1, HK1, IMPDH2
+VDAC1	skeletal muscle	LDHA, TKT, ARF1, HK1, IMPDH2
+VDAC2	tongue	PEX1
+VDAC2	heart muscle	PEX1
+VDAC2	esophagus	PEX1
+VDAC2	skeletal muscle	PEX1
+VDR	duodenum	GNPAT
+VDR	small intestine	GNPAT
+VDR	colon	GNPAT
+VDR	rectum	GNPAT
+VDR	parathyroid gland	GNPAT
+EZR	choroid plexus	NHERF1, DNM1L
+EZR	parathyroid gland	NHERF1, DNM1L
+XRCC4	testis	VIM
+XRCC4	thymus	VIM
+XRCC5	thymus	DNM1L, SOD1
+YWHAB	cerebral cortex	DNM1L, SOD1, VIM
+YWHAE	amygdala	DNM1L
+YWHAE	cerebral cortex	DNM1L
+YWHAE	cerebellum	DNM1L
+YWHAE	spinal cord	DNM1L
+YWHAE	midbrain	DNM1L
+YWHAE	hippocampal formation	DNM1L
+YWHAE	tongue	DNM1L
+YWHAE	hypothalamus	DNM1L
+YWHAE	basal ganglia	DNM1L
+YWHAE	skeletal muscle	DNM1L
+YWHAG	amygdala	BAAT, SOD1
+YWHAG	cerebral cortex	BAAT, SOD1
+YWHAG	midbrain	BAAT, SOD1
+YWHAG	hippocampal formation	BAAT, SOD1
+YWHAG	tongue	BAAT, SOD1
+YWHAG	hypothalamus	BAAT, SOD1
+YWHAG	adipose tissue	BAAT, SOD1
+YWHAG	basal ganglia	BAAT, SOD1
+YWHAG	skeletal muscle	BAAT, SOD1
+YWHAZ	esophagus	DNM1L, SOD1
+SF1	bone marrow	SCP2
+ZNF20	testis	VIM
+MKRN3	retina	POMC, PEX5, PEX10, PEX26, CCDC33
+RNF112	amygdala	PHYH, PEX26, SOD1
+RNF112	cerebral cortex	PHYH, PEX26, SOD1
+RNF112	cerebellum	PHYH, PEX26, SOD1
+RNF112	hippocampal formation	PHYH, PEX26, SOD1
+RNF112	hypothalamus	PHYH, PEX26, SOD1
+RNF112	basal ganglia	PHYH, PEX26, SOD1
+ZMYM2	thyroid gland	PAICS
+ZMYM2	retina	PAICS
+ZMYM2	testis	PAICS
+ZMYM2	bone marrow	PAICS
+PRDM2	cerebral cortex	SOD2
+PRDM2	bone marrow	SOD2
+PRDM2	skeletal muscle	SOD2
+BAG6	skeletal muscle	FAR1
+GPANK1	testis	CCDC33, PLAAT1
+SEM1	liver	SOD1
+SEM1	skeletal muscle	SOD1
+ARHGEF5	esophagus	RHOA
+ARHGEF5	skin	RHOA
+MLF2	cerebral cortex	CRAT
+MLF2	liver	CRAT
+MLF2	basal ganglia	CRAT
+MLF2	choroid plexus	CRAT
+FXR1	testis	ECH1, VIM, ACTG1, PAICS, IMPDH2
+FXR1	tongue	ECH1, VIM, ACTG1, PAICS, IMPDH2
+FXR1	heart muscle	ECH1, VIM, ACTG1, PAICS, IMPDH2
+FXR1	skeletal muscle	ECH1, VIM, ACTG1, PAICS, IMPDH2
+SYMPK	testis	SOD1
+SYMPK	lymph node	SOD1
+SYMPK	skeletal muscle	SOD1
+USP11	amygdala	DECR2
+USP11	cerebral cortex	DECR2
+USP11	cerebellum	DECR2
+USP11	pituitary gland	DECR2
+USP11	hypothalamus	DECR2
+USP11	basal ganglia	DECR2
+KDM5C	skeletal muscle	PEX14
+KDM5D	small intestine	PEX14
+AXIN1	bone marrow	TRIM37
+AXIN1	skin	TRIM37
+AXIN1	skeletal muscle	TRIM37
+CDC7	retina	GRHPR, TRIM37
+CDC7	testis	GRHPR, TRIM37
+CDC7	cerebellum	GRHPR, TRIM37
+CDC7	bone marrow	GRHPR, TRIM37
+CDC7	tonsil	GRHPR, TRIM37
+CDC7	spleen	GRHPR, TRIM37
+CDC7	lymph node	GRHPR, TRIM37
+CDC7	thymus	GRHPR, TRIM37
+H2BC9	bone marrow	CRAT, ACSL4, AKAP11
+H2BC9	thymus	CRAT, ACSL4, AKAP11
+H2BC21	retina	ATAD1, TMEM135, AKAP11
+H2BC21	heart muscle	ATAD1, TMEM135, AKAP11
+H2BC21	prostate	ATAD1, TMEM135, AKAP11
+H2BC21	skin	ATAD1, TMEM135, AKAP11
+H2BC21	vagina	ATAD1, TMEM135, AKAP11
+H3C4	bone marrow	PEX1
+H3C10	bone marrow	PEX1
+H3C10	spleen	PEX1
+MAD1L1	basal ganglia	VIM
+PLA2G6	testis	CCDC33
+STX7	tonsil	MFF
+STX7	lymph node	MFF
+CUL3	testis	PDIA6
+CUL3	tongue	PDIA6
+CUL3	tonsil	PDIA6
+CUL3	skeletal muscle	PDIA6
+KLF11	pancreas	FAR1, VIM
+SMARCA5	testis	SOD2
+SMARCA5	bone marrow	SOD2
+PPFIBP2	parathyroid gland	VIM
+PIK3R3	testis	CCDC33
+COPS3	testis	PHYH, PEX1, PEX26
+COPS3	bone marrow	PHYH, PEX1, PEX26
+COPS3	tongue	PHYH, PEX1, PEX26
+COPS3	heart muscle	PHYH, PEX1, PEX26
+COPS3	skeletal muscle	PHYH, PEX1, PEX26
+API5	thymus	SOD1
+BLZF1	testis	CCDC33, RAB2A
+BHLHE40	esophagus	EHHADH, VIM
+BHLHE40	skeletal muscle	EHHADH, VIM
+BHLHE40	vagina	EHHADH, VIM
+PIAS1	bone marrow	PHYH, PEX1, PEX7
+PIAS1	thymus	PHYH, PEX1, PEX7
+TCAP	midbrain	VIM
+TCAP	skeletal muscle	VIM
+PRKRA	tongue	EHHADH
+PRKRA	skeletal muscle	EHHADH
+RUVBL1	testis	DNM1L, SOD1
+RUVBL1	fallopian tube	DNM1L, SOD1
+SSNA1	testis	EHHADH
+EIF3A	bone marrow	DNM1L, SOD1
+EIF3A	pancreas	DNM1L, SOD1
+EIF3A	skeletal muscle	DNM1L, SOD1
+EIF3B	skeletal muscle	DNM1L
+EIF3D	tonsil	DNM1L, SOD1
+EIF3D	pancreas	DNM1L, SOD1
+EIF3H	bone marrow	SOD1
+EIF3H	tonsil	SOD1
+EIF3H	ovary	SOD1
+EIF3I	skeletal muscle	SOD1
+VAMP4	cerebral cortex	MFF, CYB5R3
+VAMP4	cerebellum	MFF, CYB5R3
+VAMP4	pituitary gland	MFF, CYB5R3
+STX11	lung	CCDC33
+PEA15	amygdala	ABCD4
+PEA15	retina	ABCD4
+PEA15	cerebral cortex	ABCD4
+PEA15	spinal cord	ABCD4
+PEA15	midbrain	ABCD4
+PEA15	hippocampal formation	ABCD4
+PEA15	hypothalamus	ABCD4
+PEA15	basal ganglia	ABCD4
+CDC23	placenta	PHYH, CCDC33
+PABPC4	tongue	SOD1
+PABPC4	heart muscle	SOD1
+PABPC4	stomach	SOD1
+PABPC4	pancreas	SOD1
+PABPC4	skeletal muscle	SOD1
+BANF1	tongue	SOD1
+BANF1	heart muscle	SOD1
+BANF1	fallopian tube	SOD1
+BANF1	skeletal muscle	SOD1
+DCAF5	testis	VAPA
+DCAF5	tongue	VAPA
+SYNGAP1	cerebral cortex	VIM
+SYNGAP1	cerebellum	VIM
+SYNGAP1	hippocampal formation	VIM
+SYNGAP1	ovary	VIM
+SYNGAP1	pituitary gland	VIM
+SYNGAP1	basal ganglia	VIM
+TMEM11	bone marrow	PEX12
+TMEM11	tongue	PEX12
+TMEM11	pancreas	PEX12
+TMEM11	skeletal muscle	PEX12
+TSC22D1	cerebral cortex	VIM
+STK19	pancreas	VIM
+FUBP1	bone marrow	SOD1, VIM
+AP1G2	cerebellum	PEX1
+AP1G2	pituitary gland	PEX1
+AP1M1	testis	CCDC33
+AP3D1	pituitary gland	SOD1
+AP3D1	pancreas	SOD1
+AP3D1	skeletal muscle	SOD1
+BTRC	retina	PRDX1
+BTRC	cerebral cortex	PRDX1
+BTRC	basal ganglia	PRDX1
+H1-10	bone marrow	SOD1
+HAP1	hypothalamus	VIM
+RHBDL1	amygdala	MFF
+RHBDL1	cerebral cortex	MFF
+RHBDL1	cerebellum	MFF
+RHBDL1	hippocampal formation	MFF
+RHBDL1	hypothalamus	MFF
+RHBDL1	basal ganglia	MFF
+UBE2M	amygdala	SOD1
+UBE2M	cerebral cortex	SOD1
+UBE2M	skeletal muscle	SOD1
+SPAG9	cerebral cortex	ARF1
+SPAG9	spinal cord	ARF1
+RPL14	ovary	PEX5
+PSTPIP1	bone marrow	TTC1, EHHADH
+PSTPIP1	tonsil	TTC1, EHHADH
+PSTPIP1	appendix	TTC1, EHHADH
+PSTPIP1	small intestine	TTC1, EHHADH
+PSTPIP1	spleen	TTC1, EHHADH
+PSTPIP1	lymph node	TTC1, EHHADH
+PSTPIP1	lung	TTC1, EHHADH
+PRC1	testis	TRIM37
+PRC1	cerebellum	TRIM37
+PRC1	bone marrow	TRIM37
+PRC1	tonsil	TRIM37
+PRC1	esophagus	TRIM37
+PRC1	thymus	TRIM37
+PIAS2	retina	PAICS
+PIAS2	testis	PAICS
+PIAS2	cerebellum	PAICS
+PIAS2	skeletal muscle	PAICS
+PIAS2	parathyroid gland	PAICS
+CLDN10	amygdala	PEX12
+CLDN10	salivary gland	PEX12
+CLDN10	pancreas	PEX12
+CLDN10	kidney	PEX12
+USP2	retina	SOD1
+USP2	testis	SOD1
+USP2	tongue	SOD1
+USP2	heart muscle	SOD1
+USP2	skeletal muscle	SOD1
+USP2	kidney	SOD1
+PDLIM1	skeletal muscle	VIM
+ARHGEF1	bone marrow	RHOA
+ARHGEF1	small intestine	RHOA
+ARHGEF1	spleen	RHOA
+ARHGEF1	lymph node	RHOA
+ARHGEF1	thymus	RHOA
+CBFA2T2	retina	PEX14
+CBFA2T2	prostate	PEX14
+SYNGR3	cerebral cortex	EHHADH
+SYNGR3	hypothalamus	EHHADH
+SYNGR1	cerebral cortex	EHHADH
+SYNGR1	choroid plexus	EHHADH
+EBAG9	thyroid gland	VAPB, VAPA, PEX16, ACSL5
+EBAG9	epididymis	VAPB, VAPA, PEX16, ACSL5
+EBAG9	tongue	VAPB, VAPA, PEX16, ACSL5
+EBAG9	salivary gland	VAPB, VAPA, PEX16, ACSL5
+EBAG9	liver	VAPB, VAPA, PEX16, ACSL5
+EBAG9	skeletal muscle	VAPB, VAPA, PEX16, ACSL5
+AP4M1	testis	ARF1
+ARHGEF2	spinal cord	RHOA
+ARHGEF2	lung	RHOA
+BUB3	bone marrow	DNM1L
+BUB3	tonsil	DNM1L
+BUB3	lymph node	DNM1L
+BUB3	thymus	DNM1L
+DDX21	bone marrow	DNM1L
+DDX21	adipose tissue	DNM1L
+DDX21	urinary bladder	DNM1L
+SLC16A7	heart muscle	VAPA, ACSL5
+SLC16A7	stomach	VAPA, ACSL5
+SLC16A7	pancreas	VAPA, ACSL5
+SLC16A7	adipose tissue	VAPA, ACSL5
+SLC16A7	kidney	VAPA, ACSL5
+ZMYM6	bone marrow	SOD1
+PNMA1	cerebral cortex	EHHADH, CCDC33
+RPS6KA5	spinal cord	ACTG1
+RPS6KA5	tongue	ACTG1
+RPS6KA5	skeletal muscle	ACTG1
+CYTH2	thyroid gland	ARF1
+CYTH2	retina	ARF1
+CYTH2	testis	ARF1
+ITGB1BP1	adipose tissue	CCDC33, SOD1
+ITGB1BP1	breast	CCDC33, SOD1
+ITGB1BP1	basal ganglia	CCDC33, SOD1
+TRIP13	testis	SCP2
+TRIP13	thymus	SCP2
+VAMP3	spinal cord	TMEM35A
+RAB9A	bone marrow	SOD1
+RAB9A	adrenal gland	SOD1
+ADIPOQ	tongue	PEX12, MFF, TMEM35A
+ADIPOQ	salivary gland	PEX12, MFF, TMEM35A
+ADIPOQ	adipose tissue	PEX12, MFF, TMEM35A
+ADIPOQ	breast	PEX12, MFF, TMEM35A
+LPXN	spleen	AGXT
+ARHGAP29	thyroid gland	RHOA
+ARHGAP29	adipose tissue	RHOA
+ARHGAP29	breast	RHOA
+ARHGAP29	spleen	RHOA
+ARHGAP29	kidney	RHOA
+ARHGAP29	lung	RHOA
+STX8	testis	PEX12, MFF
+STX8	epididymis	PEX12, MFF
+STX8	tongue	PEX12, MFF
+STX8	skeletal muscle	PEX12, MFF
+STX8	choroid plexus	PEX12, MFF
+FXR2	tongue	ECH1, VIM, PAICS, TRIM37, CCDC33, IMPDH2
+FXR2	heart muscle	ECH1, VIM, PAICS, TRIM37, CCDC33, IMPDH2
+FXR2	skeletal muscle	ECH1, VIM, PAICS, TRIM37, CCDC33, IMPDH2
+BAG4	cerebral cortex	SAMD4A, VIM
+BAG4	cerebellum	SAMD4A, VIM
+POLR1C	choroid plexus	CCDC33, VIM
+PTGES	skin	VAPB, EHHADH
+PTGES	urinary bladder	VAPB, EHHADH
+PTGES	parathyroid gland	VAPB, EHHADH
+PTGES	seminal vesicle	VAPB, EHHADH
+PTGES	placenta	VAPB, EHHADH
+SEC22B	retina	MFF
+SEC22B	epididymis	MFF
+SEC22B	liver	MFF
+GOSR2	duodenum	TMEM35A, MFF
+GOSR2	testis	TMEM35A, MFF
+KIF20B	testis	VIM
+KIF20B	thymus	VIM
+PRDX6	tongue	DNM1L, SOD1
+PRDX6	adipose tissue	DNM1L, SOD1
+PRDX6	liver	DNM1L, SOD1
+PRDX6	skeletal muscle	DNM1L, SOD1
+PDIA4	thyroid gland	SOD1
+PDIA4	epididymis	SOD1
+PDIA4	liver	SOD1
+EIF5B	spinal cord	PEX1
+EIF5B	heart muscle	PEX1
+EIF5B	skeletal muscle	PEX1
+EIF5B	choroid plexus	PEX1
+NUP93	thyroid gland	SOD1
+NUP93	retina	SOD1
+NUP93	testis	SOD1
+NUP93	bone marrow	SOD1
+NUP93	tonsil	SOD1
+NUP93	lymph node	SOD1
+NUP93	thymus	SOD1
+KIAA0408	spinal cord	TRIM37, VIM
+KIAA0408	skeletal muscle	TRIM37, VIM
+SART3	cerebellum	PDIA6
+SART3	bone marrow	PDIA6
+SART3	lymph node	PDIA6
+SART3	thymus	PDIA6
+RIPOR2	tonsil	RHOA, MAP2K2
+RIPOR2	appendix	RHOA, MAP2K2
+RIPOR2	spleen	RHOA, MAP2K2
+RIPOR2	lymph node	RHOA, MAP2K2
+RIPOR2	endometrium	RHOA, MAP2K2
+RIPOR2	thymus	RHOA, MAP2K2
+STARD8	kidney	RHOA
+STARD8	lung	RHOA
+EIF4A3	bone marrow	DNM1L, SOD1
+EIF4A3	esophagus	DNM1L, SOD1
+EIF4A3	thymus	DNM1L, SOD1
+EIF4A3	urinary bladder	DNM1L, SOD1
+EIF4A3	adrenal gland	DNM1L, SOD1
+RIMS3	amygdala	VIM
+RIMS3	cerebral cortex	VIM
+RIMS3	cerebellum	VIM
+RIMS3	midbrain	VIM
+RIMS3	hippocampal formation	VIM
+RIMS3	hypothalamus	VIM
+RIMS3	basal ganglia	VIM
+DLGAP5	testis	TRIM37
+DLGAP5	bone marrow	TRIM37
+DLGAP5	tonsil	TRIM37
+DLGAP5	lymph node	TRIM37
+DLGAP5	thymus	TRIM37
+SCRN1	retina	SOD2
+SCRN1	cerebral cortex	SOD2
+IP6K1	testis	VIM
+IP6K1	cerebral cortex	VIM
+IP6K1	cerebellum	VIM
+IP6K1	hippocampal formation	VIM
+IP6K1	basal ganglia	VIM
+GIT2	bone marrow	ACTG1
+GIT2	tonsil	ACTG1
+GIT2	appendix	ACTG1
+GIT2	spleen	ACTG1
+GIT2	lymph node	ACTG1
+GIT2	thymus	ACTG1
+URB2	testis	SCP2
+URB2	skeletal muscle	SCP2
+KEAP1	tongue	CAT
+KEAP1	skeletal muscle	CAT
+ARMCX2	pituitary gland	VIM
+ARMCX2	parathyroid gland	VIM
+ARHGAP11A	bone marrow	RHOA
+ARHGAP11A	tonsil	RHOA
+ARHGAP11A	thymus	RHOA
+ARHGEF11	retina	RHOA
+ARHGEF11	testis	RHOA
+ARHGEF11	cerebral cortex	RHOA
+ARHGEF11	cerebellum	RHOA
+ARHGEF11	parathyroid gland	RHOA
+TRIM14	duodenum	PDIA6, VIM
+TRIM14	small intestine	PDIA6, VIM
+TRIM14	thymus	PDIA6, VIM
+ZBTB24	retina	TRIM37
+ZBTB24	bone marrow	TRIM37
+ZBTB24	tonsil	TRIM37
+ZBTB24	lymph node	TRIM37
+ZBTB24	thymus	TRIM37
+ZBTB24	parathyroid gland	TRIM37
+SETDB1	testis	BAAT, VIM
+OSBPL2	esophagus	VAPB, VAPA
+ARNT2	amygdala	CCDC33, TRIM37
+ARNT2	cerebral cortex	CCDC33, TRIM37
+ARNT2	cerebellum	CCDC33, TRIM37
+ARNT2	spinal cord	CCDC33, TRIM37
+ARNT2	midbrain	CCDC33, TRIM37
+ARNT2	hippocampal formation	CCDC33, TRIM37
+ARNT2	hypothalamus	CCDC33, TRIM37
+ARNT2	basal ganglia	CCDC33, TRIM37
+IQSEC1	amygdala	PEX26, SOD1
+IQSEC1	retina	PEX26, SOD1
+IQSEC1	cerebral cortex	PEX26, SOD1
+IQSEC1	cerebellum	PEX26, SOD1
+IQSEC1	bone marrow	PEX26, SOD1
+IQSEC1	hippocampal formation	PEX26, SOD1
+RBM8A	bone marrow	DNM1L, SOD1
+RBM8A	tonsil	DNM1L, SOD1
+RBM8A	esophagus	DNM1L, SOD1
+RBM8A	lymph node	DNM1L, SOD1
+RBM8A	skeletal muscle	DNM1L, SOD1
+MVP	colon	EPHX2
+MVP	adrenal gland	EPHX2
+CCS	bone marrow	SOD1
+CCS	small intestine	SOD1
+CCS	salivary gland	SOD1
+CCS	pancreas	SOD1
+CCS	liver	SOD1
+CCS	choroid plexus	SOD1
+HNRNPDL	bone marrow	DNM1L
+HNRNPDL	ovary	DNM1L
+HNRNPDL	skeletal muscle	DNM1L
+BCL2L11	bone marrow	PEX19
+BCL2L11	tonsil	PEX19
+BCL2L11	lymph node	PEX19
+TOM1L1	duodenum	PHYH
+TOM1L1	liver	PHYH
+TOM1L1	kidney	PHYH
+SH2D3C	heart muscle	CAV1
+SH2D3C	spleen	CAV1
+SH2D3C	lung	CAV1
+RANBP9	testis	SOD1
+RANBP9	bone marrow	SOD1
+RANBP9	tongue	SOD1
+RANBP9	esophagus	SOD1
+RANBP9	skeletal muscle	SOD1
+RANBP9	vagina	SOD1
+SAE1	testis	DNM1L, SOD1
+SAE1	colon	DNM1L, SOD1
+SNUPN	testis	PEX5
+SNUPN	tongue	PEX5
+SNUPN	ovary	PEX5
+SNUPN	skeletal muscle	PEX5
+SNUPN	choroid plexus	PEX5
+HUWE1	skeletal muscle	SOD1
+TSPAN2	smooth muscle	MFF
+TSPAN2	fallopian tube	MFF
+TSPAN2	colon	MFF
+TSPAN2	endometrium	MFF
+TSPAN2	urinary bladder	MFF
+TSPAN2	seminal vesicle	MFF
+ACTR1A	tongue	EHHADH, DNM1L
+ACTR1A	skeletal muscle	EHHADH, DNM1L
+TRAP1	tongue	SOD1
+TRAP1	heart muscle	SOD1
+TRAP1	liver	SOD1
+TRAP1	skeletal muscle	SOD1
+OPTN	tongue	PEX16, CRYM
+OPTN	skeletal muscle	PEX16, CRYM
+TRIM28	bone marrow	DNM1L, SOD1, VIM
+PDZK1IP1	gallbladder	PEX16, SOD1
+PDZK1IP1	esophagus	PEX16, SOD1
+PDZK1IP1	salivary gland	PEX16, SOD1
+PDZK1IP1	skin	PEX16, SOD1
+PDZK1IP1	kidney	PEX16, SOD1
+CNIH1	liver	MFF, CYB5R3
+RBM5	ovary	HSPD1, MLYCD
+PATJ	cerebellum	PHYH
+PATJ	heart muscle	PHYH
+PATJ	skeletal muscle	PHYH
+PSMD14	tongue	SOD1
+PSMD14	skeletal muscle	SOD1
+SLC35B1	thyroid gland	VAPA, MFF
+SLC35B1	epididymis	VAPA, MFF
+SLC35B1	tongue	VAPA, MFF
+SLC35B1	liver	VAPA, MFF
+SLC35B1	skeletal muscle	VAPA, MFF
+SLC35B1	choroid plexus	VAPA, MFF
+CNKSR1	skeletal muscle	RHOA
+STUB1	cerebral cortex	PEX7
+STUB1	skeletal muscle	PEX7
+NET1	colon	RHOA
+NET1	salivary gland	RHOA
+BET1	placenta	TMEM35A, MFF
+SAP18	spinal cord	DNM1L
+SAP18	bone marrow	DNM1L
+SAP18	skeletal muscle	DNM1L
+EIF1B	bone marrow	PEX19
+EIF1B	heart muscle	PEX19
+EIF1B	skeletal muscle	PEX19
+VPS26C	tongue	DECR2
+TNIP1	skeletal muscle	EHHADH
+HMG20A	spleen	EHHADH
+HMG20A	thymus	EHHADH
+BTN2A2	tonsil	PEX12
+BTN2A2	appendix	PEX12
+BTN2A2	spleen	PEX12
+BTN2A2	lymph node	PEX12
+BTN2A2	choroid plexus	PEX12
+DLC1	adipose tissue	BAAT, RHOA
+DLC1	lung	BAAT, RHOA
+RACK1	ovary	RHOA
+BASP1	amygdala	SOD1
+BASP1	cerebral cortex	SOD1
+BASP1	epididymis	SOD1
+BASP1	hippocampal formation	SOD1
+BASP1	hypothalamus	SOD1
+PRMT5	skeletal muscle	EHHADH
+PGRMC2	duodenum	PEX16, VAPA
+PGRMC2	small intestine	PEX16, VAPA
+PGRMC2	liver	PEX16, VAPA
+MCRS1	tongue	TRIM37
+MCRS1	heart muscle	TRIM37
+MCRS1	skeletal muscle	TRIM37
+FAM3C	duodenum	MFF, CYB5R3
+FAM3C	thyroid gland	MFF, CYB5R3
+FAM3C	cervix	MFF, CYB5R3
+FAM3C	small intestine	MFF, CYB5R3
+VAV3	colon	RHOA
+VAV3	esophagus	RHOA
+VAV3	skin	RHOA
+VAV3	breast	RHOA
+VAV3	rectum	RHOA
+VAV3	kidney	RHOA
+VAV3	placenta	RHOA
+BAIAP2	esophagus	PEX26
+BAIAP2	skin	PEX26
+CLEC10A	appendix	PEX16
+ZNHIT1	liver	DNM1L
+ZNHIT1	choroid plexus	DNM1L
+UBE2E3	skeletal muscle	MUL1, TRIM37
+SEC23A	smooth muscle	MFF
+SEC23A	liver	MFF
+CAP2	cerebral cortex	ACTG1
+CAP2	smooth muscle	ACTG1
+CAP2	tongue	ACTG1
+CAP2	heart muscle	ACTG1
+CAP2	skeletal muscle	ACTG1
+CAP1	bone marrow	ACTG1
+CAP1	tonsil	ACTG1
+VAT1	skin	SOD1
+VAT1	adrenal gland	SOD1
+MYBBP1A	pancreas	SOD1
+MYBBP1A	skeletal muscle	SOD1
+KAT5	bone marrow	BAAT, TRIM37
+NEBL	heart muscle	PEX26
+BATF	bone marrow	PEX1
+BATF	tonsil	PEX1
+BATF	appendix	PEX1
+BATF	spleen	PEX1
+BATF	lymph node	PEX1
+BATF	urinary bladder	PEX1
+DCTN2	skeletal muscle	DNM1L
+PRDX4	pancreas	PRDX1, SOD1
+PRDX4	liver	PRDX1, SOD1
+AGR2	stomach	IMPDH2
+AGR2	rectum	IMPDH2
+HTATIP2	duodenum	EHHADH, ACSL4
+HTATIP2	stomach	EHHADH, ACSL4
+HTATIP2	small intestine	EHHADH, ACSL4
+HTATIP2	colon	EHHADH, ACSL4
+HTATIP2	liver	EHHADH, ACSL4
+HTATIP2	rectum	EHHADH, ACSL4
+SIVA1	skeletal muscle	PXMP2
+CCT7	tongue	DNM1L, SOD1
+CCT7	skeletal muscle	DNM1L, SOD1
+CCT2	testis	DNM1L, SOD1
+CCT2	bone marrow	DNM1L, SOD1
+AHSA1	skeletal muscle	DNM1L
+SPAG5	testis	CCDC33
+MYL12A	tongue	DNM1L
+MYL12A	heart muscle	DNM1L
+MYL12A	skeletal muscle	DNM1L
+TXNIP	tongue	IDI1
+CAMKK2	amygdala	VIM
+CAMKK2	cerebral cortex	VIM
+CAMKK2	cerebellum	VIM
+CAMKK2	basal ganglia	VIM
+KHDRBS3	amygdala	CCDC33
+KHDRBS3	testis	CCDC33
+EBP	duodenum	FIS1, VAPB, VAPA, EHHADH
+EBP	liver	FIS1, VAPB, VAPA, EHHADH
+EBP	adrenal gland	FIS1, VAPB, VAPA, EHHADH
+PNMA2	amygdala	CCDC33
+PNMA2	hippocampal formation	CCDC33
+PNMA2	hypothalamus	CCDC33
+PNMA2	basal ganglia	CCDC33
+CCT8	tongue	DNM1L, SOD1
+CCT8	tonsil	DNM1L, SOD1
+CCT8	lymph node	DNM1L, SOD1
+CCT8	thymus	DNM1L, SOD1
+NUDC	choroid plexus	PEX7
+NES	skeletal muscle	VIM
+HSPH1	amygdala	DNM1L
+HSPH1	cerebral cortex	DNM1L
+HSPH1	hippocampal formation	DNM1L
+HSPH1	hypothalamus	DNM1L
+HSPH1	basal ganglia	DNM1L
+FRS3	amygdala	CCDC33
+FRS3	testis	CCDC33
+FRS3	hippocampal formation	CCDC33
+FRS3	hypothalamus	CCDC33
+RUVBL2	testis	DNM1L, SOD1
+RUVBL2	bone marrow	DNM1L, SOD1
+RUVBL2	fallopian tube	DNM1L, SOD1
+RUVBL2	skeletal muscle	DNM1L, SOD1
+RUVBL2	choroid plexus	DNM1L, SOD1
+MALT1	tonsil	PHYH
+MALT1	lymph node	PHYH
+RUNDC3A	amygdala	VIM
+RUNDC3A	cerebral cortex	VIM
+RUNDC3A	hippocampal formation	VIM
+EHMT2	basal ganglia	CCDC33
+RNPS1	cerebral cortex	DNM1L
+RNPS1	cerebellum	DNM1L
+RNPS1	bone marrow	DNM1L
+RNPS1	skeletal muscle	DNM1L
+SUB1	bone marrow	ABCD3, DNM1L
+SUB1	thymus	ABCD3, DNM1L
+SPIN1	epididymis	SOD1
+SERINC3	testis	PEX1
+SERINC3	cerebral cortex	PEX1
+SERINC3	parathyroid gland	PEX1
+SERINC3	placenta	PEX1
+STIP1	testis	DNM1L
+STIP1	skeletal muscle	DNM1L
+STIP1	adrenal gland	DNM1L
+YWHAQ	cerebellum	DNM1L, SOD1
+COPS6	skeletal muscle	VIM
+COPS5	tongue	DDO, MAP2K2
+COPS5	heart muscle	DDO, MAP2K2
+COPS5	liver	DDO, MAP2K2
+COPS5	skeletal muscle	DDO, MAP2K2
+CCDC85B	amygdala	CCDC33
+CCDC85B	hippocampal formation	CCDC33
+CCDC85B	basal ganglia	CCDC33
+RAB35	esophagus	GNPAT
+DSTN	smooth muscle	SOD1, ACTG1
+DSTN	colon	SOD1, ACTG1
+DSTN	endometrium	SOD1, ACTG1
+DSTN	urinary bladder	SOD1, ACTG1
+DSTN	seminal vesicle	SOD1, ACTG1
+ADRM1	testis	SOD1
+ADRM1	liver	SOD1
+ADRM1	skeletal muscle	SOD1
+WWP2	bone marrow	PEX1
+WWP2	salivary gland	PEX1
+WWP2	kidney	PEX1
+HSF2BP	testis	SAMD4A, POMC, CCDC33
+WDR5	testis	MARF1
+WDR5	cerebellum	MARF1
+WDR5	pancreas	MARF1
+WDR5	liver	MARF1
+WDR5	skeletal muscle	MARF1
+PRSS23	cervix	ACTG1
+PRSS23	seminal vesicle	ACTG1
+CIT	cerebral cortex	RHOA
+CIT	basal ganglia	RHOA
+CDC37	tongue	DNM1L, CRYM, PAICS, ACTG1
+CDC37	heart muscle	DNM1L, CRYM, PAICS, ACTG1
+CDC37	skeletal muscle	DNM1L, CRYM, PAICS, ACTG1
+KAT7	testis	VIM
+KAT7	cerebellum	VIM
+KAT7	skeletal muscle	VIM
+KAT7	parathyroid gland	VIM
+GLMN	retina	PEX5
+GLMN	cerebellum	PEX5
+GLMN	skin	PEX5
+ERG28	testis	PEX2
+ERG28	epididymis	PEX2
+ERG28	esophagus	PEX2
+ERG28	liver	PEX2
+NUDT3	retina	PEX5
+NUDT3	cerebral cortex	PEX5
+NUDT3	tongue	PEX5
+NUDT3	skeletal muscle	PEX5
+FAM107A	amygdala	HSPD1, TRIM37, VIM
+FAM107A	cerebral cortex	HSPD1, TRIM37, VIM
+FAM107A	cerebellum	HSPD1, TRIM37, VIM
+FAM107A	spinal cord	HSPD1, TRIM37, VIM
+FAM107A	midbrain	HSPD1, TRIM37, VIM
+FAM107A	hippocampal formation	HSPD1, TRIM37, VIM
+FAM107A	hypothalamus	HSPD1, TRIM37, VIM
+FAM107A	basal ganglia	HSPD1, TRIM37, VIM
+FAM107A	choroid plexus	HSPD1, TRIM37, VIM
+MAP4K1	retina	SOD1
+MAP4K1	bone marrow	SOD1
+MAP4K1	tonsil	SOD1
+MAP4K1	appendix	SOD1
+MAP4K1	small intestine	SOD1
+MAP4K1	spleen	SOD1
+MAP4K1	lymph node	SOD1
+MAP4K1	thymus	SOD1
+MAP4K1	lung	SOD1
+AKAP13	skeletal muscle	RHOA
+AKAP13	endometrium	RHOA
+GALNT6	duodenum	PEX1
+GALNT6	epididymis	PEX1
+GALNT6	cervix	PEX1
+GALNT6	stomach	PEX1
+GALNT6	small intestine	PEX1
+GALNT6	salivary gland	PEX1
+GALNT6	breast	PEX1
+ZHX1	thyroid gland	IDH1, PEX14, VIM
+ZHX1	retina	IDH1, PEX14, VIM
+ZHX1	esophagus	IDH1, PEX14, VIM
+ZHX1	skin	IDH1, PEX14, VIM
+ZHX1	adipose tissue	IDH1, PEX14, VIM
+ZHX1	liver	IDH1, PEX14, VIM
+TREX1	bone marrow	PEX12
+TREX1	salivary gland	PEX12
+TREX1	skin	PEX12
+TREX1	spleen	PEX12
+TREX1	lymph node	PEX12
+TREX1	choroid plexus	PEX12
+PNKP	adrenal gland	TRIM37
+PARK7	tongue	SOD1, DNM1L, PDIA6, ARF1, IMPDH2
+PARK7	skeletal muscle	SOD1, DNM1L, PDIA6, ARF1, IMPDH2
+PARK7	choroid plexus	SOD1, DNM1L, PDIA6, ARF1, IMPDH2
+TMC6	spinal cord	VIM
+ACOT7	amygdala	ACOT12, SOD1
+ACOT7	cerebral cortex	ACOT12, SOD1
+ACOT7	cerebellum	ACOT12, SOD1
+ACOT7	midbrain	ACOT12, SOD1
+ACOT7	hippocampal formation	ACOT12, SOD1
+ACOT7	hypothalamus	ACOT12, SOD1
+ACOT7	basal ganglia	ACOT12, SOD1
+OIP5	testis	PEX19, AGXT
+OIP5	bone marrow	PEX19, AGXT
+OIP5	skeletal muscle	PEX19, AGXT
+MGLL	adipose tissue	PEX12, TMEM35A
+IKZF3	tonsil	EHHADH, RHOA
+IKZF3	lymph node	EHHADH, RHOA
+COPG1	epididymis	SOD1
+COPG1	pituitary gland	SOD1
+COPG1	pancreas	SOD1
+COPG1	liver	SOD1
+COPG1	choroid plexus	SOD1
+CNKSR2	cerebellum	VIM
+ARHGEF15	heart muscle	RHOA
+ARHGEF15	adipose tissue	RHOA
+ARHGEF15	breast	RHOA
+ARHGEF15	lung	RHOA
+SACM1L	thyroid gland	MFF
+KIFAP3	retina	PEX19
+KIFAP3	cerebral cortex	PEX19
+KIFAP3	heart muscle	PEX19
+KIFAP3	hypothalamus	PEX19
+MSRB2	tongue	PEX26
+MSRB2	heart muscle	PEX26
+MSRB2	skeletal muscle	PEX26
+HABP4	amygdala	VIM
+HABP4	testis	VIM
+HABP4	cerebral cortex	VIM
+HABP4	spinal cord	VIM
+HABP4	midbrain	VIM
+HABP4	hippocampal formation	VIM
+HABP4	hypothalamus	VIM
+HABP4	basal ganglia	VIM
+SNW1	skeletal muscle	VIM
+PAXIP1	testis	SCCPDH, LDHA
+PAXIP1	cerebellum	SCCPDH, LDHA
+PAXIP1	bone marrow	SCCPDH, LDHA
+PAXIP1	lymph node	SCCPDH, LDHA
+PAXIP1	thymus	SCCPDH, LDHA
+ACIN1	bone marrow	DNM1L
+ACIN1	spleen	DNM1L
+DAAM1	retina	RHOA
+DAAM1	skin	RHOA
+RAB21	heart muscle	SOD1
+RAB21	skeletal muscle	SOD1
+EXOSC7	skeletal muscle	VIM
+EXOSC7	choroid plexus	VIM
+KDM1A	testis	ECI2, CCDC33, PEX7
+TNIK	duodenum	ACTG1
+TNIK	amygdala	ACTG1
+TNIK	retina	ACTG1
+TNIK	cerebral cortex	ACTG1
+TNIK	tongue	ACTG1
+TNIK	small intestine	ACTG1
+TNIK	basal ganglia	ACTG1
+TNIK	skeletal muscle	ACTG1
+MYCBP2	cerebral cortex	PDIA6, SOD1
+MYCBP2	cerebellum	PDIA6, SOD1
+MYCBP2	skin	PDIA6, SOD1
+MYCBP2	adipose tissue	PDIA6, SOD1
+ARHGAP26	bone marrow	RHOA
+TAB2	skeletal muscle	VIM
+ATG2A	bone marrow	PEX19, ALDH3A2, DNM1L
+ATG2A	liver	PEX19, ALDH3A2, DNM1L
+RAD54L2	retina	PAICS
+RAD54L2	cerebellum	PAICS
+RAD54L2	liver	PAICS
+RAD54L2	skeletal muscle	PAICS
+GGA3	tonsil	ARF1
+GGA3	spleen	ARF1
+GGA3	skeletal muscle	ARF1
+MPRIP	heart muscle	RHOA
+ARL6IP1	retina	HMGCL
+ARL6IP1	cerebral cortex	HMGCL
+ARL6IP1	liver	HMGCL
+CAMTA1	tongue	PEX14
+CAMTA1	heart muscle	PEX14
+CAMTA1	skeletal muscle	PEX14
+MCF2L	cerebral cortex	RHOA
+MCF2L	cerebellum	RHOA
+MTUS2	heart muscle	SAMD4A, EHHADH
+ARHGEF12	thyroid gland	RHOA
+ARHGEF12	skin	RHOA
+ARHGEF12	liver	RHOA
+ARHGEF12	kidney	RHOA
+ARHGEF12	parathyroid gland	RHOA
+NUDCD3	amygdala	CRAT
+NUDCD3	cerebral cortex	CRAT
+NUDCD3	midbrain	CRAT
+NUDCD3	hippocampal formation	CRAT
+NUDCD3	heart muscle	CRAT
+NUDCD3	hypothalamus	CRAT
+NUDCD3	basal ganglia	CRAT
+NUDCD3	skeletal muscle	CRAT
+ATP13A2	amygdala	PDIA6
+ATP13A2	cerebral cortex	PDIA6
+ATP13A2	cerebellum	PDIA6
+ATP13A2	midbrain	PDIA6
+ATP13A2	hippocampal formation	PDIA6
+ATP13A2	pituitary gland	PDIA6
+ATP13A2	hypothalamus	PDIA6
+ATP13A2	pancreas	PDIA6
+ATP13A2	basal ganglia	PDIA6
+SIRT3	epididymis	DNM1L, PEX5
+SIRT3	basal ganglia	DNM1L, PEX5
+ITGB3BP	testis	ACTG1
+ITGB3BP	thymus	ACTG1
+SLC7A8	kidney	MFF
+SLC7A8	parathyroid gland	MFF
+AP4E1	skeletal muscle	ARF1
+AP4E1	thymus	ARF1
+SF3B3	tonsil	SOD1
+SF3B3	lymph node	SOD1
+SF3B3	skeletal muscle	SOD1
+SF3B3	thymus	SOD1
+SEC61G	epididymis	PEX12
+SEC61G	pituitary gland	PEX12
+SEC61G	pancreas	PEX12
+LEPROTL1	bone marrow	EHHADH, PEX16, VAPA, STING1
+LEPROTL1	thymus	EHHADH, PEX16, VAPA, STING1
+LEPROTL1	adrenal gland	EHHADH, PEX16, VAPA, STING1
+LEPROTL1	placenta	EHHADH, PEX16, VAPA, STING1
+DAAM2	amygdala	EHHADH
+DAAM2	cerebral cortex	EHHADH
+DAAM2	spinal cord	EHHADH
+DAAM2	midbrain	EHHADH
+DAAM2	hippocampal formation	EHHADH
+DAAM2	hypothalamus	EHHADH
+DAAM2	basal ganglia	EHHADH
+SCRIB	esophagus	PRDX5, DNM1L
+SCRIB	skin	PRDX5, DNM1L
+ZNF281	bone marrow	PDIA6
+ZNF281	liver	PDIA6
+TNPO3	testis	ECI2
+TNPO3	bone marrow	ECI2
+TNPO3	tongue	ECI2
+TNPO3	tonsil	ECI2
+TNPO3	skeletal muscle	ECI2
+TNPO3	thymus	ECI2
+LPAR3	fallopian tube	MFF
+CCNDBP1	cerebellum	GSTK1, MAP2K2
+CCNDBP1	bone marrow	GSTK1, MAP2K2
+NUP62	testis	IDH1
+NUP62	thymus	IDH1
+ARFIP2	salivary gland	ARF1
+ARFIP2	choroid plexus	ARF1
+PITPNB	colon	SOD1
+PITPNB	esophagus	SOD1
+PITPNB	liver	SOD1
+PITPNB	urinary bladder	SOD1
+OSBP2	retina	VAPA
+OSBP2	testis	VAPA
+OSBP2	pituitary gland	VAPA
+FKBP8	cerebral cortex	PEX12, MAVS
+FKBP8	basal ganglia	PEX12, MAVS
+BRD1	testis	VIM
+BRD1	cerebellum	VIM
+PRPF6	cerebellum	VIM
+PRPF6	skeletal muscle	VIM
+PRPF6	choroid plexus	VIM
+NGEF	duodenum	RHOA
+NGEF	cerebral cortex	RHOA
+NGEF	small intestine	RHOA
+NGEF	skin	RHOA
+NGEF	liver	RHOA
+NGEF	basal ganglia	RHOA
+NGEF	adrenal gland	RHOA
+TXN2	tongue	PEX19, POMC, VIM
+TXN2	liver	PEX19, POMC, VIM
+TXN2	skeletal muscle	PEX19, POMC, VIM
+TXN2	choroid plexus	PEX19, POMC, VIM
+TXN2	adrenal gland	PEX19, POMC, VIM
+MOB4	bone marrow	PAICS
+MOB4	esophagus	PAICS
+MOB4	adrenal gland	PAICS
+MPC2	testis	DNM1L
+MPC2	heart muscle	DNM1L
+MPC2	stomach	DNM1L
+MPC2	liver	DNM1L
+MPC2	skeletal muscle	DNM1L
+MPC2	kidney	DNM1L
+PLEKHG4	testis	RHOA
+PLEKHG4	ovary	RHOA
+RNF19A	bone marrow	SOD1
+RNF19A	lymph node	SOD1
+AHCTF1	testis	VIM
+POT1	testis	MVK, LDHA, PIPOX, PEX5
+NIPSNAP3A	spinal cord	EPHX2
+NIPSNAP3A	liver	EPHX2
+UNC50	thyroid gland	MFF
+UNC50	epididymis	MFF
+UNC50	parathyroid gland	MFF
+UPF2	bone marrow	LDHA
+UPF2	tongue	LDHA
+UPF2	skeletal muscle	LDHA
+UPF2	thymus	LDHA
+GGA1	testis	ARF1
+EDRF1	testis	PHYH
+EDRF1	bone marrow	PHYH
+EDRF1	tonsil	PHYH
+EDRF1	salivary gland	PHYH
+EDRF1	lymph node	PHYH
+EDRF1	thymus	PHYH
+SERBP1	skeletal muscle	DNM1L, VIM
+RIBC2	testis	TRIM37, VIM
+RGS22	testis	PDIA6
+RGS22	fallopian tube	PDIA6
+SENP3	cerebral cortex	VIM
+SENP3	cerebellum	VIM
+PTPN22	thymus	VIM
+SPAG8	testis	PEX7
+SPAG8	fallopian tube	PEX7
+SPAG8	choroid plexus	PEX7
+FAM50B	cerebral cortex	TRIM37
+FAM50B	cerebellum	TRIM37
+FAM50B	hypothalamus	TRIM37
+FAM50B	basal ganglia	TRIM37
+FAM50B	skeletal muscle	TRIM37
+TINF2	adrenal gland	LDHA, PEX5
+TINF2	parathyroid gland	LDHA, PEX5
+SACS	cerebral cortex	SOD1
+SACS	hippocampal formation	SOD1
+SACS	basal ganglia	SOD1
+SACS	skeletal muscle	SOD1
+SACS	parathyroid gland	SOD1
+ARFGAP3	pancreas	PEX1
+ARFGAP3	adrenal gland	PEX1
+LHX6	cerebral cortex	PHYH
+LHX6	adipose tissue	PHYH
+LHX6	breast	PHYH
+LHX6	basal ganglia	PHYH
+TIMM13	liver	DNM1L, SOD1
+TIMM13	adrenal gland	DNM1L, SOD1
+ITGB1BP2	smooth muscle	TKT
+ITGB1BP2	tongue	TKT
+ITGB1BP2	heart muscle	TKT
+ITGB1BP2	skeletal muscle	TKT
+ITGB1BP2	endometrium	TKT
+SH3YL1	pancreas	VIM
+SEC22A	testis	PEX12, MFF
+PABPC1	esophagus	DNM1L
+PABPC1	salivary gland	DNM1L
+LAT	colon	MFF
+LAT	spleen	MFF
+LAT	lymph node	MFF
+LAT	thymus	MFF
+SND1	salivary gland	SOD1
+SND1	pancreas	SOD1
+CACYBP	amygdala	CRAT
+CACYBP	retina	CRAT
+CACYBP	cerebral cortex	CRAT
+CACYBP	cerebellum	CRAT
+CACYBP	spinal cord	CRAT
+CACYBP	midbrain	CRAT
+CACYBP	hippocampal formation	CRAT
+CACYBP	hypothalamus	CRAT
+CACYBP	basal ganglia	CRAT
+DKK3	retina	IDH1
+DKK3	cerebral cortex	IDH1
+DKK3	heart muscle	IDH1
+DKK3	basal ganglia	IDH1
+DKK3	choroid plexus	IDH1
+DISC1	retina	VAPA, MYO5A, ACTG1, AKAP11, TRIM37, IMPDH2
+DISC1	heart muscle	VAPA, MYO5A, ACTG1, AKAP11, TRIM37, IMPDH2
+DISC1	placenta	VAPA, MYO5A, ACTG1, AKAP11, TRIM37, IMPDH2
+TUBGCP4	retina	VIM
+TUBGCP4	cerebellum	VIM
+TUBGCP4	skeletal muscle	VIM
+TUBGCP4	parathyroid gland	VIM
+GNMT	prostate	PDIA6
+GNMT	stomach	PDIA6
+GNMT	pancreas	PDIA6
+GNMT	liver	PDIA6
+COQ2	tongue	IDH2, TKT, ARF1
+COQ2	skeletal muscle	IDH2, TKT, ARF1
+COQ2	adrenal gland	IDH2, TKT, ARF1
+APEX2	tonsil	TRIM37
+APEX2	esophagus	TRIM37
+PRPF19	cerebral cortex	GSTK1
+TMEM97	testis	MFF
+TMEM97	stomach	MFF
+TMEM97	pancreas	MFF
+TMEM97	liver	MFF
+TMEM97	urinary bladder	MFF
+TMEM97	adrenal gland	MFF
+CCDC22	spleen	ACTG1
+DEXI	heart muscle	PEX16
+DEXI	liver	PEX16
+DEXI	skeletal muscle	PEX16
+DEXI	adrenal gland	PEX16
+SPCS1	pancreas	FIS1
+SCG3	cerebral cortex	DNM1L
+ANKRD11	bone marrow	TRIM37
+ANKRD11	skin	TRIM37
+TMOD4	tongue	IDH1
+TMOD4	prostate	IDH1
+TMOD4	esophagus	IDH1
+TMOD4	salivary gland	IDH1
+TMOD4	skeletal muscle	IDH1
+MYL11	tongue	PEX1
+MYL11	salivary gland	PEX1
+MYL11	skeletal muscle	PEX1
+UBIAD1	tongue	HMGCR, CYB5R3
+UBIAD1	skeletal muscle	HMGCR, CYB5R3
+UBIAD1	thymus	HMGCR, CYB5R3
+NME7	fallopian tube	CCDC33
+DSE	appendix	ACSL4
+DSE	adipose tissue	ACSL4
+OSGIN1	duodenum	CCDC33, DECR2
+OSGIN1	liver	CCDC33, DECR2
+OSGIN1	skeletal muscle	CCDC33, DECR2
+OSGIN1	adrenal gland	CCDC33, DECR2
+CERS2	spinal cord	PEX6
+CERS2	liver	PEX6
+CERS2	adrenal gland	PEX6
+CERS2	kidney	PEX6
+SLC39A2	skin	EHHADH
+SLC39A2	seminal vesicle	EHHADH
+PILRA	cerebellum	PAICS
+PILRA	bone marrow	PAICS
+PILRA	appendix	PAICS
+PILRA	spleen	PAICS
+PILRA	lung	PAICS
+CDR2L	spinal cord	EHHADH
+STOML2	tongue	PEX1
+STOML2	heart muscle	PEX1
+STOML2	liver	PEX1
+STOML2	skeletal muscle	PEX1
+STOML2	choroid plexus	PEX1
+ARHGEF4	amygdala	RHOA
+ARHGEF4	cerebral cortex	RHOA
+ARHGEF4	hippocampal formation	RHOA
+ARHGEF4	skin	RHOA
+ARHGEF4	hypothalamus	RHOA
+ARHGEF4	basal ganglia	RHOA
+DCAF8	retina	PEX1
+DCAF8	tongue	PEX1
+DCAF8	liver	PEX1
+DCAF8	skeletal muscle	PEX1
+F11R	esophagus	PEX19
+RNF141	testis	MVK
+RNF141	spinal cord	MVK
+RNF141	midbrain	MVK
+UBXN1	skeletal muscle	EHHADH
+TXNDC11	bone marrow	ACAA1
+ATL1	amygdala	PEX7
+ATL1	cerebral cortex	PEX7
+ATL1	cerebellum	PEX7
+ATL1	spinal cord	PEX7
+ATL1	midbrain	PEX7
+ATL1	hippocampal formation	PEX7
+ATL1	hypothalamus	PEX7
+ATL1	basal ganglia	PEX7
+APIP	tongue	IMPDH2, VIM
+APIP	salivary gland	IMPDH2, VIM
+APIP	skeletal muscle	IMPDH2, VIM
+APIP	thymus	IMPDH2, VIM
+TMX2	choroid plexus	VAPB, VAPA, MFF, PEX16
+PLLP	amygdala	MFF, STING1
+PLLP	spinal cord	MFF, STING1
+PLLP	midbrain	MFF, STING1
+PLLP	hippocampal formation	MFF, STING1
+PLLP	skin	MFF, STING1
+PLLP	hypothalamus	MFF, STING1
+PLLP	basal ganglia	MFF, STING1
+SH3GLB1	skeletal muscle	BAAT
+IER3IP1	skeletal muscle	PEX12
+IER3IP1	kidney	PEX12
+CEP83	testis	EHHADH, VAPB, VAPA
+CEP83	heart muscle	EHHADH, VAPB, VAPA
+CEP83	fallopian tube	EHHADH, VAPB, VAPA
+CEP83	pancreas	EHHADH, VAPB, VAPA
+COPS4	tongue	PEX14
+COPS4	heart muscle	PEX14
+COPS4	skeletal muscle	PEX14
+CHCHD2	tongue	SOD1
+CHCHD2	skeletal muscle	SOD1
+CHCHD2	choroid plexus	SOD1
+CHCHD2	adrenal gland	SOD1
+DYNC1LI1	retina	SOD2
+DYNC1LI1	testis	SOD2
+DYNC1LI1	bone marrow	SOD2
+DYNC1LI1	tongue	SOD2
+DYNC1LI1	heart muscle	SOD2
+DYNC1LI1	skin	SOD2
+DYNC1LI1	skeletal muscle	SOD2
+ING4	cerebellum	PEX1
+HSD17B11	duodenum	EHHADH, VAPA
+HSD17B11	gallbladder	EHHADH, VAPA
+HSD17B11	bone marrow	EHHADH, VAPA
+HSD17B11	small intestine	EHHADH, VAPA
+HSD17B11	colon	EHHADH, VAPA
+HSD17B11	liver	EHHADH, VAPA
+HSD17B11	rectum	EHHADH, VAPA
+PLEKHO1	testis	PDIA6
+PLEKHO1	colon	PDIA6
+PLEKHO1	urinary bladder	PDIA6
+TCEAL9	epididymis	SOD2
+TCEAL9	ovary	SOD2
+TCEAL9	choroid plexus	SOD2
+TCEAL9	adrenal gland	SOD2
+TCEAL9	placenta	SOD2
+CLDN18	stomach	EHHADH
+PIGP	epididymis	FIS1
+MARCHF2	amygdala	PEX12
+MARCHF2	heart muscle	PEX12
+CDKL3	testis	TRIM37
+KLF3	bone marrow	PEX1
+KLF3	skin	PEX1
+GMIP	bone marrow	RHOA
+GMIP	tonsil	RHOA
+GMIP	appendix	RHOA
+GMIP	stomach	RHOA
+GMIP	small intestine	RHOA
+GMIP	spleen	RHOA
+GMIP	lymph node	RHOA
+GMIP	thymus	RHOA
+GMIP	lung	RHOA
+TIMMDC1	tongue	PEX5
+TIMMDC1	heart muscle	PEX5
+TIMMDC1	skeletal muscle	PEX5
+TIMMDC1	parathyroid gland	PEX5
+TEX264	testis	MFF
+TEX264	skin	MFF
+TEX264	liver	MFF
+TEX264	choroid plexus	MFF
+TEX264	adrenal gland	MFF
+TEX264	kidney	MFF
+TEX264	parathyroid gland	MFF
+CRLF3	bone marrow	PHYH
+CRLF3	tonsil	PHYH
+CRLF3	appendix	PHYH
+CRLF3	spleen	PHYH
+CRLF3	lymph node	PHYH
+CRLF3	thymus	PHYH
+AIG1	liver	VAPB, MFF, CYB5R3
+AIG1	kidney	VAPB, MFF, CYB5R3
+TRPV2	bone marrow	ARF1
+TRPV2	spleen	ARF1
+TRPV2	lymph node	ARF1
+TRPV2	adrenal gland	ARF1
+TRPV2	lung	ARF1
+TRPV2	placenta	ARF1
+PRKAG2	heart muscle	PDIA6
+PRKAG2	basal ganglia	PDIA6
+PRKAG2	urinary bladder	PDIA6
+HSD17B7	liver	ACOX1
+HSD17B7	choroid plexus	ACOX1
+HSD17B7	adrenal gland	ACOX1
+LARS1	cerebellum	DNM1L, SOD1, VIM
+LARS1	tongue	DNM1L, SOD1, VIM
+LARS1	pancreas	DNM1L, SOD1, VIM
+LARS1	breast	DNM1L, SOD1, VIM
+LARS1	skeletal muscle	DNM1L, SOD1, VIM
+LARS1	choroid plexus	DNM1L, SOD1, VIM
+GSKIP	duodenum	PEX19
+GSKIP	retina	PEX19
+GSKIP	testis	PEX19
+GSKIP	small intestine	PEX19
+GSKIP	colon	PEX19
+GSKIP	esophagus	PEX19
+GSKIP	rectum	PEX19
+ANAPC11	amygdala	PEX1
+ANAPC11	heart muscle	PEX1
+ANAPC11	skeletal muscle	PEX1
+PPHLN1	testis	VIM
+PPHLN1	thymus	VIM
+ZCCHC17	amygdala	EHHADH
+ZCCHC17	cerebral cortex	EHHADH
+ZCCHC17	spinal cord	EHHADH
+ZCCHC17	epididymis	EHHADH
+ZCCHC17	midbrain	EHHADH
+ZCCHC17	hippocampal formation	EHHADH
+ZCCHC17	heart muscle	EHHADH
+ZCCHC17	hypothalamus	EHHADH
+ZCCHC17	basal ganglia	EHHADH
+IL23A	tonsil	PEX19
+IL23A	urinary bladder	PEX19
+MBIP	thyroid gland	PEX1, VIM
+MBIP	bone marrow	PEX1, VIM
+MBIP	ovary	PEX1, VIM
+MBIP	stomach	PEX1, VIM
+MBIP	lung	PEX1, VIM
+ARMCX3	epididymis	EHHADH
+ARMCX3	parathyroid gland	EHHADH
+PIAS4	testis	VIM, IMPDH2
+PIAS4	cerebellum	VIM, IMPDH2
+SRRT	testis	VIM
+CUTA	pituitary gland	SOD1
+CUTA	choroid plexus	SOD1
+GET4	testis	SOD2
+GET4	liver	SOD2
+GET4	adrenal gland	SOD2
+GET4	kidney	SOD2
+ERGIC3	epididymis	PEX11G, PEX16, EHHADH, FIS1, MFF
+ERGIC3	fallopian tube	PEX11G, PEX16, EHHADH, FIS1, MFF
+ERGIC3	choroid plexus	PEX11G, PEX16, EHHADH, FIS1, MFF
+LUC7L2	thyroid gland	RHOA
+LUC7L2	bone marrow	RHOA
+LUC7L2	skeletal muscle	RHOA
+LUC7L2	thymus	RHOA
+RTRAF	testis	DNM1L, SOD1
+RTRAF	bone marrow	DNM1L, SOD1
+RTRAF	heart muscle	DNM1L, SOD1
+RTRAF	skeletal muscle	DNM1L, SOD1
+SF3B6	bone marrow	DNM1L
+CIAO2B	skeletal muscle	VIM
+RASD1	pituitary gland	TRIM37
+RASD1	adipose tissue	TRIM37
+RASD1	breast	TRIM37
+RASD1	liver	TRIM37
+RASD1	skeletal muscle	TRIM37
+RASD1	kidney	TRIM37
+FKBP7	cervix	PEX19
+FKBP7	ovary	PEX19
+FKBP7	endometrium	PEX19
+SARAF	epididymis	ABCD4
+SUFU	skin	PEX26
+LSM8	bone marrow	SOD1
+WBP11	testis	ARF1
+WBP11	bone marrow	ARF1
+WBP11	tongue	ARF1
+WBP11	heart muscle	ARF1
+WBP11	skeletal muscle	ARF1
+SYT17	amygdala	CCDC33
+SYT17	hippocampal formation	CCDC33
+SYT17	hypothalamus	CCDC33
+TM6SF1	thyroid gland	MFF, PEX5
+TM6SF1	tongue	MFF, PEX5
+TM6SF1	heart muscle	MFF, PEX5
+TM6SF1	skeletal muscle	MFF, PEX5
+TM6SF1	lung	MFF, PEX5
+UBASH3A	lymph node	CCDC33, TRIM37
+UBASH3A	thymus	CCDC33, TRIM37
+FXYD6	cerebral cortex	PEX12, MFF, TMEM35A
+FXYD6	colon	PEX12, MFF, TMEM35A
+FXYD6	endometrium	PEX12, MFF, TMEM35A
+RBM11	spinal cord	ACOT1, VIM
+RBM11	epididymis	ACOT1, VIM
+RIPK4	esophagus	RHOA
+CYCS	tongue	CROT
+CYCS	heart muscle	CROT
+CYCS	colon	CROT
+CYCS	rectum	CROT
+CYCS	skeletal muscle	CROT
+CYCS	parathyroid gland	CROT
+ANLN	amygdala	RHOA
+ANLN	cerebral cortex	RHOA
+ANLN	spinal cord	RHOA
+ANLN	midbrain	RHOA
+ANLN	bone marrow	RHOA
+ANLN	hippocampal formation	RHOA
+ANLN	hypothalamus	RHOA
+PRR13	duodenum	PEX5
+PRR13	bone marrow	PEX5
+PRR13	small intestine	PEX5
+PRR13	colon	PEX5
+PRR13	kidney	PEX5
+XRN1	bone marrow	LDHA
+XRN1	liver	LDHA
+MIEF1	testis	DNM1L
+MIEF1	bone marrow	DNM1L
+MIEF1	liver	DNM1L
+MIEF1	kidney	DNM1L
+MTRF1L	retina	PDIA6
+MTRF1L	tongue	PDIA6
+MTRF1L	heart muscle	PDIA6
+MTRF1L	skeletal muscle	PDIA6
+MTRF1L	choroid plexus	PDIA6
+CCHCR1	testis	CCDC33
+TOMM7	tongue	PEX5
+TOMM7	ovary	PEX5
+TOMM7	breast	PEX5
+TOMM7	skeletal muscle	PEX5
+TOMM7	choroid plexus	PEX5
+NECAB2	amygdala	EHHADH, CCDC33
+NECAB2	cerebral cortex	EHHADH, CCDC33
+NECAB2	hypothalamus	EHHADH, CCDC33
+NECAB2	basal ganglia	EHHADH, CCDC33
+SGTB	amygdala	PDIA6
+SGTB	retina	PDIA6
+SGTB	cerebral cortex	PDIA6
+SGTB	cerebellum	PDIA6
+SGTB	spinal cord	PDIA6
+SGTB	midbrain	PDIA6
+SGTB	bone marrow	PDIA6
+SGTB	hippocampal formation	PDIA6
+SGTB	hypothalamus	PDIA6
+SGTB	basal ganglia	PDIA6
+LZTFL1	cerebral cortex	EHHADH
+LZTFL1	pituitary gland	EHHADH
+EPDR1	cerebellum	SOD1
+EPDR1	tongue	SOD1
+EPDR1	skeletal muscle	SOD1
+ZRANB1	bone marrow	EHHADH
+ZRANB1	tongue	EHHADH
+ZRANB1	liver	EHHADH
+ZRANB1	skeletal muscle	EHHADH
+ZRANB1	adrenal gland	EHHADH
+PPP1R12C	heart muscle	EHHADH
+PPP1R12C	colon	EHHADH
+RNF111	bone marrow	VAPB, SOD1
+KCTD9	tongue	EHHADH, CCDC33
+KCTD9	heart muscle	EHHADH, CCDC33
+KCTD9	skeletal muscle	EHHADH, CCDC33
+AFTPH	kidney	PEX14
+APTX	skin	TRIM37
+APTX	liver	TRIM37
+EPS8L1	esophagus	PEX1
+EPS8L1	skin	PEX1
+NSUN2	tonsil	SOD1
+NSUN2	breast	SOD1
+NSUN2	liver	SOD1
+NSUN2	skeletal muscle	SOD1
+LAX1	tonsil	IDH1
+TASOR2	testis	HSPD1, CCDC33
+SEMA4C	colon	PEX1
+SEMA4C	placenta	PEX1
+RPP25	retina	SOD1
+RPP25	spinal cord	SOD1
+RPP25	ovary	SOD1
+RPP25	adrenal gland	SOD1
+RPP25	parathyroid gland	SOD1
+CMTM6	fallopian tube	EHHADH
+CMTM6	liver	EHHADH
+OCIAD1	tongue	VAPA
+OCIAD1	parathyroid gland	VAPA
+PPP2R3C	testis	CCDC33
+C14orf119	choroid plexus	DECR2
+USP47	retina	PDIA6
+USP47	tongue	PDIA6
+USP47	heart muscle	PDIA6
+USP47	liver	PDIA6
+USP47	skeletal muscle	PDIA6
+UACA	skeletal muscle	VIM
+IFT57	testis	GSTK1
+IFT57	epididymis	GSTK1
+IFT57	fallopian tube	GSTK1
+IFT57	lung	GSTK1
+NTAQ1	choroid plexus	AOC1, POMC, ACTG1
+ATG2B	retina	PDIA6
+ATG2B	cerebellum	PDIA6
+ATG2B	skin	PDIA6
+ATG2B	pancreas	PDIA6
+AGGF1	retina	IDH1, VIM
+AGGF1	epididymis	IDH1, VIM
+PRMT6	choroid plexus	PEX7
+PRMT6	kidney	PEX7
+RESF1	ovary	VIM
+RESF1	thymus	VIM
+PLEKHG6	duodenum	RHOA
+PLEKHG6	small intestine	RHOA
+PLEKHG6	colon	RHOA
+PLEKHG6	esophagus	RHOA
+DPPA4	thymus	VIM
+USP40	epididymis	VAPA
+SLC38A7	testis	ACBD5, CYB5R3
+SLC38A7	heart muscle	ACBD5, CYB5R3
+SLC38A7	liver	ACBD5, CYB5R3
+SLC38A7	spleen	ACBD5, CYB5R3
+SLC38A7	adrenal gland	ACBD5, CYB5R3
+SLC38A7	parathyroid gland	ACBD5, CYB5R3
+PCMTD2	retina	ACSL6
+PCMTD2	cerebellum	ACSL6
+TRAPPC14	spleen	AGXT
+TMEM140	adipose tissue	MFF
+TMEM140	liver	MFF
+TMEM140	skeletal muscle	MFF
+MCM10	bone marrow	TRIM37
+MCM10	thymus	TRIM37
+NOP10	epididymis	SOD1
+BATF3	spleen	AGXT
+ASIC4	pituitary gland	PHYH
+FEM1A	bone marrow	ACAA1
+FEM1A	tongue	ACAA1
+FEM1A	heart muscle	ACAA1
+FEM1A	esophagus	ACAA1
+FEM1A	skin	ACAA1
+FEM1A	pancreas	ACAA1
+FEM1A	skeletal muscle	ACAA1
+FEM1A	parathyroid gland	ACAA1
+BMP2K	tonsil	BAAT, OXCT1, ACAA1
+BMP2K	lymph node	BAAT, OXCT1, ACAA1
+OTUB1	amygdala	SOD1
+OTUB1	cerebral cortex	SOD1
+OTUB1	cerebellum	SOD1
+OTUB1	hippocampal formation	SOD1
+OTUB1	esophagus	SOD1
+OTUB1	basal ganglia	SOD1
+DOCK10	spinal cord	VIM
+RNF126	testis	HMGCL
+RNF126	esophagus	HMGCL
+RNF126	skin	HMGCL
+RNF126	skeletal muscle	HMGCL
+PRPF40A	bone marrow	BAAT, CROT, SCP2
+RBM22	ovary	VIM
+RBM22	thymus	VIM
+YJU2	bone marrow	PRDX5
+KBTBD4	cerebellum	PEX1, SOD1
+KBTBD4	skeletal muscle	PEX1, SOD1
+ATF7IP	testis	PEX6, ACTG1
+ATF7IP	bone marrow	PEX6, ACTG1
+ATF7IP	tonsil	PEX6, ACTG1
+ATF7IP	lymph node	PEX6, ACTG1
+ATF7IP	thymus	PEX6, ACTG1
+VPS35	bone marrow	DNM1L
+CDK5RAP2	testis	TRIM37
+CDK5RAP2	tongue	TRIM37
+CDK5RAP2	salivary gland	TRIM37
+CDK5RAP2	skeletal muscle	TRIM37
+LMBRD1	spinal cord	ABCD4
+LRIF1	retina	VIM
+LRIF1	testis	VIM
+LRIF1	skeletal muscle	VIM
+SCN3B	amygdala	FIS1, VAPB, VAPA
+SCN3B	cerebral cortex	FIS1, VAPB, VAPA
+SCN3B	hippocampal formation	FIS1, VAPB, VAPA
+SCN3B	pituitary gland	FIS1, VAPB, VAPA
+SCN3B	hypothalamus	FIS1, VAPB, VAPA
+PBK	testis	TRIM37
+PBK	thymus	TRIM37
+LMO3	basal ganglia	BAAT, CCDC33
+MEPCE	testis	VIM
+GKN1	stomach	VAPA, MFF
+GKN1	spleen	VAPA, MFF
+GKN1	placenta	VAPA, MFF
+DIABLO	testis	EHHADH
+DIABLO	choroid plexus	EHHADH
+GRIPAP1	amygdala	EHHADH
+GRIPAP1	cerebral cortex	EHHADH
+GRIPAP1	spinal cord	EHHADH
+GRIPAP1	midbrain	EHHADH
+GRIPAP1	hippocampal formation	EHHADH
+GRIPAP1	pituitary gland	EHHADH
+GRIPAP1	hypothalamus	EHHADH
+GRIPAP1	basal ganglia	EHHADH
+UBQLN4	cerebral cortex	PLAAT3, HK2, CCDC33, IMPDH2
+UBQLN4	basal ganglia	PLAAT3, HK2, CCDC33, IMPDH2
+UBQLN4	skeletal muscle	PLAAT3, HK2, CCDC33, IMPDH2
+AGPAT4	spinal cord	MFF
+AGPAT4	midbrain	MFF
+AGPAT4	hippocampal formation	MFF
+AGPAT4	hypothalamus	MFF
+DPYSL5	spinal cord	PEX1
+ANKS1B	amygdala	RHOA
+ANKS1B	cerebral cortex	RHOA
+ANKS1B	cerebellum	RHOA
+ANKS1B	spinal cord	RHOA
+ANKS1B	midbrain	RHOA
+ANKS1B	hippocampal formation	RHOA
+ANKS1B	hypothalamus	RHOA
+ANKS1B	basal ganglia	RHOA
+SMCO4	salivary gland	PEX12
+SMCO4	liver	PEX12
+OTUD7B	spinal cord	PHYH, SOD1
+OTUD7B	tongue	PHYH, SOD1
+OTUD7B	skeletal muscle	PHYH, SOD1
+KIF15	testis	VIM
+KIF15	thymus	VIM
+COQ9	tongue	EHHADH
+COQ9	heart muscle	EHHADH
+COQ9	skeletal muscle	EHHADH
+COQ9	choroid plexus	EHHADH
+COQ9	parathyroid gland	EHHADH
+TRIM54	tongue	EHHADH
+TRIM54	heart muscle	EHHADH
+TRIM54	skeletal muscle	EHHADH
+ANKRD50	testis	PEX5
+ANKRD50	urinary bladder	PEX5
+ANKRD50	placenta	PEX5
+NIPAL3	amygdala	MFF, VIM
+NIPAL3	cerebral cortex	MFF, VIM
+NIPAL3	cerebellum	MFF, VIM
+NIPAL3	spinal cord	MFF, VIM
+NIPAL3	midbrain	MFF, VIM
+NIPAL3	hippocampal formation	MFF, VIM
+NIPAL3	prostate	MFF, VIM
+NIPAL3	hypothalamus	MFF, VIM
+NIPAL3	basal ganglia	MFF, VIM
+ERGIC1	liver	EHHADH
+ERGIC1	adrenal gland	EHHADH
+CBX8	testis	VIM
+CBX8	pituitary gland	VIM
+CBX8	parathyroid gland	VIM
+ABHD6	duodenum	FIS1
+ABHD6	spinal cord	FIS1
+ABHD6	small intestine	FIS1
+ABHD6	liver	FIS1
+ABHD6	spleen	FIS1
+ABHD6	kidney	FIS1
+ODF2L	retina	PIPOX
+ARHGAP31	adipose tissue	RHOA
+ARHGAP31	lung	RHOA
+NUFIP2	bone marrow	PRDX5, PEX5
+NUFIP2	placenta	PRDX5, PEX5
+CEP126	testis	VIM
+CEP126	pituitary gland	VIM
+CEP126	choroid plexus	VIM
+ARHGAP20	testis	RHOA
+ARHGAP20	adipose tissue	RHOA
+ARHGAP20	seminal vesicle	RHOA
+PREX1	spinal cord	RHOA
+PREX1	bone marrow	RHOA
+PREX1	appendix	RHOA
+PREX1	spleen	RHOA
+PREX1	lymph node	RHOA
+ARHGAP21	cerebral cortex	RHOA
+ARHGAP21	cerebellum	RHOA
+ARHGAP21	spinal cord	RHOA
+ARHGAP21	midbrain	RHOA
+ARHGAP21	hippocampal formation	RHOA
+MRTFA	bone marrow	PEX26, SOD1
+USP36	ovary	SOD2
+ARHGAP23	spinal cord	RHOA
+ARHGAP23	esophagus	RHOA
+ARHGAP23	skin	RHOA
+KIAA1549	retina	SOD2
+KIAA1549	pancreas	SOD2
+KIAA1549	seminal vesicle	SOD2
+ZBTB26	retina	EHHADH
+ZBTB26	testis	EHHADH
+SLC7A14	cerebral cortex	MFF, ACSL5
+SEMA4G	duodenum	PEX1
+SEMA4G	cerebellum	PEX1
+SEMA4G	small intestine	PEX1
+SEMA4G	colon	PEX1
+SEMA4G	liver	PEX1
+SEMA4G	rectum	PEX1
+ANKRD36B	bone marrow	EHHADH
+CCAR2	bone marrow	SOD1
+CXCL16	testis	PEX12, MFF, TMEM35A
+CXCL16	lung	PEX12, MFF, TMEM35A
+MS4A7	gallbladder	HMGCL
+MS4A7	appendix	HMGCL
+MS4A7	adipose tissue	HMGCL
+MS4A7	liver	HMGCL
+MS4A7	spleen	HMGCL
+MS4A7	lung	HMGCL
+ABHD17C	colon	PHYH, PEX26
+ABHD17C	esophagus	PHYH, PEX26
+ABHD17C	rectum	PHYH, PEX26
+ARHGAP22	amygdala	RHOA
+ARHGAP22	cerebral cortex	RHOA
+ARHGAP22	spinal cord	RHOA
+ARHGAP22	midbrain	RHOA
+ARHGAP22	hippocampal formation	RHOA
+ARHGAP22	hypothalamus	RHOA
+NIF3L1	retina	PAICS, VIM
+NIF3L1	tonsil	PAICS, VIM
+CCDC90B	testis	PRDX5
+CCDC90B	spinal cord	PRDX5
+CCDC90B	epididymis	PRDX5
+CCDC90B	liver	PRDX5
+CCDC90B	adrenal gland	PRDX5
+AASDHPPT	cerebral cortex	SOD1
+ZFAND3	testis	PEX5
+ZFAND3	skeletal muscle	PEX5
+ZNF667	cerebral cortex	VIM
+ZNF667	pituitary gland	VIM
+GPSM3	bone marrow	SOD1
+GPSM3	tonsil	SOD1
+GPSM3	appendix	SOD1
+GPSM3	small intestine	SOD1
+GPSM3	spleen	SOD1
+GPSM3	lymph node	SOD1
+GPSM3	thymus	SOD1
+GPSM3	urinary bladder	SOD1
+GPSM3	lung	SOD1
+PRDM16	stomach	ACOT8
+CENPK	bone marrow	PEX14
+CENPK	thymus	PEX14
+NOD2	skin	FIS1, VIM
+KIF9	testis	ACBD4, TRIM37, VIM
+KIF9	fallopian tube	ACBD4, TRIM37, VIM
+KIF9	choroid plexus	ACBD4, TRIM37, VIM
+KIF9	kidney	ACBD4, TRIM37, VIM
+ARHGEF28	thyroid gland	RHOA
+ARHGEF28	ovary	RHOA
+ARHGEF28	stomach	RHOA
+ARHGEF28	salivary gland	RHOA
+ARHGEF28	skin	RHOA
+ARHGEF28	pancreas	RHOA
+ARHGEF28	adrenal gland	RHOA
+ARHGEF28	kidney	RHOA
+GMCL1	thymus	EHHADH
+GMCL1	parathyroid gland	EHHADH
+MOSPD3	testis	MFF
+MOSPD3	skin	MFF
+SMURF2	retina	ACOX3
+SMURF2	testis	ACOX3
+SMURF2	placenta	ACOX3
+RUSF1	salivary gland	TMEM35A, EHHADH
+RUSF1	pancreas	TMEM35A, EHHADH
+RUSF1	liver	TMEM35A, EHHADH
+CCDC14	retina	DHRS2, PEX5
+CCDC14	epididymis	DHRS2, PEX5
+CCDC14	bone marrow	DHRS2, PEX5
+CCDC14	rectum	DHRS2, PEX5
+CFAP68	kidney	AGXT
+PINK1	amygdala	DNM1L
+PINK1	cerebral cortex	DNM1L
+PINK1	spinal cord	DNM1L
+PINK1	midbrain	DNM1L
+PINK1	tongue	DNM1L
+PINK1	heart muscle	DNM1L
+PINK1	basal ganglia	DNM1L
+PINK1	skeletal muscle	DNM1L
+ACD	testis	LDHA, PEX5
+ACD	ovary	LDHA, PEX5
+TMEM237	retina	MFF
+MRPL44	skeletal muscle	VIM
+MARCKSL1	amygdala	SOD1
+MARCKSL1	spinal cord	SOD1
+MARCKSL1	midbrain	SOD1
+MARCKSL1	hippocampal formation	SOD1
+MARCKSL1	ovary	SOD1
+MARCKSL1	hypothalamus	SOD1
+CAPRIN2	retina	PEX5
+CAPRIN2	testis	PEX5
+CAPRIN2	cerebral cortex	PEX5
+CAPRIN2	cerebellum	PEX5
+CAPRIN2	heart muscle	PEX5
+CAPRIN2	hypothalamus	PEX5
+CAPRIN2	basal ganglia	PEX5
+ZBTB10	bone marrow	EHHADH
+ZBTB10	liver	EHHADH
+ZBTB10	placenta	EHHADH
+CYP4F12	duodenum	SOD2
+CYP4F12	small intestine	SOD2
+CYP4F12	liver	SOD2
+VKORC1	liver	FIS1, VAPB, PDIA6
+SCNM1	bone marrow	TRIM37, CCDC33, VIM
+SCNM1	skeletal muscle	TRIM37, CCDC33, VIM
+TMEM106C	duodenum	TMEM35A
+TMEM106C	retina	TMEM35A
+TMEM106C	epididymis	TMEM35A
+TMEM106C	small intestine	TMEM35A
+TMEM106C	colon	TMEM35A
+TMEM106C	rectum	TMEM35A
+TMEM106C	choroid plexus	TMEM35A
+TMEM106C	parathyroid gland	TMEM35A
+AHNAK	skin	NUDT12
+ZNF655	esophagus	ACSL6, TRIM37, SZT2, IDI1
+ZNF655	pancreas	ACSL6, TRIM37, SZT2, IDI1
+ZNF655	thymus	ACSL6, TRIM37, SZT2, IDI1
+KCTD15	skin	PEX26
+NOC4L	testis	VIM
+PRRG4	esophagus	PEX13
+PRRG4	skin	PEX13
+PRRG4	liver	PEX13
+BBLN	amygdala	PEX26
+BBLN	cerebral cortex	PEX26
+BBLN	hippocampal formation	PEX26
+BBLN	basal ganglia	PEX26
+BBLN	adrenal gland	PEX26
+FA2H	spinal cord	PEX12
+FA2H	midbrain	PEX12
+FA2H	hippocampal formation	PEX12
+FA2H	stomach	PEX12
+CPLANE2	cerebral cortex	IMPDH2
+ZXDC	bone marrow	SOD1
+ZXDC	pancreas	SOD1
+ZXDC	skeletal muscle	SOD1
+CYBC1	liver	PEX12, MFF
+CYBC1	spleen	PEX12, MFF
+GCC1	testis	CCDC33
+FAM118B	basal ganglia	VIM
+FAM118B	skeletal muscle	VIM
+FAM118B	choroid plexus	VIM
+ARMC7	cerebellum	CCDC33, VIM
+MCPH1	bone marrow	HSPD1, ACTG1, PMVK, VIM
+MCPH1	skeletal muscle	HSPD1, ACTG1, PMVK, VIM
+MCPH1	thymus	HSPD1, ACTG1, PMVK, VIM
+C3orf52	stomach	MFF
+C3orf52	skin	MFF
+C3orf52	pancreas	MFF
+C3orf52	rectum	MFF
+ZNF329	retina	TRIM37
+ZNF329	parathyroid gland	TRIM37
+CENPU	testis	VIM
+TBL1XR1	thyroid gland	SOD1
+TBL1XR1	retina	SOD1
+TBL1XR1	thymus	SOD1
+WDR59	retina	VIM
+E2F8	bone marrow	PEX26
+E2F8	skeletal muscle	PEX26
+CCDC102B	gallbladder	EHHADH, POMC, CCDC33
+CCDC102B	adipose tissue	EHHADH, POMC, CCDC33
+CCDC102B	lymph node	EHHADH, POMC, CCDC33
+CCDC102B	urinary bladder	EHHADH, POMC, CCDC33
+CCDC102B	lung	EHHADH, POMC, CCDC33
+CCDC102B	placenta	EHHADH, POMC, CCDC33
+FAM124B	adipose tissue	TRIM37
+FAM124B	placenta	TRIM37
+RBFA	liver	PEX12
+RBFA	skeletal muscle	PEX12
+CPSF7	pituitary gland	SOD1
+NUDT18	epididymis	PAICS, TRIM37
+NUDT18	pancreas	PAICS, TRIM37
+CYBRD1	duodenum	VAPB, VAPA
+CYBRD1	small intestine	VAPB, VAPA
+TCEAL4	cervix	PEX1
+TCEAL4	ovary	PEX1
+TCEAL4	fallopian tube	PEX1
+TCEAL4	endometrium	PEX1
+TCEAL4	urinary bladder	PEX1
+TCEAL4	choroid plexus	PEX1
+SPEF2	choroid plexus	VIM
+ERMP1	thyroid gland	PEX12
+ERMP1	esophagus	PEX12
+ERMP1	salivary gland	PEX12
+ERMP1	urinary bladder	PEX12
+ERMP1	kidney	PEX12
+ERMP1	parathyroid gland	PEX12
+CEP76	testis	PAICS
+CEP76	cerebellum	PAICS
+CEP76	bone marrow	PAICS
+CEP76	thymus	PAICS
+WLS	retina	PEX11B
+WLS	epididymis	PEX11B
+WLS	choroid plexus	PEX11B
+PSME3IP1	bone marrow	SOD2
+TMEM254	epididymis	MFF
+TMEM254	prostate	MFF
+TMEM254	esophagus	MFF
+TMEM254	skin	MFF
+TMEM254	liver	MFF
+PREX2	adipose tissue	RHOA
+PREX2	basal ganglia	RHOA
+SP6	skin	SOD1
+SP6	placenta	SOD1
+CEP70	duodenum	SOD2, HSPD1
+CEP70	thyroid gland	SOD2, HSPD1
+CEP70	retina	SOD2, HSPD1
+CEP70	testis	SOD2, HSPD1
+CEP70	thymus	SOD2, HSPD1
+TRAF3IP3	bone marrow	MFF
+TRAF3IP3	tonsil	MFF
+TRAF3IP3	appendix	MFF
+TRAF3IP3	small intestine	MFF
+TRAF3IP3	spleen	MFF
+TRAF3IP3	lymph node	MFF
+TRAF3IP3	thymus	MFF
+REEP4	testis	VAPB, PEX16, CYB5R3
+REEP4	esophagus	VAPB, PEX16, CYB5R3
+REEP4	skin	VAPB, PEX16, CYB5R3
+REEP4	spleen	VAPB, PEX16, CYB5R3
+REEP4	vagina	VAPB, PEX16, CYB5R3
+SKIC8	epididymis	VAPB, PEX1, PEX26, SOD1
+SKIC8	choroid plexus	VAPB, PEX1, PEX26, SOD1
+TSGA10	testis	CCDC33
+TSGA10	fallopian tube	CCDC33
+THSD7B	retina	PEX12, HSPD1
+AARSD1	testis	CRAT
+AARSD1	cerebral cortex	CRAT
+AARSD1	tongue	CRAT
+AARSD1	heart muscle	CRAT
+AARSD1	skeletal muscle	CRAT
+TMEM121	amygdala	EHHADH
+TMEM121	cerebral cortex	EHHADH
+TMEM121	hippocampal formation	EHHADH
+TMEM121	hypothalamus	EHHADH
+TMEM121	basal ganglia	EHHADH
+CYB5B	adrenal gland	TMEM35A, MFF
+APOL3	liver	LDHA
+APOL3	spleen	LDHA
+APOL3	lymph node	LDHA
+SYNC	skeletal muscle	VIM
+GDPD5	retina	PEX5
+GDPD5	testis	PEX5
+GDPD5	cerebellum	PEX5
+GDPD5	pancreas	PEX5
+GDPD5	adipose tissue	PEX5
+GDPD5	breast	PEX5
+GDPD5	spleen	PEX5
+UNC93B1	spleen	MFF
+TSC22D4	amygdala	CCDC33
+TSC22D4	hippocampal formation	CCDC33
+TSC22D4	hypothalamus	CCDC33
+TSC22D4	basal ganglia	CCDC33
+TMEM14B	thyroid gland	PEX11G, CYB5R3, FIS1, ACSL5
+TMEM14B	retina	PEX11G, CYB5R3, FIS1, ACSL5
+TMEM14B	bone marrow	PEX11G, CYB5R3, FIS1, ACSL5
+TMEM14B	tongue	PEX11G, CYB5R3, FIS1, ACSL5
+TMEM14B	heart muscle	PEX11G, CYB5R3, FIS1, ACSL5
+TMEM14B	skeletal muscle	PEX11G, CYB5R3, FIS1, ACSL5
+L3MBTL2	cerebral cortex	CCDC33, PAICS
+TMEM120A	tongue	TMEM35A
+TMEM120A	adrenal gland	TMEM35A
+USHBP1	lung	CCDC33
+RBM48	cerebellum	VIM
+RBM48	spinal cord	VIM
+TMEM222	choroid plexus	PEX12, TMEM35A
+SLC41A2	duodenum	MFF
+SLC41A2	stomach	MFF
+SLC41A2	small intestine	MFF
+SLC41A2	colon	MFF
+SLC41A2	liver	MFF
+PCGF6	testis	PEX10
+PCGF6	liver	PEX10
+PCGF6	skeletal muscle	PEX10
+FAM161A	retina	TRIM37, CCDC33, VIM
+FAM161A	testis	TRIM37, CCDC33, VIM
+BLTP1	retina	SOD1
+SLF1	testis	PDIA6
+CAMKK1	amygdala	SOD1
+CAMKK1	cerebral cortex	SOD1
+CAMKK1	cerebellum	SOD1
+CAMKK1	hippocampal formation	SOD1
+CAMKK1	salivary gland	SOD1
+CAMKK1	pituitary gland	SOD1
+CAMKK1	basal ganglia	SOD1
+TCHP	cerebellum	VIM
+ING5	cerebellum	CCDC33, VIM
+LCOR	duodenum	ACOT1, GRHPR, PAICS
+LCOR	retina	ACOT1, GRHPR, PAICS
+LCOR	bone marrow	ACOT1, GRHPR, PAICS
+LCOR	small intestine	ACOT1, GRHPR, PAICS
+JAGN1	liver	VAPB, VAPA, EHHADH, FIS1, MFF
+JAGN1	adrenal gland	VAPB, VAPA, EHHADH, FIS1, MFF
+MFSD14B	esophagus	PEX16
+MFSD14B	skin	PEX16
+MFSD14B	parathyroid gland	PEX16
+TRIM63	tongue	ACBD4, EHHADH, TMEM35A, DECR2
+TRIM63	heart muscle	ACBD4, EHHADH, TMEM35A, DECR2
+TRIM63	skeletal muscle	ACBD4, EHHADH, TMEM35A, DECR2
+SPATA22	testis	SOD1
+LNX1	esophagus	CCDC33, PAICS, ACAT2
+LNX1	salivary gland	CCDC33, PAICS, ACAT2
+LNX1	adipose tissue	CCDC33, PAICS, ACAT2
+LNX1	placenta	CCDC33, PAICS, ACAT2
+MGARP	retina	SOD1
+MGARP	cerebellum	SOD1
+MGARP	ovary	SOD1
+MGARP	adrenal gland	SOD1
+SPSB2	kidney	NOS2, VIM
+SPSB2	lung	NOS2, VIM
+NFKBID	thymus	SAMD4A, POMC, VIM
+LMNB2	cerebellum	SOD1
+LMNB2	esophagus	SOD1
+LMNB2	thymus	SOD1
+ZNF587	retina	TRIM37
+ZNF587	salivary gland	TRIM37
+ZNF587	pituitary gland	TRIM37
+ZNF587	rectum	TRIM37
+MPND	liver	SOD1
+MFSD5	esophagus	PEX19
+MFSD5	skin	PEX19
+MFSD5	vagina	PEX19
+MFSD5	choroid plexus	PEX19
+MFSD5	adrenal gland	PEX19
+CEP19	retina	PEX13
+CEP19	testis	PEX13
+CEP19	cerebral cortex	PEX13
+CEP19	basal ganglia	PEX13
+CEP19	thymus	PEX13
+ARHGAP19	testis	RHOA
+ARHGAP19	bone marrow	RHOA
+ARHGAP19	tonsil	RHOA
+ARHGAP19	lymph node	RHOA
+ARHGAP19	thymus	RHOA
+UBL7	cerebral cortex	IDH1
+UBL7	skeletal muscle	IDH1
+TMEM128	spinal cord	MFF
+TMEM128	epididymis	MFF
+TMEM128	parathyroid gland	MFF
+TMEM60	liver	MFF, CYB5R3
+TMEM60	parathyroid gland	MFF, CYB5R3
+PAQR8	amygdala	EHHADH
+PAQR8	cerebral cortex	EHHADH
+PAQR8	spinal cord	EHHADH
+PAQR8	midbrain	EHHADH
+PAQR8	hippocampal formation	EHHADH
+PAQR8	basal ganglia	EHHADH
+SHISAL1	amygdala	MFF
+SHISAL1	cerebral cortex	MFF
+SHISAL1	smooth muscle	MFF
+SHISAL1	endometrium	MFF
+SHANK3	cerebral cortex	VIM
+SHANK3	cerebellum	VIM
+SHANK3	hippocampal formation	VIM
+SHANK3	skeletal muscle	VIM
+RHPN2	stomach	RHOA
+ZCRB1	amygdala	PEX1
+ZCRB1	spinal cord	PEX1
+ZCRB1	midbrain	PEX1
+ZCRB1	skeletal muscle	PEX1
+SELENOI	cerebral cortex	ACSL5
+SELENOI	small intestine	ACSL5
+SELENOI	skin	ACSL5
+SELENOI	liver	ACSL5
+SELENOI	parathyroid gland	ACSL5
+ARHGAP11B	bone marrow	RHOA
+IFT20	testis	PEX1
+IFT20	bone marrow	PEX1
+IFT20	pituitary gland	PEX1
+IFT20	pancreas	PEX1
+BMF	bone marrow	PEX26
+BMF	thymus	PEX26
+SCRN2	adipose tissue	PEX5
+SCRN2	kidney	PEX5
+STARD13	colon	HMGCR
+STARD13	placenta	HMGCR
+SEC11C	epididymis	VAPA, MFF
+SEC11C	salivary gland	VAPA, MFF
+SEC11C	pancreas	VAPA, MFF
+CEP95	retina	SOD1
+CEP95	bone marrow	SOD1
+TRIM41	amygdala	EHHADH
+TRIM41	cerebral cortex	EHHADH
+TRIM41	spinal cord	EHHADH
+TRIM41	midbrain	EHHADH
+TRIM41	hippocampal formation	EHHADH
+TRIM41	hypothalamus	EHHADH
+TRIM41	basal ganglia	EHHADH
+TRIM41	skeletal muscle	EHHADH
+CREB3L1	stomach	PEX16
+CREB3L1	salivary gland	PEX16
+CREB3L1	pancreas	PEX16
+DPP9	liver	PRDX1
+DPP9	skeletal muscle	PRDX1
+DERL3	testis	EHHADH
+DERL3	stomach	EHHADH
+DERL3	small intestine	EHHADH
+DERL3	colon	EHHADH
+DERL3	salivary gland	EHHADH
+DERL3	pancreas	EHHADH
+DERL3	spleen	EHHADH
+TMEM88	heart muscle	MFF
+TMEM88	adipose tissue	MFF
+MOB1B	bone marrow	SOD1
+MOB1B	thymus	SOD1
+MOB1B	kidney	SOD1
+REEP6	duodenum	EHHADH, STING1
+REEP6	retina	EHHADH, STING1
+REEP6	testis	EHHADH, STING1
+REEP6	small intestine	EHHADH, STING1
+REEP6	liver	EHHADH, STING1
+REEP6	adrenal gland	EHHADH, STING1
+HNRNPLL	retina	SOD1
+HNRNPLL	testis	SOD1
+HNRNPLL	bone marrow	SOD1
+HNRNPLL	thymus	SOD1
+MMGT1	thyroid gland	FIS1, PEX16, MFF
+MMGT1	bone marrow	FIS1, PEX16, MFF
+SYCE1	testis	LONP2, MPV17
+SYCE1	cerebellum	LONP2, MPV17
+HTRA3	ovary	VIM
+ORMDL1	epididymis	TMEM35A, EHHADH
+ORMDL1	spleen	TMEM35A, EHHADH
+SYTL4	smooth muscle	TRIM37
+SYTL4	cervix	TRIM37
+SYTL4	ovary	TRIM37
+SYTL4	fallopian tube	TRIM37
+SYTL4	pituitary gland	TRIM37
+SYTL4	endometrium	TRIM37
+STX1B	amygdala	ACBD5
+STX1B	cerebral cortex	ACBD5
+STX1B	cerebellum	ACBD5
+STX1B	midbrain	ACBD5
+STX1B	hippocampal formation	ACBD5
+STX1B	hypothalamus	ACBD5
+STX1B	basal ganglia	ACBD5
+NACC1	amygdala	EHHADH
+NACC1	cerebral cortex	EHHADH
+MED8	retina	PEX14
+MED8	esophagus	PEX14
+MED8	skin	PEX14
+MED8	pituitary gland	PEX14
+MED8	liver	PEX14
+GOLM2	thyroid gland	PDIA6
+GOLM2	adrenal gland	PDIA6
+GOLM2	parathyroid gland	PDIA6
+TMEM106A	smooth muscle	ARF1
+TMEM106A	appendix	ARF1
+TMEM106A	spleen	ARF1
+TMEM106A	kidney	ARF1
+TMEM106A	placenta	ARF1
+SFT2D1	spinal cord	EHHADH
+TMEM54	small intestine	PEX19
+TMEM54	colon	PEX19
+TMEM54	esophagus	PEX19
+RHPN1	thyroid gland	PEX1, TRIM37
+RHPN1	amygdala	PEX1, TRIM37
+RHPN1	cerebral cortex	PEX1, TRIM37
+RHPN1	hippocampal formation	PEX1, TRIM37
+RHPN1	pituitary gland	PEX1, TRIM37
+RHPN1	hypothalamus	PEX1, TRIM37
+RHPN1	basal ganglia	PEX1, TRIM37
+RHPN1	kidney	PEX1, TRIM37
+OSBPL1A	spinal cord	VAPB, VAPA
+OSBPL1A	tongue	VAPB, VAPA
+OSBPL1A	choroid plexus	VAPB, VAPA
+OSBPL9	retina	VAPA
+OSBPL9	parathyroid gland	VAPA
+KCTD12	fallopian tube	DNM1L
+KCTD12	adipose tissue	DNM1L
+KCTD12	placenta	DNM1L
+DDIT4L	cervix	PMVK
+DDIT4L	tongue	PMVK
+DDIT4L	prostate	PMVK
+DDIT4L	salivary gland	PMVK
+DDIT4L	basal ganglia	PMVK
+DDIT4L	skeletal muscle	PMVK
+DDIT4L	kidney	PMVK
+ARHGEF25	cerebellum	RHOA
+ARHGEF25	colon	RHOA
+CTHRC1	gallbladder	VAPA
+CTHRC1	adipose tissue	VAPA
+CTHRC1	urinary bladder	VAPA
+FAM210B	bone marrow	FIS1, MFF, CYB5R3
+FAM210B	tongue	FIS1, MFF, CYB5R3
+FAM210B	ovary	FIS1, MFF, CYB5R3
+FAM210B	liver	FIS1, MFF, CYB5R3
+FAM210B	skeletal muscle	FIS1, MFF, CYB5R3
+FAM210B	adrenal gland	FIS1, MFF, CYB5R3
+CMTM5	spinal cord	TMEM35A, MFF, STING1
+CMTM5	midbrain	TMEM35A, MFF, STING1
+CMTM5	hippocampal formation	TMEM35A, MFF, STING1
+ZMYND19	retina	HACL1
+ZMYND19	testis	HACL1
+ZMYND19	skin	HACL1
+COX20	retina	TMEM35A
+ARAP2	bone marrow	RHOA
+ARAP2	thymus	RHOA
+AGAP2	amygdala	RHOA
+AGAP2	cerebral cortex	RHOA
+AGAP2	cerebellum	RHOA
+AGAP2	hippocampal formation	RHOA
+AGAP2	hypothalamus	RHOA
+AGAP2	basal ganglia	RHOA
+THEM4	retina	VIM
+THEM4	skeletal muscle	VIM
+DCD	skin	DNM1L
+SSX2IP	duodenum	EHHADH, TRIM37
+SSX2IP	retina	EHHADH, TRIM37
+SSX2IP	testis	EHHADH, TRIM37
+SSX2IP	cerebral cortex	EHHADH, TRIM37
+SSX2IP	cerebellum	EHHADH, TRIM37
+SSX2IP	epididymis	EHHADH, TRIM37
+SSX2IP	small intestine	EHHADH, TRIM37
+EXOSC6	cerebral cortex	SOD1
+EXOSC6	cerebellum	SOD1
+EXOSC6	basal ganglia	SOD1
+SNX20	thymus	VIM
+HEXIM2	testis	CCDC33
+MIEF2	heart muscle	DNM1L
+MIEF2	skeletal muscle	DNM1L
+MAB21L3	retina	EHHADH
+MAB21L3	bone marrow	EHHADH
+MAB21L3	esophagus	EHHADH
+MAB21L3	skin	EHHADH
+C1orf216	amygdala	VIM
+C1orf216	retina	VIM
+C1orf216	cerebral cortex	VIM
+C1orf216	midbrain	VIM
+C1orf216	hippocampal formation	VIM
+C1orf216	hypothalamus	VIM
+C1orf216	basal ganglia	VIM
+ARHGEF19	esophagus	RHOA
+ARHGEF19	salivary gland	RHOA
+ARHGEF19	skin	RHOA
+SGSM1	cerebellum	SOD1
+SGSM1	hypothalamus	SOD1
+FAM131A	amygdala	IDH1
+FAM131A	cerebral cortex	IDH1
+FAM131A	cerebellum	IDH1
+FAM131A	hippocampal formation	IDH1
+FAM131A	pituitary gland	IDH1
+FAM131A	basal ganglia	IDH1
+C6orf141	basal ganglia	SOD1
+COL26A1	cerebral cortex	FAR1
+MTPN	cerebral cortex	SOD1
+MTPN	bone marrow	SOD1
+MTPN	tonsil	SOD1
+MTPN	esophagus	SOD1
+SPMIP4	testis	PHYH
+SPMIP4	colon	PHYH
+SPMIP4	adrenal gland	PHYH
+DIPK1B	cerebral cortex	VIM
+DIPK1B	cerebellum	VIM
+FUNDC1	salivary gland	EHHADH
+NEK7	spinal cord	IDH1, MAVS
+NEK7	tongue	IDH1, MAVS
+NEK7	heart muscle	IDH1, MAVS
+NEK7	adipose tissue	IDH1, MAVS
+NEK7	skeletal muscle	IDH1, MAVS
+NEK7	adrenal gland	IDH1, MAVS
+SRXN1	heart muscle	PRDX1
+SRXN1	esophagus	PRDX1
+SRXN1	liver	PRDX1
+SRXN1	skeletal muscle	PRDX1
+SRXN1	adrenal gland	PRDX1
+RIPOR3	bone marrow	RHOA
+RIPOR3	cervix	RHOA
+RIPOR3	fallopian tube	RHOA
+RIPOR3	kidney	RHOA
+CWF19L2	ovary	TRIM37, VIM
+CWF19L2	choroid plexus	TRIM37, VIM
+DNHD1	testis	PDIA6
+DNHD1	cerebellum	PDIA6
+GLIPR1L2	testis	VIM
+GLIPR1L2	spinal cord	VIM
+HNRNPA1L2	retina	DNM1L
+HNRNPA1L2	bone marrow	DNM1L
+HNRNPA1L2	ovary	DNM1L
+HNRNPA1L2	lymph node	DNM1L
+HNRNPA1L2	thymus	DNM1L
+HNRNPA1L2	choroid plexus	DNM1L
+MIPOL1	testis	CCDC33
+CEP128	testis	VIM
+CEP128	thymus	VIM
+C16orf92	retina	TMEM35A
+PROCA1	testis	VIM
+ZNF417	retina	TRIM37
+ZNF417	epididymis	TRIM37
+ZNF417	skin	TRIM37
+KLC3	esophagus	PEX26
+KLC3	skin	PEX26
+KLC3	vagina	PEX26
+KASH5	testis	FIS1
+FAM163A	pituitary gland	VIM
+CLDN19	kidney	MFF
+C2CD6	testis	VIM
+RMDN2	testis	VAPB, VAPA
+RMDN2	small intestine	VAPB, VAPA
+RMDN2	adrenal gland	VAPB, VAPA
+RMDN2	seminal vesicle	VAPB, VAPA
+ZMAT2	cerebral cortex	TRIM37, PEX26, SOD1
+ZMAT2	basal ganglia	TRIM37, PEX26, SOD1
+ZMAT2	skeletal muscle	TRIM37, PEX26, SOD1
+ZMAT2	choroid plexus	TRIM37, PEX26, SOD1
+RAET1L	esophagus	MFF
+CFAP206	testis	CCDC33
+CFAP206	fallopian tube	CCDC33
+ANKRD46	skeletal muscle	MFF
+PRUNE2	cerebellum	HSPD1, VIM
+PABIR3	retina	ABCD3
+PABIR3	testis	ABCD3
+PABIR3	bone marrow	ABCD3
+PABIR3	ovary	ABCD3
+PABIR3	choroid plexus	ABCD3
+TMEM229B	cerebellum	TMEM35A, VAPA, MFF, ACBD5
+ADAL	retina	VIM
+ADAL	skeletal muscle	VIM
+RETREG3	testis	VAPB, VAPA, MFF, ACSL5
+RETREG3	skin	VAPB, VAPA, MFF, ACSL5
+RETREG3	pancreas	VAPB, VAPA, MFF, ACSL5
+RETREG3	liver	VAPB, VAPA, MFF, ACSL5
+SASS6	retina	PEX26
+SASS6	testis	PEX26
+SASS6	bone marrow	PEX26
+ZNF366	placenta	PEX1
+TXLNB	ovary	VIM
+TXLNB	skeletal muscle	VIM
+TXLNB	thymus	VIM
+SPIN3	cerebellum	VIM
+TCEANC	bone marrow	CCDC33, TRIM37
+PSORS1C2	skin	PEX19
+SDR16C5	esophagus	EHHADH
+SDR16C5	skin	EHHADH
+DZIP1L	fallopian tube	TRIM37
+TMEM201	tongue	TMEM35A, MFF, CYB5R3
+TMEM201	pituitary gland	TMEM35A, MFF, CYB5R3
+TMEM201	skeletal muscle	TMEM35A, MFF, CYB5R3
+FAM209A	testis	FIS1, MFF
+TMEM17	hypothalamus	EHHADH
+TMEM17	choroid plexus	EHHADH
+KCTD6	retina	EHHADH
+KCTD6	epididymis	EHHADH
+TUBB	smooth muscle	SOD1
+TUBB	bone marrow	SOD1
+TUBB	tonsil	SOD1
+TUBB	ovary	SOD1
+TUBB	lymph node	SOD1
+TUBB	thymus	SOD1
+TMEM31	testis	EHHADH, CYB5R3
+ENKUR	fallopian tube	SOD1
+CYB561A3	tonsil	EHHADH, AOC1
+CYB561A3	skin	EHHADH, AOC1
+CYB561A3	spleen	EHHADH, AOC1
+CYB561A3	lymph node	EHHADH, AOC1
+CYB561A3	adrenal gland	EHHADH, AOC1
+ZNG1E	cerebellum	PEX26
+ZNG1E	liver	PEX26
+ARMC12	testis	EHHADH
+ARMC12	epididymis	EHHADH
+ARMC12	pituitary gland	EHHADH
+ARMC12	choroid plexus	EHHADH
+ZBTB9	testis	EHHADH
+ZBTB9	pituitary gland	EHHADH
+LNX2	pancreas	SOD1
+LNX2	liver	SOD1
+TSPO2	bone marrow	MFF
+LHFPL5	retina	MFF
+LHFPL5	epididymis	MFF
+LHFPL5	bone marrow	MFF
+LHFPL5	skin	MFF
+STAC3	testis	SOD1
+STAC3	bone marrow	SOD1
+STAC3	tongue	SOD1
+STAC3	prostate	SOD1
+STAC3	esophagus	SOD1
+STAC3	salivary gland	SOD1
+STAC3	skeletal muscle	SOD1
+TMEM86B	duodenum	PEX11G, VAPA, MFF
+TMEM86B	gallbladder	PEX11G, VAPA, MFF
+TMEM86B	bone marrow	PEX11G, VAPA, MFF
+TMEM86B	small intestine	PEX11G, VAPA, MFF
+TMEM86B	liver	PEX11G, VAPA, MFF
+FDCSP	tonsil	MFF
+FDCSP	appendix	MFF
+FDCSP	salivary gland	MFF
+FDCSP	breast	MFF
+FDCSP	lymph node	MFF
+P4HA3	smooth muscle	ACOT8
+CRACR2B	prostate	IDH1
+CRACR2B	stomach	IDH1
+CRACR2B	colon	IDH1
+CRACR2B	salivary gland	IDH1
+CRACR2B	pancreas	IDH1
+CRACR2B	breast	IDH1
+HID1	stomach	EHHADH
+HID1	salivary gland	EHHADH
+HID1	pancreas	EHHADH
+ZSCAN1	pituitary gland	SOD1
+ACTMAP	liver	AGXT
+LYPD5	esophagus	EHHADH
+LYPD5	skin	EHHADH
+SEC14L4	liver	HAO2
+CEP57L1	testis	IDH1
+CEP57L1	parathyroid gland	IDH1
+SCARA5	heart muscle	EHHADH
+SCARA5	adipose tissue	EHHADH
+SCARA5	urinary bladder	EHHADH
+FAM78A	testis	PEX26
+FAM78A	bone marrow	PEX26
+FAM78A	tongue	PEX26
+FAM78A	tonsil	PEX26
+FAM78A	heart muscle	PEX26
+FAM78A	appendix	PEX26
+FAM78A	spleen	PEX26
+FAM78A	lymph node	PEX26
+FAM78A	skeletal muscle	PEX26
+FAM78A	thymus	PEX26
+TRARG1	adipose tissue	MFF
+TRARG1	breast	MFF
+ARL16	amygdala	VAPB, PEX26, SOD1
+ARL16	cerebral cortex	VAPB, PEX26, SOD1
+ARL16	hippocampal formation	VAPB, PEX26, SOD1
+CLEC4G	cerebellum	PRDX1
+CLEC4G	adipose tissue	PRDX1
+CLEC4G	liver	PRDX1
+CLEC4G	lymph node	PRDX1
+ANKRD45	testis	PDIA6
+ANKRD45	fallopian tube	PDIA6
+LRRC66	duodenum	ACOX1
+LRRC66	small intestine	ACOX1
+NAT8L	cerebral cortex	PEX19
+NAT8L	adipose tissue	PEX19
+TSPAN33	liver	MFF
+TSPAN33	kidney	MFF
+ATXN1L	kidney	AGXT
+ARHGAP40	epididymis	RHOA
+ARHGAP40	skin	RHOA
+SLC10A6	esophagus	FIS1, PEX16, ACSL5, CYB5R3
+SLC10A6	skin	FIS1, PEX16, ACSL5, CYB5R3
+SERINC2	salivary gland	MFF
+SERINC2	liver	MFF
+TRIM74	testis	PHYH
+TRIM74	stomach	PHYH
+INCA1	duodenum	HSPD1, MARF1, VIM
+INCA1	testis	HSPD1, MARF1, VIM
+INCA1	skeletal muscle	HSPD1, MARF1, VIM
+SMIM1	testis	MFF, STING1
+SMIM1	bone marrow	MFF, STING1
+SMIM1	heart muscle	MFF, STING1
+SMIM1	salivary gland	MFF, STING1
+SMIM1	pituitary gland	MFF, STING1
+SMIM1	kidney	MFF, STING1
+NOTCH2NLA	liver	HSPD1, AGXT
+INKA1	esophagus	PEX7
+INKA1	skin	PEX7
+INKA1	skeletal muscle	PEX7
+INKA1	vagina	PEX7
+C5orf46	salivary gland	PEX12
+C5orf46	skin	PEX12
+CCDC187	testis	VIM
+C14orf180	heart muscle	MFF
+C14orf180	choroid plexus	MFF
+LIAT1	testis	HSPD1, VIM
+LIAT1	cerebral cortex	HSPD1, VIM
+LIAT1	basal ganglia	HSPD1, VIM
+ZNF772	thyroid gland	PEX5
+ZNF772	retina	PEX5
+ZNF772	parathyroid gland	PEX5
+RNASEK	pituitary gland	FIS1, VAPB
+RNASEK	hypothalamus	FIS1, VAPB
+RNASEK	choroid plexus	FIS1, VAPB
+RNASEK	adrenal gland	FIS1, VAPB
+RNASEK	kidney	FIS1, VAPB
+ZNG1C	pancreas	PEX26
+ZNG1C	liver	PEX26
+ZNG1C	choroid plexus	PEX26
+GIMAP6	spleen	SOD1
+GIMAP6	lymph node	SOD1
+CISD2	liver	EHHADH
+CKMT1A	duodenum	DNM1L
+CKMT1A	cerebellum	DNM1L
+CKMT1A	colon	DNM1L
+CKMT1A	esophagus	DNM1L
+CKMT1A	rectum	DNM1L
+CTXN3	kidney	MFF
+SMIM5	esophagus	EHHADH
+SMIM5	choroid plexus	EHHADH
+SMIM5	kidney	EHHADH
+TMPPE	bone marrow	FIS1
+ZBTB8A	cervix	EHHADH, CCDC33, ACOT12
+ZBTB8A	tongue	EHHADH, CCDC33, ACOT12
+ZBTB8A	endometrium	EHHADH, CCDC33, ACOT12
+ANXA8	esophagus	PEX1, SOD1
+ANXA8	skin	PEX1, SOD1
+NCF1	tonsil	CAV1
+NCF1	appendix	CAV1
+NCF1	small intestine	CAV1
+NCF1	spleen	CAV1
+NCF1	lymph node	CAV1
+NCF1	lung	CAV1
+ANXA8L1	esophagus	PEX1, SOD1
+ANXA8L1	skin	PEX1, SOD1
+ANXA8L1	vagina	PEX1, SOD1
+STRIT1	tongue	MFF
+STRIT1	basal ganglia	MFF
+STRIT1	skeletal muscle	MFF
+PTGES3L-AARSD1	tongue	CRAT
+PTGES3L-AARSD1	skeletal muscle	CRAT
