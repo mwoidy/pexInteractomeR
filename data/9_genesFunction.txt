@@ -1,0 +1,93 @@
+id	symbol	geneFunction
+215	ABCD1	membrane; transporter
+225	ABCD2	membrane; transporter
+5825	ABCD3	membrane; transporter
+5826	ABCD4	membrane; transporter; cobalamine
+30	ACAA1	beta oxidation; matrix
+84129	ACAD11	beta oxidation; matrix
+91452	ACBD5	membrane; tether
+641371	ACOT1	beta oxidation; matrix
+122970	ACOT4	beta oxidation; matrix
+10005	ACOT8	beta oxidation; bile acid synthesis; matrix
+51	ACOX1	beta oxidation; matrix
+8309	ACOX2	beta oxidation of prystanoyl CoA; bile acid synthesis; matrix
+8310	ACOX3	beta oxidation of prystanoyl CoA; matrix
+2182	ACSL4	beta oxidation; matrix
+51703	ACSL5	beta oxidation; matrix
+23305	ACSL6	beta oxidation; matrix
+8540	AGPS	plasmalogen biosynthesis; membrane
+189	AGXT	glyoxylate metabolism; matrix
+224	ALDH3A2	alpha oxidation; membrane
+23600	AMACR	beta oxidation of prystanoyl CoA; bile acid synthesis; matrix
+84896	ATAD1	membrane; protein import; dislocation
+570	BAAT	bile acid synthesis; matrix
+847	CAT	ROS metabolism; matrix
+1384	CRAT	beta oxidation; matrix
+54677	CROT	beta oxidation; matrix
+1610	DAO	glyoxylate metabolism; matrix
+8528	DDO	glyoxylate metabolism; matrix
+26063	DECR2	beta oxidation auxilliary; membrane
+10901	DHRS4	retinoic acid signalling; matrix
+10059	DNM1L	membrane; proliferation
+1891	ECH1	beta oxidation auxilliary; matrix
+10455	ECI2	beta oxidation auxilliary; matrix
+1962	EHHADH	beta oxidation; matrix
+2053	EPHX2	ROS metabolism; matrix
+84188	FAR1	plasmalogen biosynthesis; membrane
+55711	FAR2	plasmalogen biosynthesis; membrane
+51024	FIS1	membrane; proliferation
+252995	FNDC5	unknown
+8443	GNPAT	plasmalogen biosynthesis; membrane
+373156	GSTK1	ROS metabolism; matrix
+26061	HACL1	alpha oxidation; matrix
+54363	HAO1	glyoxylate metabolism; matrix
+51179	HAO2	alpha oxidation; matrix
+3155	HMGCL	amino acid metabolism; matrix
+3156	HMGCR	cholesterol/isoprenoid biosynthesis; membrane
+3295	HSD17B4	beta oxidation of prystanoyl CoA; bile acid synthesis
+3416	IDE	signaling
+3417	IDH1	beta oxidation; citric acid cycle
+3422	IDI1	cholesterol/isoprenoid biosynthesis
+91734	IDI2	cholesterol/isoprenoid biosynthesis
+54996	MARC2	ROS metabolism; nitrate metabolism
+56947	MFF	membrane; proliferation
+23417	MLYCD	regulation of fatty acid oxidation
+4358	MPV17	ROS metabolism
+4598	MVK	cholesterol/isoprenoid biosynthesis
+4843	NOS2	ROS metabolism; nitrate metabolism
+83594	NUDT12	nicotinamide salvaging
+55825	PECR	alpha oxidation
+5189	PEX1	peroxin; membrane; protein import; dislocation
+5192	PEX10	peroxin; membrane; protein import; ubiquitination
+8800	PEX11A	peroxin; membrane; proliferation
+8799	PEX11B	peroxin; membrane; proliferation
+92960	PEX11G	peroxin; membrane; proliferation
+5193	PEX12	peroxin; membrane; protein import; ubiquitination
+5194	PEX13	peroxin; membrane; protein import; docking and translocation
+5195	PEX14	peroxin; membrane; protein import; docking and translocation
+9409	PEX16	peroxin; membrane; protein import
+5824	PEX19	peroxin; membrane; protein import
+5828	PEX2	peroxin; membrane; protein import; ubiquitination
+55670	PEX26	peroxin; membrane; protein import; dislocation
+8504	PEX3	peroxin; membrane; protein import
+5830	PEX5	peroxin; membrane; protein import; docking and translocation
+5190	PEX6	peroxin; membrane; protein import; dislocation
+5191	PEX7	peroxin; membrane; protein import; docking and translocation
+5264	PHYH	alpha oxidation
+51268	PIPOX	amino acid metabolism
+10654	PMVK	cholesterol/isoprenoid biosynthesis
+5052	PRDX1	ROS metabolism
+25824	PRDX5	ROS metabolism
+5827	PXMP2	membrane; glyoxylate metabolism
+11264	PXMP4	membrane
+222659	PXT1	unknown
+6342	SCP2	beta oxidation
+94009	SERHL	unknown
+10478	SLC25A17	membrane; transporter
+11001	SLC27A2	plasmalogen biosynthesis; alpha oxidation; membrane
+6647	SOD1	ROS metabolism
+6648	SOD2	ROS metabolism
+65084	TMEM135	fission
+4591	TRIM37	ubiquitination
+219743	TYSND1	processing
+284273	ZADH2	regulation of fat cell differentiation
