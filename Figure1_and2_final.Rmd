@@ -21,7 +21,7 @@ library(readxl)
 Variables and data
 ```{r}
 #colors from iwanthue https://medialab.github.io/iwanthue/?utm_source=Nature+Briefing&utm_campaign=e0c3e024d4-briefing-dy-20211006&utm_medium=email&utm_term=0_c9dfd39373-e0c3e024d4-44542065
-colors <- read_tsv("data/colors_fancy.txt", col_names = F, show_col_types = FALSE) %>% pull()
+colors <- read_tsv("data/colors/colors_fancy.txt", col_names = F, show_col_types = FALSE) %>% pull()
 mygrey <- "#F5F5F5"
 
 #import
@@ -30,13 +30,13 @@ my_file_pos <- "data/2_Bret_screen_final.xlsx"
 my_file_interactions <- "data/Peroxisomal_interactions_across_dbs_final.xlsx" 
 #import of Yifrach Dataset
 #Gene / FinalScore / DetectionFrequency
-my_yifrach_genes <- "data/yifrach.xlsx"
+my_yifrach_genes <- "data/yifrach_adapted.xlsx"
 #ePI interactome
 ePI_file <- "data/ePI_edgelist.csv"
 #random sampling lcc
 my_random_lcc_file <- "data/1000_degree_matched_random_samples_LCC_disease_genes_in_interactome.xlsx"
 #data on degree of ePI members
-my_intExt_degree_file <- ("../Manuskript/Julia_Analysen/173_ePI/results/parameter/characteristics_ePI_degrees.csv")
+my_intExt_degree_file <- "data/characteristics_ePI_degrees.csv"
 #contains comparison of lit vs bret interactions
 my_file_mapping <- "data/mapper.xlsx" #mapping from entrez to symbol
 my_file_function <- "data/9_genesFunction.txt"  #functions of peroxisomal proteins
@@ -104,8 +104,7 @@ isos
 
 ```{r}
 p_inter_with_iso <- positives_original %>% 
-  filter(!ProteinA %in% remove_genes & !ProteinB %in% remove_genes) %>% 
-  select(ProteinA, ProteinB)
+  dplyr::select(ProteinA, ProteinB)
 
 p_graph_with_iso <- graph_from_edgelist(as.matrix(p_inter_with_iso), directed = FALSE)
 #create graph without the isoforms in order to avoid redundancy
@@ -164,7 +163,7 @@ jacc_isoforms_withoutImport <- sapply(list(accaa1, gstk1, pex10, scp2, sod2), fu
 
 jacc_allother_withoutImport <- similarity(p_graph_without_iso_withoutImport, method="jaccard")
 
-jacc_all_withoutImport <- rbind(jacc_tbl_withoutImport, tibble(jaccard = jacc_isoforms_withoutImport[2,], cat = "isoforms"))
+jacc_all_withoutImport <- rbind(tibble(jaccard = jacc_allother_withoutImport[2,], cat="other"), tibble(jaccard = jacc_isoforms_withoutImport[2,], cat="isoforms"))
 
 jaccard_plot <- jacc_all_withoutImport %>% 
   ggplot(aes(x = cat, y=jaccard)) + 
@@ -216,7 +215,9 @@ print(p)
 
 Comparison with yifrach dataset
 ```{r}
-yifrach_genes <- read_excel(my_yifrach_genes)
+yifrach_genes <- read_excel(my_yifrach_genes) %>% 
+  dplyr::select(`Gene name update`, DetectionFrequency, FinalScore) %>% 
+  dplyr::rename("Gene" = `Gene name update`)
 
 yifrach_genes %>% 
   mutate(study = if_else(Gene %in% pg_withoutIso,"y","n")) %>% 
@@ -250,7 +251,7 @@ pex_both <- graph_from_edgelist(as.matrix(positives_mapped %>% filter(class == 3
 inter_both <- as_data_frame(igraph::intersection(ePI_graph, pex_both, keep.all.vertices = FALSE)) %>% mutate(class = 3)
 inter_bret <- as_data_frame(igraph::intersection(ePI_graph, pex_bret, keep.all.vertices = FALSE)) %>% mutate(class = 2)
 inter_lit <- as_data_frame(igraph::intersection(ePI_graph, pex_lit, keep.all.vertices = FALSE)) %>% mutate(class = 1)
-inter_ePI <- as_data_frame(difference(ePI_graph, union(pex_bret, pex_both, pex_lit))) %>% unique() %>% mutate(class = 1)
+inter_ePI <- as_data_frame(igraph::difference(ePI_graph, igraph::union(pex_bret, pex_both, pex_lit))) %>% unique() %>% mutate(class = 1)
 ePI_edge_cl <- rbind(inter_both, inter_bret, inter_lit, inter_ePI) %>% dplyr::rename(proteinA = "from", proteinB = "to")
 rm(inter_both,inter_bret, inter_lit, inter_ePI)
 
@@ -317,7 +318,7 @@ pex_graph <- graph_from_edgelist(as.matrix(positives_mapped %>% filter(class != 
 pex_degree <- as_tibble(rownames_to_column(as.data.frame(degree(pex_graph, loops = FALSE)), var="symbol")) %>% dplyr::rename("degree" = `degree(pex_graph, loops = FALSE)`) 
 
 p_bar <- pex_degree %>%
-  mutate(ranking = dense_rank(desc(degree))) %>%
+  mutate(ranking = dense_rank(dplyr::desc(degree))) %>%
   filter(ranking < 8) %>%
   ggplot(aes(x = reorder(symbol, degree), y = degree)) + 
   geom_bar(stat = "identity", fill="#D3D3D3", color="black", width=0.7, linewidth=0.3) + 
@@ -360,9 +361,7 @@ Check for power law distribution
 ```{r}
 library(poweRlaw)
 
-#deg <- G.degrees[G.degrees > 0] 
-deg <- G.degrees_ePI[G.degrees_ePI > 0] 
-
+deg <- G.degrees[G.degrees > 0] 
 pl_model <- displ$new(deg)  # discrete power law
 
 #xmin
@@ -397,9 +396,8 @@ comp$test_statistic
 comp$p_two_sided
 
 # Save as PNG using png() and dev.off()
-#png(paste(path_to, "PI_distr_comparison.png", sep=""))
-png("output/figure2/ePI_distr_comparison.png")
-
+png("output/figure2/PI_distr_comparison.png")
+#png("output/figure2/ePI_distr_comparison.png")
 
 #plot both models (eg powerlaw vs log-normal)
 plot(pl_model, main = "Degree distribution")
@@ -410,13 +408,8 @@ legend("bottomleft",
        legend = c("Power law", "Log-normal"),
        col = c("red", "blue"),
        lty = 1)
-
-
-
 # Close the PNG device
 dev.off()
-
-
 ```
 
 
@@ -440,6 +433,61 @@ p <- ggplot(G.degree_ePI.histogram, aes(x = log(G.degrees_ePI), y = log(Freq))) 
   theme_classic()
 ggsave("output/figure2/degree_distributio_ePI.pdf", plot = p, width = 4, height = 3, units = "cm", scale = 2)
 p
+```
+
+Compare distribution
+```{r}
+deg <- G.degrees_ePI[G.degrees_ePI > 0] 
+
+pl_model <- displ$new(deg)  # discrete power law
+
+#xmin
+est_pl <- estimate_xmin(pl_model)
+pl_model$setXmin(est_pl)
+
+#alpha
+pl_model$setPars(est_pl$pars)
+pl_model$pars
+
+#goodness of fit
+bs_pl <- bootstrap_p(pl_model, no_of_sims = 1000, threads = 2)
+bs_pl$p
+#p ≥ 0,1 → Power law plausible
+#p < 0,05 → Power law unlikely
+```
+
+
+Compare to log-normal distribution
+```{r}
+ln_model <- dislnorm$new(deg)
+#ximn
+ln_model$setXmin(pl_model$getXmin())
+ln_model$setPars(estimate_pars(ln_model))
+
+#likelihood test
+comp <- compare_distributions(pl_model, ln_model)
+#comp
+
+#results
+comp$test_statistic
+comp$p_two_sided
+
+# Save as PNG using png() and dev.off()
+#png(paste(path_to, "PI_distr_comparison.png", sep=""))
+png("output/figure2/ePI_distr_comparison.png")
+
+#plot both models (eg powerlaw vs log-normal)
+plot(pl_model, main = "Degree distribution")
+lines(pl_model, col = "red")
+lines(ln_model, col = "blue")
+
+legend("bottomleft",
+       legend = c("Power law", "Log-normal"),
+       col = c("red", "blue"),
+       lty = 1)
+# Close the PNG device
+dev.off()
+```
 ```
 
 
@@ -503,7 +551,7 @@ peroxins <- fun_genes %>%
 
 fun_pl <- fun_genes %>% 
   mutate(gene_class = if_else(symbol %in% peroxins, "peroxin", "other")) %>% 
-  select(symbol, gene_class) %>% 
+  dplyr::select(symbol, gene_class) %>% 
   unique() %>%
   left_join(pex_degree, by = join_by(symbol == symbol))
 
@@ -529,7 +577,7 @@ pex_between <- as_tibble(rownames_to_column(as.data.frame(betweenness(pex_graph,
 
 fun_pl <- fun_genes %>% 
   mutate(gene_class = if_else(symbol %in% peroxins, "peroxin", "other")) %>% 
-  select(symbol, gene_class) %>% 
+  dplyr::select(symbol, gene_class) %>% 
   unique() %>%  
   left_join(pex_between, by = join_by(symbol == symbol))
 
@@ -554,7 +602,7 @@ pex_closeness <- as_tibble(rownames_to_column(as.data.frame(closeness(pex_graph)
 
 fun_pl <- fun_genes %>% 
   mutate(gene_class = if_else(symbol %in% peroxins, "peroxin", "other")) %>% 
-  select(symbol, gene_class) %>% 
+  dplyr::select(symbol, gene_class) %>% 
   unique() %>%
   left_join(pex_closeness, by = join_by(symbol == symbol))
 
@@ -640,7 +688,7 @@ How is the ePI connected to the human interactome?
 
 ```{r}
 #load data from Julia with internal / external degree per ePI protein
-ePI_in_out_degree <- read_csv(my_intExt_degree_file) %>% 
+ePI_in_out_degree <- read_csv(my_intExt_degree_file, show_col_types = FALSE) %>% 
   dplyr::rename("Entrez" = "...1", "degree" = "overall degree", "degree_int" = "internal degree", "degree_ext" = "external degree")
 #merch with yifrach_genes
 ePI_in_out_degree %>% left_join(yifrach_genes, by=join_by(symbol == Gene))

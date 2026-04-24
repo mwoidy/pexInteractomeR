@@ -53,8 +53,6 @@ tipNeighbors %>%
   count(TiP) %>% 
   arrange(desc(n)) %>%
   filter(n > 9)
-
-print(tipNeighbors)
 ```
 
 Save as supplementary file
@@ -89,8 +87,6 @@ tipNeighbors %>%
   mutate(n_interactors = length(unlist(str_split(pex_interactor, ",")))) %>% 
   ungroup %>% 
   arrange(desc(n_interactors))
-
-print(tipNeighbors)
 ```
 
 

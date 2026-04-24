@@ -49,7 +49,7 @@ id	symbol	geneFunction
 3417	IDH1	beta oxidation; citric acid cycle
 3422	IDI1	cholesterol/isoprenoid biosynthesis
 91734	IDI2	cholesterol/isoprenoid biosynthesis
-54996	MARC2	ROS metabolism; nitrate metabolism
+54996	MTARC2	ROS metabolism; nitrate metabolism
 56947	MFF	membrane; proliferation
 23417	MLYCD	regulation of fatty acid oxidation
 4358	MPV17	ROS metabolism
@@ -90,4 +90,4 @@ id	symbol	geneFunction
 65084	TMEM135	fission
 4591	TRIM37	ubiquitination
 219743	TYSND1	processing
-284273	ZADH2	regulation of fat cell differentiation
+284273	PTGR3	regulation of fat cell differentiation

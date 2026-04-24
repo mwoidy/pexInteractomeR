@@ -1,6 +1,8 @@
 ---
-title: "Figure 3: examine tissue specific networks"
-output: html_notebook
+title: 'Figure 3: examine tissue specific networks'
+output:
+  html_document:
+    df_print: paged
 ---
 
 
@@ -28,6 +30,7 @@ tip_tissue <- read_xlsx("data/number_of_TiP_per_tissue.xlsx", col_names=c("tissu
 my_file_function <- "data/9_genesFunction.txt"  #functions of peroxisomal proteins
 #read genes with their respective functions and sort
 pex_functions <- read_tsv(my_file_function, show_col_types = FALSE)
+
 #get all functions in separate cols and rows 
 fun_genes <- pex_functions %>% 
   dplyr::select(symbol, geneFunction) %>% 
@@ -37,11 +40,7 @@ peroxins <- fun_genes %>%
   filter(geneFunction == "peroxin") %>% 
   pull(symbol)
 
-fun_pl <- fun_genes %>% 
-  mutate(gene_class = if_else(symbol %in% peroxins, "peroxin", "other")) %>% 
-  dplyr::select(symbol, gene_class) %>% 
-  unique() %>%
-  left_join(pex_degree, by = join_by(symbol == symbol))
+col_peroxins <- c(peroxin = "#FDD49F", other = "#D9D9D9")
 
 ```
 
@@ -96,11 +95,11 @@ p<- protein_expr %>%
   filter(expression == "TiP") %>% 
   group_by(protein) %>% 
   summarise(n=n()) %>% 
-  left_join(fun_pl, by=join_by(protein == symbol)) %>% 
-  dplyr::select(protein, n, gene_class) %>% 
-  replace_na(list(gene_class = "other")) %>% 
-  ggplot(aes(x=gene_class, y=n)) + 
-  geom_boxplot(aes(fill = gene_class), stat="boxplot") + 
+  left_join(fun_genes %>% filter(geneFunction == "peroxin"), by=join_by(protein == symbol)) %>% 
+  dplyr::select(protein, n, geneFunction) %>% 
+  replace_na(list(geneFunction = "other")) %>% 
+  ggplot(aes(x=geneFunction, y=n)) + 
+  geom_boxplot(aes(fill = geneFunction), stat="boxplot") + 
   scale_fill_manual(values = col_peroxins) +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45,hjust = 1,vjust = 1), legend.position = "none") + 
@@ -154,7 +153,7 @@ Which TiP are most often member of a lcc
 ```{r}
 #tissues that have sig larger lcc than expected by chance
 #tissues lcc > 2
-sig_tissues <- c("tongue", "parathyroid gland", "liver", "adrenal gland", "kidney", "duodenum", "midbrain", "choroid plexus", "heart muscle", "adipose tissue", "skeletal muscle",  "small intestine")
+sig_tissues <- c("tongue", "parathyroid gland", "liver", "adrenal gland", "kidney", "duodenum", "midbrain", "adipose tissue", "skeletal muscle")
 
 tip_lcc_pertissue %>% 
   filter(tissue %in% sig_tissues) %>% 
@@ -165,13 +164,6 @@ tip_lcc_pertissue %>%
 
 
 Figure 3D: Extract function of members of TiP-lcc
-```{r}
-#get all functions in separate cols and rows 
-fun_genes <- pex_functions %>% 
-  dplyr::select(symbol, geneFunction) %>% 
-  separate_longer_delim(geneFunction, delim = "; ") %>%
-  filter(!geneFunction %in% c("membrane", "matrix"))
-```
 
 Function that takes fun_genes and a gene_list and outputs n of function per gene of gene_list
 ```{r}
@@ -185,7 +177,7 @@ Get functions by tissue.
 ```{r}
 #colors
 tissue_filt = "tongue"
-fun_cols <- deframe(read_tsv("data/fun_colors.txt", show_col_types = FALSE))
+fun_cols <- deframe(read_tsv("data/colors/fun_colors.txt", show_col_types = FALSE))
 #get barplots
 # col fill "#D3D3D3"
 gene_list <- tip_lcc_pertissue %>% filter(tissue == tissue_filt) %>% pull(SYMBOL)
